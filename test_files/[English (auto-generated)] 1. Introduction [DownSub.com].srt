@@ -1,0 +1,3176 @@
+1
+00:00:13,040 --> 00:00:15,120
+i'd like to welcome people to
+
+2
+00:00:15,120 --> 00:00:17,119
+introduction to psychology
+
+3
+00:00:17,119 --> 00:00:18,960
+my name is dr paul bloom and i'm the
+
+4
+00:00:18,960 --> 00:00:20,720
+professor for this course
+
+5
+00:00:20,720 --> 00:00:22,960
+uh if you haven't yet picked up
+
+6
+00:00:22,960 --> 00:00:25,279
+a syllabus from the front of the class
+
+7
+00:00:25,279 --> 00:00:27,680
+please raise your hand are we out are we
+
+8
+00:00:27,680 --> 00:00:28,840
+at a
+
+9
+00:00:28,840 --> 00:00:32,079
+syllabi oh please raise your hand and
+
+10
+00:00:32,079 --> 00:00:33,440
+when the teaching fellows will bring it
+
+11
+00:00:33,440 --> 00:00:36,880
+to you if you don't yet have a syllabus
+
+12
+00:00:38,559 --> 00:00:40,559
+um
+
+13
+00:00:40,559 --> 00:00:42,800
+the syllabus is also available on this
+
+14
+00:00:42,800 --> 00:00:45,360
+website this website will become
+
+15
+00:00:45,360 --> 00:00:47,360
+important to you should you choose to
+
+16
+00:00:47,360 --> 00:00:49,600
+take this class
+
+17
+00:00:49,600 --> 00:00:52,399
+it will include the syllabus
+
+18
+00:00:52,399 --> 00:00:55,280
+which will occasionally be revised
+
+19
+00:00:55,280 --> 00:00:57,440
+well in advance
+
+20
+00:00:57,440 --> 00:00:59,600
+also all of the class material will be
+
+21
+00:00:59,600 --> 00:01:01,600
+on this site including copies of the
+
+22
+00:01:01,600 --> 00:01:03,680
+slides i'm presenting including these
+
+23
+00:01:03,680 --> 00:01:05,920
+slides right now
+
+24
+00:01:05,920 --> 00:01:07,760
+practice exams
+
+25
+00:01:07,760 --> 00:01:10,159
+and any details on the written
+
+26
+00:01:10,159 --> 00:01:11,360
+assignments
+
+27
+00:01:11,360 --> 00:01:13,119
+so you'll need to use this website
+
+28
+00:01:13,119 --> 00:01:14,640
+regularly
+
+29
+00:01:14,640 --> 00:01:17,040
+to keep in touch with the course today
+
+30
+00:01:17,040 --> 00:01:19,600
+will be a short class what i just want
+
+31
+00:01:19,600 --> 00:01:20,960
+to do today
+
+32
+00:01:20,960 --> 00:01:23,360
+is orient you tell you what this course
+
+33
+00:01:23,360 --> 00:01:24,400
+is about
+
+34
+00:01:24,400 --> 00:01:25,920
+i know this is shopping period and i
+
+35
+00:01:25,920 --> 00:01:28,080
+want to give you a good sense of what
+
+36
+00:01:28,080 --> 00:01:30,159
+you'd be in for if you took this course
+
+37
+00:01:30,159 --> 00:01:31,840
+i want to go over the style of the
+
+38
+00:01:31,840 --> 00:01:34,400
+classes the evaluation the readings and
+
+39
+00:01:34,400 --> 00:01:35,680
+so on
+
+40
+00:01:35,680 --> 00:01:37,439
+and then give some examples of some of
+
+41
+00:01:37,439 --> 00:01:39,520
+the specific topics that we'll be
+
+42
+00:01:39,520 --> 00:01:41,840
+covering
+
+43
+00:01:41,920 --> 00:01:44,159
+but before i get started i have to point
+
+44
+00:01:44,159 --> 00:01:45,759
+out something a little bit unusual about
+
+45
+00:01:45,759 --> 00:01:47,600
+this class
+
+46
+00:01:47,600 --> 00:01:49,280
+we are being filmed
+
+47
+00:01:49,280 --> 00:01:51,680
+this course is one of seven courses
+
+48
+00:01:51,680 --> 00:01:54,479
+chosen to begin the yale university open
+
+49
+00:01:54,479 --> 00:01:56,399
+educational resources video lecture
+
+50
+00:01:56,399 --> 00:01:58,719
+project
+
+51
+00:01:58,719 --> 00:02:00,560
+and what this means is that when the
+
+52
+00:02:00,560 --> 00:02:02,640
+year is over
+
+53
+00:02:02,640 --> 00:02:04,560
+these videos will be available on the
+
+54
+00:02:04,560 --> 00:02:06,880
+internet free for anybody who wants to
+
+55
+00:02:06,880 --> 00:02:09,840
+see them and ideally will be accessed by
+
+56
+00:02:09,840 --> 00:02:10,959
+people
+
+57
+00:02:10,959 --> 00:02:13,200
+across many different countries some who
+
+58
+00:02:13,200 --> 00:02:15,280
+would not normally have access to a
+
+59
+00:02:15,280 --> 00:02:18,239
+university education
+
+60
+00:02:18,239 --> 00:02:20,400
+i see this as a good and honorable use
+
+61
+00:02:20,400 --> 00:02:22,319
+of yale's resources and of course it's
+
+62
+00:02:22,319 --> 00:02:24,400
+also part of yale's plan for world
+
+63
+00:02:24,400 --> 00:02:27,040
+domination
+
+64
+00:02:27,120 --> 00:02:30,319
+so because of this a yale university
+
+65
+00:02:30,319 --> 00:02:32,239
+production team from the center of media
+
+66
+00:02:32,239 --> 00:02:34,000
+initiatives is going to be taping all
+
+67
+00:02:34,000 --> 00:02:37,280
+the class lectures and they're up there
+
+68
+00:02:37,280 --> 00:02:39,440
+the idea is that this should be as
+
+69
+00:02:39,440 --> 00:02:42,319
+unobtrusive as possible
+
+70
+00:02:42,319 --> 00:02:43,840
+and the classroom experience should
+
+71
+00:02:43,840 --> 00:02:45,519
+essentially be the same as if they're
+
+72
+00:02:45,519 --> 00:02:48,480
+not there so it's their intention to
+
+73
+00:02:48,480 --> 00:02:50,640
+tape the lectures to take me and
+
+74
+00:02:50,640 --> 00:02:52,239
+sometimes uh
+
+75
+00:02:52,239 --> 00:02:55,040
+the slides but not tape your faces or
+
+76
+00:02:55,040 --> 00:02:56,800
+voices so we're not having you sign
+
+77
+00:02:56,800 --> 00:02:58,480
+release forms
+
+78
+00:02:58,480 --> 00:03:01,200
+um two things one thing is personally
+
+79
+00:03:01,200 --> 00:03:03,200
+i have to remind myself
+
+80
+00:03:03,200 --> 00:03:05,200
+not to use profanity because children
+
+81
+00:03:05,200 --> 00:03:06,800
+may be watching so i'll try not to do
+
+82
+00:03:06,800 --> 00:03:07,599
+that
+
+83
+00:03:07,599 --> 00:03:09,760
+there's also another complexity if you
+
+84
+00:03:09,760 --> 00:03:12,480
+are in the front row
+
+85
+00:03:12,480 --> 00:03:14,480
+or the second row or the third row it is
+
+86
+00:03:14,480 --> 00:03:16,879
+possible that some part of your head
+
+87
+00:03:16,879 --> 00:03:19,280
+your back or even your face might end up
+
+88
+00:03:19,280 --> 00:03:21,280
+on film um
+
+89
+00:03:21,280 --> 00:03:23,200
+if if you are in the witness protection
+
+90
+00:03:23,200 --> 00:03:24,400
+program
+
+91
+00:03:24,400 --> 00:03:26,720
+or you're some sort of fugitive you
+
+92
+00:03:26,720 --> 00:03:28,640
+probably don't want to sit in the front
+
+93
+00:03:28,640 --> 00:03:29,920
+row
+
+94
+00:03:29,920 --> 00:03:31,040
+i'll give them if people want to
+
+95
+00:03:31,040 --> 00:03:32,959
+unobtrusively kind of slide back that's
+
+96
+00:03:32,959 --> 00:03:36,159
+that's fine as i'm talking
+
+97
+00:03:36,159 --> 00:03:39,120
+okay we're ready
+
+98
+00:03:39,680 --> 00:03:40,400
+so
+
+99
+00:03:40,400 --> 00:03:43,120
+i'd like to to um welcome people to this
+
+100
+00:03:43,120 --> 00:03:45,200
+course introduction to psychology my
+
+101
+00:03:45,200 --> 00:03:47,360
+name is dr paul bloom i'm professor of
+
+102
+00:03:47,360 --> 00:03:49,519
+this course
+
+103
+00:03:49,519 --> 00:03:52,959
+and what this is going to be
+
+104
+00:03:53,599 --> 00:03:55,440
+is a comprehensive introduction to the
+
+105
+00:03:55,440 --> 00:03:57,680
+study of the human mind
+
+106
+00:03:57,680 --> 00:04:00,400
+so we're going to cover a very very wide
+
+107
+00:04:00,400 --> 00:04:02,000
+range of topics
+
+108
+00:04:02,000 --> 00:04:04,319
+including brains children language sex
+
+109
+00:04:04,319 --> 00:04:07,760
+memory madness discuss racism and love
+
+110
+00:04:07,760 --> 00:04:09,599
+and many others we're going to talk
+
+111
+00:04:09,599 --> 00:04:12,400
+about things like the proper explanation
+
+112
+00:04:12,400 --> 00:04:15,760
+for differences between men and women
+
+113
+00:04:15,760 --> 00:04:17,358
+the question of whether animals can
+
+114
+00:04:17,358 --> 00:04:19,040
+learn language
+
+115
+00:04:19,040 --> 00:04:21,600
+the puzzle of what grosses us out the
+
+116
+00:04:21,600 --> 00:04:24,080
+problem of why some of us eat too much
+
+117
+00:04:24,080 --> 00:04:26,400
+and what we could do to stop
+
+118
+00:04:26,400 --> 00:04:28,479
+the question of why people go crazy in
+
+119
+00:04:28,479 --> 00:04:30,160
+groups
+
+120
+00:04:30,160 --> 00:04:31,840
+research into whether you can trust your
+
+121
+00:04:31,840 --> 00:04:33,919
+childhood memories
+
+122
+00:04:33,919 --> 00:04:35,440
+research into why some of us get
+
+123
+00:04:35,440 --> 00:04:38,560
+depressed and others don't
+
+124
+00:04:38,560 --> 00:04:40,240
+the style of this is there'll be two
+
+125
+00:04:40,240 --> 00:04:43,680
+lectures a week
+
+126
+00:04:43,680 --> 00:04:45,040
+as well as
+
+127
+00:04:45,040 --> 00:04:46,400
+course readings
+
+128
+00:04:46,400 --> 00:04:49,120
+now to do well in the course
+
+129
+00:04:49,120 --> 00:04:51,520
+you have to attend both the lectures and
+
+130
+00:04:51,520 --> 00:04:53,360
+do the readings there will be some
+
+131
+00:04:53,360 --> 00:04:54,479
+overlap
+
+132
+00:04:54,479 --> 00:04:56,400
+in some cases the lectures will be quite
+
+133
+00:04:56,400 --> 00:04:58,080
+linked to the readings but there will be
+
+134
+00:04:58,080 --> 00:05:00,560
+some parts of the readings that will not
+
+135
+00:05:00,560 --> 00:05:02,479
+find your way into lectures and some
+
+136
+00:05:02,479 --> 00:05:05,040
+lectures some entire lectures that will
+
+137
+00:05:05,040 --> 00:05:07,440
+not connect at all to the readings
+
+138
+00:05:07,440 --> 00:05:08,320
+so
+
+139
+00:05:08,320 --> 00:05:10,479
+to pursue this course properly you have
+
+140
+00:05:10,479 --> 00:05:13,680
+to do both um what this means is that if
+
+141
+00:05:13,680 --> 00:05:16,000
+you miss a class you need to get notes
+
+142
+00:05:16,000 --> 00:05:18,160
+and so you should get them from a friend
+
+143
+00:05:18,160 --> 00:05:20,479
+or from the person sitting next to you
+
+144
+00:05:20,479 --> 00:05:22,080
+the slides
+
+145
+00:05:22,080 --> 00:05:24,400
+are going to be made available online
+
+146
+00:05:24,400 --> 00:05:26,080
+so one of the things you don't have to
+
+147
+00:05:26,080 --> 00:05:28,160
+do is you don't have to write this down
+
+148
+00:05:28,160 --> 00:05:30,960
+you take notes any way you choose but if
+
+149
+00:05:30,960 --> 00:05:32,800
+you don't get anything on there it'll be
+
+150
+00:05:32,800 --> 00:05:34,960
+available online i'm going to post it in
+
+151
+00:05:34,960 --> 00:05:36,880
+a format which will be black and white
+
+152
+00:05:36,880 --> 00:05:39,280
+and easy to print out so you don't have
+
+153
+00:05:39,280 --> 00:05:41,520
+to worry about this but again
+
+154
+00:05:41,520 --> 00:05:43,199
+attending to the slides is not a
+
+155
+00:05:43,199 --> 00:05:46,960
+substitute for attending class
+
+156
+00:05:46,960 --> 00:05:49,840
+there's a textbook um peter gray's
+
+157
+00:05:49,840 --> 00:05:52,800
+psychology fifth edition
+
+158
+00:05:52,800 --> 00:05:54,560
+and there's also a collection of short
+
+159
+00:05:54,560 --> 00:05:56,960
+readings the norton reader edited by
+
+160
+00:05:56,960 --> 00:05:58,560
+gary marcus
+
+161
+00:05:58,560 --> 00:06:00,000
+it's an excellent textbook it's an
+
+162
+00:06:00,000 --> 00:06:02,000
+excellent collection and you should get
+
+163
+00:06:02,000 --> 00:06:03,120
+them both
+
+164
+00:06:03,120 --> 00:06:05,600
+they're available at labyrinth bookstore
+
+165
+00:06:05,600 --> 00:06:07,600
+on york street or you can get them
+
+166
+00:06:07,600 --> 00:06:08,720
+online
+
+167
+00:06:08,720 --> 00:06:10,400
+i should note that last time i taught
+
+168
+00:06:10,400 --> 00:06:13,600
+the course i used the marcus reader and
+
+169
+00:06:13,600 --> 00:06:15,440
+when professor marvin chun taught his
+
+170
+00:06:15,440 --> 00:06:17,600
+course last semester he used peter
+
+171
+00:06:17,600 --> 00:06:19,759
+gray's fifth edition textbook so there
+
+172
+00:06:19,759 --> 00:06:21,440
+may be a lot of used copies floating
+
+173
+00:06:21,440 --> 00:06:23,520
+around you should feel free to try to
+
+174
+00:06:23,520 --> 00:06:25,600
+get one of those
+
+175
+00:06:25,600 --> 00:06:27,759
+the evaluation goes like this
+
+176
+00:06:27,759 --> 00:06:30,479
+there is a midterm and there's a final
+
+177
+00:06:30,479 --> 00:06:32,479
+the final will not be held in the exam
+
+178
+00:06:32,479 --> 00:06:34,400
+period because i like to take long
+
+179
+00:06:34,400 --> 00:06:36,960
+vacations it will be held the last day
+
+180
+00:06:36,960 --> 00:06:38,400
+of class
+
+181
+00:06:38,400 --> 00:06:40,560
+the exams will be will be multiple
+
+182
+00:06:40,560 --> 00:06:42,400
+choice and short answer fill in the
+
+183
+00:06:42,400 --> 00:06:44,639
+blank that sort of thing prior to the
+
+184
+00:06:44,639 --> 00:06:47,840
+exams i will post previous exams online
+
+185
+00:06:47,840 --> 00:06:49,919
+so you have a feeling for how these
+
+186
+00:06:49,919 --> 00:06:52,400
+exams work and so on there will also be
+
+187
+00:06:52,400 --> 00:06:54,400
+review sessions
+
+188
+00:06:54,400 --> 00:06:56,240
+starting at the beginning of the third
+
+189
+00:06:56,240 --> 00:06:58,240
+week of class that is not next week but
+
+190
+00:06:58,240 --> 00:07:01,039
+the week after on monday each monday i'm
+
+191
+00:07:01,039 --> 00:07:03,120
+going to put up a brief question
+
+192
+00:07:03,120 --> 00:07:05,199
+or set of questions which you have to
+
+193
+00:07:05,199 --> 00:07:06,240
+answer
+
+194
+00:07:06,240 --> 00:07:08,560
+and your answers need to be sent to your
+
+195
+00:07:08,560 --> 00:07:09,919
+teaching fellow and you'll be given a
+
+196
+00:07:09,919 --> 00:07:12,720
+teaching fellow a signed one
+
+197
+00:07:12,720 --> 00:07:14,160
+by friday
+
+198
+00:07:14,160 --> 00:07:16,080
+this is not meant to be difficult it's
+
+199
+00:07:16,080 --> 00:07:17,840
+not meant to be more than five ten
+
+200
+00:07:17,840 --> 00:07:19,919
+minutes of work but the point of the
+
+201
+00:07:19,919 --> 00:07:21,039
+question
+
+202
+00:07:21,039 --> 00:07:23,360
+fifteen twenty minutes of work um but
+
+203
+00:07:23,360 --> 00:07:25,599
+the point of the question is to motivate
+
+204
+00:07:25,599 --> 00:07:27,680
+people to keep up with the material and
+
+205
+00:07:27,680 --> 00:07:29,840
+do the readings these questions will be
+
+206
+00:07:29,840 --> 00:07:32,400
+marked past fail i expect most everybody
+
+207
+00:07:32,400 --> 00:07:34,720
+to pass all of the questions but it's
+
+208
+00:07:34,720 --> 00:07:36,479
+just to keep you on track and keep you
+
+209
+00:07:36,479 --> 00:07:37,759
+going
+
+210
+00:07:37,759 --> 00:07:39,840
+there's a book review
+
+211
+00:07:39,840 --> 00:07:41,520
+a short book review to be written
+
+212
+00:07:41,520 --> 00:07:43,520
+towards near the end of the class i'll
+
+213
+00:07:43,520 --> 00:07:45,280
+give details about that later on in the
+
+214
+00:07:45,280 --> 00:07:46,800
+semester and there's also an
+
+215
+00:07:46,800 --> 00:07:49,199
+experimental participation requirement
+
+216
+00:07:49,199 --> 00:07:51,120
+and next week i'll i'll hand out a piece
+
+217
+00:07:51,120 --> 00:07:53,120
+of paper describing the requirement the
+
+218
+00:07:53,120 --> 00:07:55,039
+point of requirement is to give you all
+
+219
+00:07:55,039 --> 00:07:56,319
+experience
+
+220
+00:07:56,319 --> 00:07:58,400
+actually seeing what psychological
+
+221
+00:07:58,400 --> 00:08:00,400
+research is about as well as to give us
+
+222
+00:08:00,400 --> 00:08:01,840
+hundreds of subjects to do our
+
+223
+00:08:01,840 --> 00:08:04,080
+experiments on
+
+224
+00:08:04,080 --> 00:08:05,360
+um
+
+225
+00:08:05,360 --> 00:08:07,520
+the issue sometimes comes up as the how
+
+226
+00:08:07,520 --> 00:08:10,319
+to do well in the course
+
+227
+00:08:10,319 --> 00:08:12,879
+um here's how to do well
+
+228
+00:08:12,879 --> 00:08:15,039
+attend all the classes keep up with the
+
+229
+00:08:15,039 --> 00:08:17,280
+readings ideally keep up with the
+
+230
+00:08:17,280 --> 00:08:18,319
+readings
+
+231
+00:08:18,319 --> 00:08:20,879
+before you come to class
+
+232
+00:08:20,879 --> 00:08:22,879
+and one thing i would strongly suggest
+
+233
+00:08:22,879 --> 00:08:25,039
+is to form some sort of study groups
+
+234
+00:08:25,039 --> 00:08:27,120
+either formally or informally have
+
+235
+00:08:27,120 --> 00:08:29,440
+people you could talk to when the exam
+
+236
+00:08:29,440 --> 00:08:31,520
+prior to the exams are she's patting
+
+237
+00:08:31,520 --> 00:08:34,000
+somebody next to to her i hope you know
+
+238
+00:08:34,000 --> 00:08:36,240
+him
+
+239
+00:08:36,799 --> 00:08:39,120
+and um
+
+240
+00:08:39,120 --> 00:08:41,200
+and and and in fact what i'm going to do
+
+241
+00:08:41,200 --> 00:08:42,640
+not this class because the shopping
+
+242
+00:08:42,640 --> 00:08:44,000
+period i don't know who's coming next
+
+243
+00:08:44,000 --> 00:08:45,839
+class or what but i'll set up a few
+
+244
+00:08:45,839 --> 00:08:47,920
+minutes prior at the beginning class for
+
+245
+00:08:47,920 --> 00:08:49,440
+people just to introduce themselves to
+
+246
+00:08:49,440 --> 00:08:51,200
+the person next to them
+
+247
+00:08:51,200 --> 00:08:53,760
+so they have some sort of resource
+
+248
+00:08:53,760 --> 00:08:56,080
+in the class
+
+249
+00:08:56,080 --> 00:08:57,360
+now
+
+250
+00:08:57,360 --> 00:09:00,000
+this is a large class
+
+251
+00:09:00,000 --> 00:09:01,839
+and if you don't do anything about it it
+
+252
+00:09:01,839 --> 00:09:03,839
+can be very anonymous and some of you
+
+253
+00:09:03,839 --> 00:09:05,600
+may choose to pursue it that way and
+
+254
+00:09:05,600 --> 00:09:08,480
+it's totally fine but what i would
+
+255
+00:09:08,480 --> 00:09:11,920
+suggest you do is establish some contact
+
+256
+00:09:11,920 --> 00:09:14,560
+with us either with me or with any of
+
+257
+00:09:14,560 --> 00:09:16,160
+the teaching fellows and i'll introduce
+
+258
+00:09:16,160 --> 00:09:18,880
+the teaching fellows sometime next week
+
+259
+00:09:18,880 --> 00:09:20,959
+um you could talk to us at the beginning
+
+260
+00:09:20,959 --> 00:09:22,399
+or the end of class
+
+261
+00:09:22,399 --> 00:09:24,240
+unless there's special circumstances i
+
+262
+00:09:24,240 --> 00:09:25,440
+always try to come
+
+263
+00:09:25,440 --> 00:09:27,040
+at least 10 minutes early and i try and
+
+264
+00:09:27,040 --> 00:09:28,800
+i'm willing to stay late to talk to
+
+265
+00:09:28,800 --> 00:09:30,000
+people
+
+266
+00:09:30,000 --> 00:09:31,839
+you could come by during my office hours
+
+267
+00:09:31,839 --> 00:09:33,519
+which are on the syllabus and you can
+
+268
+00:09:33,519 --> 00:09:36,080
+send me email and set up an appointment
+
+269
+00:09:36,080 --> 00:09:37,920
+i'm very willing to talk to students
+
+270
+00:09:37,920 --> 00:09:39,760
+about intellectual ideas about course
+
+271
+00:09:39,760 --> 00:09:42,240
+problems and so on and if you see me at
+
+272
+00:09:42,240 --> 00:09:44,080
+some point just on campus
+
+273
+00:09:44,080 --> 00:09:46,399
+you could introduce yourself and i i'd
+
+274
+00:09:46,399 --> 00:09:49,600
+like to meet people from this class
+
+275
+00:09:49,600 --> 00:09:52,080
+so again a lot of stress you have the
+
+276
+00:09:52,080 --> 00:09:53,680
+option of staying anonymous in this
+
+277
+00:09:53,680 --> 00:09:55,200
+class but you also have the option of
+
+278
+00:09:55,200 --> 00:09:56,560
+seeking out and making some sort of
+
+279
+00:09:56,560 --> 00:09:58,880
+contact with us
+
+280
+00:09:58,880 --> 00:10:00,720
+okay
+
+281
+00:10:00,720 --> 00:10:03,360
+that's the formal stuff of the course
+
+282
+00:10:03,360 --> 00:10:05,839
+what's this course about
+
+283
+00:10:05,839 --> 00:10:08,720
+um unlike a lot of other courses some
+
+284
+00:10:08,720 --> 00:10:10,880
+people come to intro psychology with
+
+285
+00:10:10,880 --> 00:10:13,040
+some unusual motivations
+
+286
+00:10:13,040 --> 00:10:15,600
+um maybe you're crazy
+
+287
+00:10:15,600 --> 00:10:19,800
+and hope to become less crazy
+
+288
+00:10:20,160 --> 00:10:21,680
+maybe you want to learn how to study
+
+289
+00:10:21,680 --> 00:10:24,160
+better improve your sex life interpret
+
+290
+00:10:24,160 --> 00:10:26,079
+your dreams and win friends and
+
+291
+00:10:26,079 --> 00:10:28,959
+influence people
+
+292
+00:10:29,279 --> 00:10:31,279
+those are not necessarily bad reasons to
+
+293
+00:10:31,279 --> 00:10:32,800
+take
+
+294
+00:10:32,800 --> 00:10:34,880
+this course and with the exception of
+
+295
+00:10:34,880 --> 00:10:36,560
+the sex part
+
+296
+00:10:36,560 --> 00:10:38,240
+this course might actually help you out
+
+297
+00:10:38,240 --> 00:10:40,160
+with some of these things the study of
+
+298
+00:10:40,160 --> 00:10:42,640
+scientific psychology has a lot of
+
+299
+00:10:42,640 --> 00:10:45,200
+insights of real world relevance to real
+
+300
+00:10:45,200 --> 00:10:47,360
+problems that we face in our everyday
+
+301
+00:10:47,360 --> 00:10:49,279
+lives and i want to try and when these
+
+302
+00:10:49,279 --> 00:10:50,560
+issues come up i'm going to try to
+
+303
+00:10:50,560 --> 00:10:52,880
+stress them and and and make you try to
+
+304
+00:10:52,880 --> 00:10:54,720
+think about the extent to which the
+
+305
+00:10:54,720 --> 00:10:56,399
+laboratory research i'll be talking
+
+306
+00:10:56,399 --> 00:10:58,959
+about can affect your everyday life how
+
+307
+00:10:58,959 --> 00:11:01,040
+you study how you interact with people
+
+308
+00:11:01,040 --> 00:11:03,360
+how you might try to persuade somebody
+
+309
+00:11:03,360 --> 00:11:05,600
+of something else what sort of therapy
+
+310
+00:11:05,600 --> 00:11:08,240
+works best for you
+
+311
+00:11:08,240 --> 00:11:11,600
+but the general goals of this course
+
+312
+00:11:11,600 --> 00:11:12,880
+are actually
+
+313
+00:11:12,880 --> 00:11:16,959
+i think even more interesting than that
+
+314
+00:11:17,120 --> 00:11:18,959
+what i want to do is provide a
+
+315
+00:11:18,959 --> 00:11:20,880
+state-of-the-art introduction to the
+
+316
+00:11:20,880 --> 00:11:23,360
+most important topic that there is
+
+317
+00:11:23,360 --> 00:11:24,160
+um
+
+318
+00:11:24,160 --> 00:11:24,959
+us
+
+319
+00:11:24,959 --> 00:11:28,000
+how the human mind works how we think
+
+320
+00:11:28,000 --> 00:11:30,240
+what makes us what we are
+
+321
+00:11:30,240 --> 00:11:31,680
+and we'll be approaching this from a
+
+322
+00:11:31,680 --> 00:11:33,920
+range of directions so traditionally
+
+323
+00:11:33,920 --> 00:11:36,160
+psychology is often broken up into the
+
+324
+00:11:36,160 --> 00:11:39,440
+following in into five sub areas
+
+325
+00:11:39,440 --> 00:11:42,000
+neuroscience which is the study of the
+
+326
+00:11:42,000 --> 00:11:45,200
+of the mind by looking at the brain
+
+327
+00:11:45,200 --> 00:11:47,440
+developmental which is the area which i
+
+328
+00:11:47,440 --> 00:11:49,839
+focus mostly on which is trying to learn
+
+329
+00:11:49,839 --> 00:11:52,240
+about how people develop and grow and
+
+330
+00:11:52,240 --> 00:11:54,320
+learn
+
+331
+00:11:54,320 --> 00:11:55,519
+cognitive
+
+332
+00:11:55,519 --> 00:11:57,279
+which is the one term of the five that
+
+333
+00:11:57,279 --> 00:11:58,959
+might be unfamiliar to some of you but
+
+334
+00:11:58,959 --> 00:12:00,880
+it refers to a sort of computational
+
+335
+00:12:00,880 --> 00:12:03,680
+approach to studying the mind often
+
+336
+00:12:03,680 --> 00:12:06,399
+viewing the mind on analogy with a
+
+337
+00:12:06,399 --> 00:12:08,480
+computer and looking at how people do
+
+338
+00:12:08,480 --> 00:12:10,399
+things like understand language
+
+339
+00:12:10,399 --> 00:12:12,240
+recognize objects
+
+340
+00:12:12,240 --> 00:12:14,480
+play games and so on
+
+341
+00:12:14,480 --> 00:12:16,399
+there is social
+
+342
+00:12:16,399 --> 00:12:18,240
+which is the study of how people act in
+
+343
+00:12:18,240 --> 00:12:21,200
+groups how people act with other people
+
+344
+00:12:21,200 --> 00:12:23,600
+and there is clinical which is maybe the
+
+345
+00:12:23,600 --> 00:12:25,200
+aspect of psychology that people think
+
+346
+00:12:25,200 --> 00:12:27,200
+of immediately when they hear psychology
+
+347
+00:12:27,200 --> 00:12:29,040
+which is a study of mental health and
+
+348
+00:12:29,040 --> 00:12:30,480
+mental illness
+
+349
+00:12:30,480 --> 00:12:32,560
+and we'll be covering all of those areas
+
+350
+00:12:32,560 --> 00:12:34,399
+we'll also be covering a set of related
+
+351
+00:12:34,399 --> 00:12:35,600
+areas
+
+352
+00:12:35,600 --> 00:12:38,079
+i am convinced that you cannot study the
+
+353
+00:12:38,079 --> 00:12:39,519
+mind
+
+354
+00:12:39,519 --> 00:12:41,600
+solely by looking at the discipline of
+
+355
+00:12:41,600 --> 00:12:43,760
+psychology discipline psychology spills
+
+356
+00:12:43,760 --> 00:12:46,399
+over to issues of how the mind has
+
+357
+00:12:46,399 --> 00:12:48,000
+evolved
+
+358
+00:12:48,000 --> 00:12:50,480
+economics and game theory
+
+359
+00:12:50,480 --> 00:12:52,800
+are now an essential tools for
+
+360
+00:12:52,800 --> 00:12:54,560
+understanding human thought and human
+
+361
+00:12:54,560 --> 00:12:56,560
+behavior there's issues connecting to
+
+362
+00:12:56,560 --> 00:12:58,880
+philosophy computer science anthropology
+
+363
+00:12:58,880 --> 00:13:01,440
+literature theology and many many other
+
+364
+00:13:01,440 --> 00:13:02,880
+domains
+
+365
+00:13:02,880 --> 00:13:05,760
+so this course will be wide-ranging in
+
+366
+00:13:05,760 --> 00:13:07,279
+that sense
+
+367
+00:13:07,279 --> 00:13:09,360
+um at this point i've been speaking in
+
+368
+00:13:09,360 --> 00:13:11,200
+generalities so
+
+369
+00:13:11,200 --> 00:13:14,240
+i want to close this introductory class
+
+370
+00:13:14,240 --> 00:13:16,480
+by giving five examples
+
+371
+00:13:16,480 --> 00:13:18,720
+of the sorts of topics we'll be covering
+
+372
+00:13:18,720 --> 00:13:20,880
+and i'll start the topic that we'll be
+
+373
+00:13:20,880 --> 00:13:23,519
+covering next week on monday
+
+374
+00:13:23,519 --> 00:13:25,279
+the brain
+
+375
+00:13:25,279 --> 00:13:27,600
+um this is a brain
+
+376
+00:13:27,600 --> 00:13:31,839
+in fact it's a specific person's brain
+
+377
+00:13:31,839 --> 00:13:33,680
+and what's interesting about the brain
+
+378
+00:13:33,680 --> 00:13:37,120
+is that little white mark there
+
+379
+00:13:37,120 --> 00:13:38,880
+it's her brain
+
+380
+00:13:38,880 --> 00:13:41,120
+it's terri schiavo's brain
+
+381
+00:13:41,120 --> 00:13:43,120
+you recognize her more from pictures
+
+382
+00:13:43,120 --> 00:13:44,800
+like that
+
+383
+00:13:44,800 --> 00:13:47,519
+and what a case like this where somebody
+
+384
+00:13:47,519 --> 00:13:48,639
+um
+
+385
+00:13:48,639 --> 00:13:49,760
+is is
+
+386
+00:13:49,760 --> 00:13:52,480
+in a coma is without consciousness
+
+387
+00:13:52,480 --> 00:13:54,800
+as a result of damage to the brain is a
+
+388
+00:13:54,800 --> 00:13:57,199
+stark illustration of the physical
+
+389
+00:13:57,199 --> 00:13:59,120
+nature of mental life
+
+390
+00:13:59,120 --> 00:14:01,040
+the physical basis for everything that
+
+391
+00:14:01,040 --> 00:14:04,320
+we normally hold dear like free will
+
+392
+00:14:04,320 --> 00:14:05,600
+consciousness
+
+393
+00:14:05,600 --> 00:14:07,760
+morality and emotions
+
+394
+00:14:07,760 --> 00:14:09,040
+and that's what we'll begin the course
+
+395
+00:14:09,040 --> 00:14:12,160
+with talking about how a physical thing
+
+396
+00:14:12,160 --> 00:14:16,399
+can give rise to mental life
+
+397
+00:14:16,399 --> 00:14:19,040
+we'll talk a lot about children
+
+398
+00:14:19,040 --> 00:14:21,680
+this is actually a specific child it's
+
+399
+00:14:21,680 --> 00:14:25,519
+uh my son zachary my younger son um
+
+400
+00:14:25,519 --> 00:14:27,920
+dressed up as super as spider-man but it
+
+401
+00:14:27,920 --> 00:14:31,839
+is halloween no it's not halloween oh
+
+402
+00:14:31,839 --> 00:14:33,120
+no
+
+403
+00:14:33,120 --> 00:14:36,000
+there's more to say about that um
+
+404
+00:14:36,000 --> 00:14:39,120
+i study child development for a living
+
+405
+00:14:39,120 --> 00:14:41,199
+and i'm interested in several questions
+
+406
+00:14:41,199 --> 00:14:43,120
+so one question is just a question of
+
+407
+00:14:43,120 --> 00:14:45,839
+development everybody in this room
+
+408
+00:14:45,839 --> 00:14:48,480
+can speak and understand english
+
+409
+00:14:48,480 --> 00:14:50,240
+everybody in this room has some
+
+410
+00:14:50,240 --> 00:14:52,160
+understanding of how the world works how
+
+411
+00:14:52,160 --> 00:14:54,560
+physical things behave everybody in this
+
+412
+00:14:54,560 --> 00:14:55,839
+room has some understanding of other
+
+413
+00:14:55,839 --> 00:14:59,920
+people and how people behave
+
+414
+00:14:59,920 --> 00:15:01,199
+and the question
+
+415
+00:15:01,199 --> 00:15:03,279
+that that preoccupies developmental
+
+416
+00:15:03,279 --> 00:15:05,360
+psychologists is how do we come to have
+
+417
+00:15:05,360 --> 00:15:06,480
+this knowledge
+
+418
+00:15:06,480 --> 00:15:09,440
+and in particular how much of it is
+
+419
+00:15:09,440 --> 00:15:12,560
+hardwired built in innate and how much
+
+420
+00:15:12,560 --> 00:15:14,560
+of it is a product of culture
+
+421
+00:15:14,560 --> 00:15:17,839
+of of language of schooling
+
+422
+00:15:17,839 --> 00:15:20,480
+and developmental psychologists use
+
+423
+00:15:20,480 --> 00:15:22,480
+many ingenious methods to try to pull
+
+424
+00:15:22,480 --> 00:15:23,920
+these apart
+
+425
+00:15:23,920 --> 00:15:26,000
+and and try to figure out what what as
+
+426
+00:15:26,000 --> 00:15:27,360
+what's what's
+
+427
+00:15:27,360 --> 00:15:29,839
+what are the basic components of human
+
+428
+00:15:29,839 --> 00:15:31,600
+nature
+
+429
+00:15:31,600 --> 00:15:35,760
+there's also the question of continuity
+
+430
+00:15:35,760 --> 00:15:39,760
+to what extent is zachary at that age
+
+431
+00:15:39,760 --> 00:15:41,760
+going to be
+
+432
+00:15:41,760 --> 00:15:43,360
+that way forever
+
+433
+00:15:43,360 --> 00:15:46,000
+to what extent is your fate sealed
+
+434
+00:15:46,000 --> 00:15:48,480
+to what extent could if i were to meet
+
+435
+00:15:48,480 --> 00:15:50,639
+you when you were five years old
+
+436
+00:15:50,639 --> 00:15:54,639
+i could describe the way you are now
+
+437
+00:15:55,199 --> 00:15:56,399
+the poet
+
+438
+00:15:56,399 --> 00:15:58,000
+william wordsworth
+
+439
+00:15:58,000 --> 00:15:59,920
+wrote
+
+440
+00:15:59,920 --> 00:16:02,639
+the child is father to the man
+
+441
+00:16:02,639 --> 00:16:05,600
+and what this means is that you can see
+
+442
+00:16:05,600 --> 00:16:08,480
+within every child the adult he or she
+
+443
+00:16:08,480 --> 00:16:11,040
+will become
+
+444
+00:16:11,040 --> 00:16:13,199
+we will look and and ask the question
+
+445
+00:16:13,199 --> 00:16:15,279
+whether this is true is it true for your
+
+446
+00:16:15,279 --> 00:16:17,519
+personality is it true for your interest
+
+447
+00:16:17,519 --> 00:16:21,279
+is it true for your intelligence
+
+448
+00:16:21,360 --> 00:16:23,360
+another question having to do with
+
+449
+00:16:23,360 --> 00:16:25,600
+development
+
+450
+00:16:25,600 --> 00:16:26,480
+is
+
+451
+00:16:26,480 --> 00:16:29,279
+what makes us the way we are
+
+452
+00:16:29,279 --> 00:16:31,839
+we're different in a lot of ways
+
+453
+00:16:31,839 --> 00:16:33,680
+the people in this room differ according
+
+454
+00:16:33,680 --> 00:16:34,480
+to
+
+455
+00:16:34,480 --> 00:16:36,000
+their taste and food they differ
+
+456
+00:16:36,000 --> 00:16:38,639
+according to their iqs whether they're
+
+457
+00:16:38,639 --> 00:16:40,560
+aggressive or shy
+
+458
+00:16:40,560 --> 00:16:42,320
+whether they're attracted to males
+
+459
+00:16:42,320 --> 00:16:45,360
+females both or neither whether
+
+460
+00:16:45,360 --> 00:16:47,360
+whether they're good at music
+
+461
+00:16:47,360 --> 00:16:48,639
+whether
+
+462
+00:16:48,639 --> 00:16:50,160
+they're politically liberal or
+
+463
+00:16:50,160 --> 00:16:51,680
+conservative
+
+464
+00:16:51,680 --> 00:16:53,680
+why are we different what's the
+
+465
+00:16:53,680 --> 00:16:56,000
+explanation for why we're different
+
+466
+00:16:56,000 --> 00:16:58,560
+and again this could be translated in
+
+467
+00:16:58,560 --> 00:17:00,399
+terms of a question of genes and
+
+468
+00:17:00,399 --> 00:17:03,120
+environment to what extent are things
+
+469
+00:17:03,120 --> 00:17:05,039
+the result of the genes we possess to
+
+470
+00:17:05,039 --> 00:17:08,079
+what extent are our our individual
+
+471
+00:17:08,079 --> 00:17:10,240
+nature as a result of how we were raised
+
+472
+00:17:10,240 --> 00:17:12,079
+and to what extent are they best
+
+473
+00:17:12,079 --> 00:17:15,039
+explained in terms of an interaction um
+
+474
+00:17:15,039 --> 00:17:17,839
+one common theory for instance is that
+
+475
+00:17:17,839 --> 00:17:19,839
+we are shaped by our parents
+
+476
+00:17:19,839 --> 00:17:22,240
+um this was best summarized most
+
+477
+00:17:22,240 --> 00:17:24,559
+famously by the british poet phillip
+
+478
+00:17:24,559 --> 00:17:26,799
+larkin
+
+479
+00:17:26,799 --> 00:17:28,720
+who wrote
+
+480
+00:17:28,720 --> 00:17:31,280
+they they messed you up
+
+481
+00:17:31,280 --> 00:17:33,600
+your mum and dad
+
+482
+00:17:33,600 --> 00:17:36,480
+they may not mean to but they do
+
+483
+00:17:36,480 --> 00:17:38,960
+they fill you with the faults they had
+
+484
+00:17:38,960 --> 00:17:42,480
+and add some extra just for you
+
+485
+00:17:42,480 --> 00:17:43,840
+is he right
+
+486
+00:17:43,840 --> 00:17:46,720
+it's very controversial you it's been a
+
+487
+00:17:46,720 --> 00:17:49,039
+series of a huge controversy in a
+
+488
+00:17:49,039 --> 00:17:51,440
+popular culture to the extent to which
+
+489
+00:17:51,440 --> 00:17:52,799
+parents matter
+
+490
+00:17:52,799 --> 00:17:54,000
+and this is an issue which will
+
+491
+00:17:54,000 --> 00:17:58,160
+preoccupy us for much of the course
+
+492
+00:17:58,160 --> 00:18:00,960
+a different question what makes somebody
+
+493
+00:18:00,960 --> 00:18:02,480
+attractive
+
+494
+00:18:02,480 --> 00:18:04,080
+and this can be asked at all sorts of
+
+495
+00:18:04,080 --> 00:18:06,640
+levels but a symbol level is
+
+496
+00:18:06,640 --> 00:18:09,120
+what makes for a pretty face
+
+497
+00:18:09,120 --> 00:18:10,480
+so these are
+
+498
+00:18:10,480 --> 00:18:13,520
+according to ratings very attractive
+
+499
+00:18:13,520 --> 00:18:14,799
+faces
+
+500
+00:18:14,799 --> 00:18:17,200
+they are not the faces of real people
+
+501
+00:18:17,200 --> 00:18:18,640
+what's on the screen are computer
+
+502
+00:18:18,640 --> 00:18:20,160
+generated faces
+
+503
+00:18:20,160 --> 00:18:22,880
+um of a caucasian male and a caucasian
+
+504
+00:18:22,880 --> 00:18:27,280
+female who don't exist in the real world
+
+505
+00:18:27,280 --> 00:18:30,160
+but through using this sort of computer
+
+506
+00:18:30,160 --> 00:18:32,559
+generation and then asking people what
+
+507
+00:18:32,559 --> 00:18:34,000
+they think of this face what they think
+
+508
+00:18:34,000 --> 00:18:35,840
+of that face scientists have come to
+
+509
+00:18:35,840 --> 00:18:37,520
+some sense as to what really makes a
+
+510
+00:18:37,520 --> 00:18:39,280
+face attractive
+
+511
+00:18:39,280 --> 00:18:42,559
+both within cultures and across cultures
+
+512
+00:18:42,559 --> 00:18:43,600
+and that's something which we're going
+
+513
+00:18:43,600 --> 00:18:45,919
+to devote some time to when we talk
+
+514
+00:18:45,919 --> 00:18:48,000
+about social behavior and in particular
+
+515
+00:18:48,000 --> 00:18:50,960
+when we talk about sex
+
+516
+00:18:50,960 --> 00:18:53,280
+not all attractiveness not all beauty of
+
+517
+00:18:53,280 --> 00:18:56,240
+course is linked to sex
+
+518
+00:18:56,240 --> 00:18:58,080
+so
+
+519
+00:18:58,080 --> 00:19:00,640
+so pandas for instance like this panda
+
+520
+00:19:00,640 --> 00:19:02,720
+are notoriously cute
+
+521
+00:19:02,720 --> 00:19:04,400
+and i don't
+
+522
+00:19:04,400 --> 00:19:06,000
+i don't have anything to say about it
+
+523
+00:19:06,000 --> 00:19:10,039
+really it's just a cute picture
+
+524
+00:19:11,440 --> 00:19:14,000
+um morality
+
+525
+00:19:14,000 --> 00:19:16,480
+is extremely
+
+526
+00:19:16,480 --> 00:19:18,240
+central to our lives
+
+527
+00:19:18,240 --> 00:19:19,919
+and a deep question which we will
+
+528
+00:19:19,919 --> 00:19:21,360
+struggle with throughout most of the
+
+529
+00:19:21,360 --> 00:19:23,760
+course is the question of good and evil
+
+530
+00:19:23,760 --> 00:19:26,480
+evil and good um these three pictures
+
+531
+00:19:26,480 --> 00:19:29,440
+exemplify different sorts of of evil
+
+532
+00:19:29,440 --> 00:19:32,480
+what you call institutional evil
+
+533
+00:19:32,480 --> 00:19:35,840
+um by somebody um
+
+534
+00:19:35,840 --> 00:19:38,400
+behaving cruelly or towards somebody for
+
+535
+00:19:38,400 --> 00:19:40,160
+somebody else perhaps not due to malice
+
+536
+00:19:40,160 --> 00:19:42,080
+but because of the situation that she's
+
+537
+00:19:42,080 --> 00:19:45,760
+in it has a picture of osama bin laden
+
+538
+00:19:45,760 --> 00:19:47,679
+a mass murderer driven by political
+
+539
+00:19:47,679 --> 00:19:49,600
+cause and then there's this guy on the
+
+540
+00:19:49,600 --> 00:19:53,720
+bottom anybody know who he is
+
+541
+00:19:54,799 --> 00:19:57,200
+ted bundy who got that
+
+542
+00:19:57,200 --> 00:19:59,039
+film that man no
+
+543
+00:19:59,039 --> 00:20:00,480
+ted bundy
+
+544
+00:20:00,480 --> 00:20:03,200
+exactly and that's like
+
+545
+00:20:03,200 --> 00:20:04,720
+before we get into the technicals that's
+
+546
+00:20:04,720 --> 00:20:06,640
+like crazy evil
+
+547
+00:20:06,640 --> 00:20:08,559
+and and and we're going to have to come
+
+548
+00:20:08,559 --> 00:20:10,320
+to terms
+
+549
+00:20:10,320 --> 00:20:13,200
+with why some people are like that
+
+550
+00:20:13,200 --> 00:20:16,080
+and again the same situation comes up is
+
+551
+00:20:16,080 --> 00:20:18,400
+it part of your nature
+
+552
+00:20:18,400 --> 00:20:21,600
+to be good or bad um
+
+553
+00:20:21,600 --> 00:20:24,320
+or is it largely due to the situation
+
+554
+00:20:24,320 --> 00:20:26,320
+that you that you've fallen
+
+555
+00:20:26,320 --> 00:20:27,760
+and there's a lot of some
+
+556
+00:20:27,760 --> 00:20:30,000
+quite spectacular experiments that try
+
+557
+00:20:30,000 --> 00:20:31,200
+to tease that
+
+558
+00:20:31,200 --> 00:20:33,440
+apart um if we're going to talk about
+
+559
+00:20:33,440 --> 00:20:36,960
+evil we should also talk about good
+
+560
+00:20:36,960 --> 00:20:37,919
+um
+
+561
+00:20:37,919 --> 00:20:40,960
+this is these are pictures of um of two
+
+562
+00:20:40,960 --> 00:20:42,960
+notoriously good men
+
+563
+00:20:42,960 --> 00:20:49,120
+um oscar schindler and paul russessa but
+
+564
+00:20:49,280 --> 00:20:53,440
+each who at different times in history
+
+565
+00:20:53,840 --> 00:20:55,760
+saved the lives of many many people at
+
+566
+00:20:55,760 --> 00:20:58,880
+great risk to themselves
+
+567
+00:20:59,039 --> 00:21:02,559
+schindler and the holocaust um and and
+
+568
+00:21:02,559 --> 00:21:04,480
+and then the other guy in
+
+569
+00:21:04,480 --> 00:21:06,400
+in um could i can't pronounce his name
+
+570
+00:21:06,400 --> 00:21:08,559
+recessive again
+
+571
+00:21:08,559 --> 00:21:09,919
+in rwanda
+
+572
+00:21:09,919 --> 00:21:12,080
+and they both had real good movies made
+
+573
+00:21:12,080 --> 00:21:13,039
+about them
+
+574
+00:21:13,039 --> 00:21:14,720
+um
+
+575
+00:21:14,720 --> 00:21:16,880
+and and so but what's interesting with
+
+576
+00:21:16,880 --> 00:21:18,720
+these cases is you couldn't have
+
+577
+00:21:18,720 --> 00:21:20,799
+predicted ahead of time
+
+578
+00:21:20,799 --> 00:21:23,039
+that they would be heroes
+
+579
+00:21:23,039 --> 00:21:25,200
+and one personal issue within any of us
+
+580
+00:21:25,200 --> 00:21:27,440
+is what would we do
+
+581
+00:21:27,440 --> 00:21:30,640
+in such situations
+
+582
+00:21:31,039 --> 00:21:32,559
+finally
+
+583
+00:21:32,559 --> 00:21:34,000
+throughout this course
+
+584
+00:21:34,000 --> 00:21:36,880
+we will discuss mental illness
+
+585
+00:21:36,880 --> 00:21:37,679
+now
+
+586
+00:21:37,679 --> 00:21:39,200
+towards the end of the class i want to
+
+587
+00:21:39,200 --> 00:21:40,880
+devote a full week
+
+588
+00:21:40,880 --> 00:21:43,440
+to discussing major or disorders like
+
+589
+00:21:43,440 --> 00:21:45,360
+depression and anxiety
+
+590
+00:21:45,360 --> 00:21:47,039
+because of their profound social
+
+591
+00:21:47,039 --> 00:21:49,440
+importance
+
+592
+00:21:49,440 --> 00:21:51,200
+such disorders are reasonably common in
+
+593
+00:21:51,200 --> 00:21:52,880
+college students
+
+594
+00:21:52,880 --> 00:21:55,039
+many people in this room are currently
+
+595
+00:21:55,039 --> 00:21:57,520
+suffering from a mood disorder an
+
+596
+00:21:57,520 --> 00:21:59,919
+anxiety disorder or both
+
+597
+00:21:59,919 --> 00:22:02,240
+and i won't ask for a show of hands but
+
+598
+00:22:02,240 --> 00:22:04,400
+i know a lot of people in this room are
+
+599
+00:22:04,400 --> 00:22:06,880
+on some form of medication for this
+
+600
+00:22:06,880 --> 00:22:08,000
+disorder
+
+601
+00:22:08,000 --> 00:22:10,640
+um and we'll discuss we'll discuss the
+
+602
+00:22:10,640 --> 00:22:12,720
+current research and why people get
+
+603
+00:22:12,720 --> 00:22:15,280
+these disorders and what's the best way
+
+604
+00:22:15,280 --> 00:22:17,039
+to make them better
+
+605
+00:22:17,039 --> 00:22:19,360
+but i also have a weakness
+
+606
+00:22:19,360 --> 00:22:22,320
+for the less common mental disorders
+
+607
+00:22:22,320 --> 00:22:23,919
+that i think tell us something really
+
+608
+00:22:23,919 --> 00:22:26,799
+interesting about mental life
+
+609
+00:22:26,799 --> 00:22:28,960
+so when we talk about memory for
+
+610
+00:22:28,960 --> 00:22:31,200
+instance we'll talk about disorders in
+
+611
+00:22:31,200 --> 00:22:33,440
+memory including some disorders that
+
+612
+00:22:33,440 --> 00:22:35,600
+keep you from forming new memories as
+
+613
+00:22:35,600 --> 00:22:38,159
+well as or disorders of amnesia where
+
+614
+00:22:38,159 --> 00:22:40,720
+you forget the past and these are
+
+615
+00:22:40,720 --> 00:22:42,559
+extraordinarily interesting for all
+
+616
+00:22:42,559 --> 00:22:45,919
+sorts of reasons
+
+617
+00:22:46,240 --> 00:22:48,159
+early in the course in fact i think next
+
+618
+00:22:48,159 --> 00:22:49,039
+week
+
+619
+00:22:49,039 --> 00:22:51,120
+we will discuss no later on in the
+
+620
+00:22:51,120 --> 00:22:52,320
+course the middle of middle of the
+
+621
+00:22:52,320 --> 00:22:54,559
+semester we will discuss the amazing
+
+622
+00:22:54,559 --> 00:22:56,880
+case of phineas gage
+
+623
+00:22:56,880 --> 00:22:58,880
+phineas gage was a construction worker
+
+624
+00:22:58,880 --> 00:23:00,720
+about 100 years ago
+
+625
+00:23:00,720 --> 00:23:03,840
+due to an explosion a metal pipe went
+
+626
+00:23:03,840 --> 00:23:06,840
+through his head like so
+
+627
+00:23:06,840 --> 00:23:09,600
+miraculously he was not killed
+
+628
+00:23:09,600 --> 00:23:10,640
+in fact
+
+629
+00:23:10,640 --> 00:23:12,320
+his friends it went through his head
+
+630
+00:23:12,320 --> 00:23:14,240
+when ended up a hundred feet away
+
+631
+00:23:14,240 --> 00:23:16,799
+covered with brains and blood
+
+632
+00:23:16,799 --> 00:23:19,600
+and phineas gays sat down and oh
+
+633
+00:23:19,600 --> 00:23:21,840
+and then on the way to the hospital they
+
+634
+00:23:21,840 --> 00:23:24,080
+stopped by a pub
+
+635
+00:23:24,080 --> 00:23:26,960
+have some cider
+
+636
+00:23:27,120 --> 00:23:30,240
+he was not blind he was not deaf he was
+
+637
+00:23:30,240 --> 00:23:33,280
+not
+
+638
+00:23:33,280 --> 00:23:37,120
+but something else happened to him
+
+639
+00:23:37,120 --> 00:23:40,240
+he lost his sense of right and wrong
+
+640
+00:23:40,240 --> 00:23:43,200
+he lost his control
+
+641
+00:23:43,200 --> 00:23:47,120
+he used to be a hard-working family man
+
+642
+00:23:47,120 --> 00:23:49,440
+after an accident he lost all of that
+
+643
+00:23:49,440 --> 00:23:51,679
+he couldn't hold a job he couldn't stay
+
+644
+00:23:51,679 --> 00:23:53,200
+faithful to his wife
+
+645
+00:23:53,200 --> 00:23:55,120
+he couldn't speak for five minutes
+
+646
+00:23:55,120 --> 00:23:56,559
+without cursing
+
+647
+00:23:56,559 --> 00:23:58,960
+he got into fights he got into brawls he
+
+648
+00:23:58,960 --> 00:24:01,520
+got drunk he lost his control
+
+649
+00:24:01,520 --> 00:24:04,480
+he ended up on a circus sideshow
+
+650
+00:24:04,480 --> 00:24:06,080
+traveling through the country with the
+
+651
+00:24:06,080 --> 00:24:07,600
+big steel pipe that went through his
+
+652
+00:24:07,600 --> 00:24:09,280
+head
+
+653
+00:24:09,280 --> 00:24:10,880
+and this is again
+
+654
+00:24:10,880 --> 00:24:14,080
+an extraordinary example of how the the
+
+655
+00:24:14,080 --> 00:24:16,480
+brain can give rise to the mind and how
+
+656
+00:24:16,480 --> 00:24:17,919
+things that go wrong the brain can
+
+657
+00:24:17,919 --> 00:24:20,880
+affect you in in a serious way
+
+658
+00:24:20,880 --> 00:24:22,400
+we'll discuss
+
+659
+00:24:22,400 --> 00:24:25,039
+cases of multiple personality disorder
+
+660
+00:24:25,039 --> 00:24:26,480
+where people have more than one
+
+661
+00:24:26,480 --> 00:24:28,880
+personality and also discuss the debate
+
+662
+00:24:28,880 --> 00:24:30,960
+over what's whether such cases are true
+
+663
+00:24:30,960 --> 00:24:33,279
+or not whether they can be taken as a
+
+664
+00:24:33,279 --> 00:24:35,840
+real phenomena or a made-up phenomena
+
+665
+00:24:35,840 --> 00:24:37,279
+which is there's a matter of a lot of
+
+666
+00:24:37,279 --> 00:24:39,440
+controversy and then we'll even discuss
+
+667
+00:24:39,440 --> 00:24:42,559
+some rarer cases
+
+668
+00:24:43,200 --> 00:24:45,520
+like cap grass syndrome
+
+669
+00:24:45,520 --> 00:24:48,880
+cup grass syndrome is typically is is
+
+670
+00:24:48,880 --> 00:24:51,120
+there's hundreds of cases not many
+
+671
+00:24:51,120 --> 00:24:52,880
+hundreds of cases it's typically the
+
+672
+00:24:52,880 --> 00:24:55,120
+result of some sort of stroke
+
+673
+00:24:55,120 --> 00:24:57,919
+and what happens to you is very specific
+
+674
+00:24:57,919 --> 00:25:00,400
+you develop a particular
+
+675
+00:25:00,400 --> 00:25:01,840
+delusion
+
+676
+00:25:01,840 --> 00:25:04,799
+like it's getting dark
+
+677
+00:25:06,400 --> 00:25:07,679
+and
+
+678
+00:25:07,679 --> 00:25:10,320
+the delusion
+
+679
+00:25:10,320 --> 00:25:14,240
+is that the people you love the most
+
+680
+00:25:14,240 --> 00:25:16,480
+have been replaced
+
+681
+00:25:16,480 --> 00:25:18,799
+they've been replaced by aliens or
+
+682
+00:25:18,799 --> 00:25:20,159
+robots
+
+683
+00:25:20,159 --> 00:25:22,799
+thank you um by by
+
+684
+00:25:22,799 --> 00:25:25,279
+by martians by cia agents by trained
+
+685
+00:25:25,279 --> 00:25:29,840
+actors and actresses but the people
+
+686
+00:25:31,200 --> 00:25:33,520
+but the idea is the people you care for
+
+687
+00:25:33,520 --> 00:25:36,799
+the most you believe are gone
+
+688
+00:25:36,799 --> 00:25:37,919
+and
+
+689
+00:25:37,919 --> 00:25:40,080
+this could lead to tragic consequences
+
+690
+00:25:40,080 --> 00:25:42,559
+cop grass syndrome is associated with a
+
+691
+00:25:42,559 --> 00:25:45,120
+very high level of violence
+
+692
+00:25:45,120 --> 00:25:47,279
+one man in australia a couple of years
+
+693
+00:25:47,279 --> 00:25:49,360
+ago was under the delusion that his
+
+694
+00:25:49,360 --> 00:25:51,600
+father was replaced with a robot and cut
+
+695
+00:25:51,600 --> 00:25:54,159
+off his head
+
+696
+00:25:54,240 --> 00:25:56,400
+a related disorder
+
+697
+00:25:56,400 --> 00:25:58,480
+involving the very same parts of the
+
+698
+00:25:58,480 --> 00:25:59,600
+brain
+
+699
+00:25:59,600 --> 00:26:03,200
+is called katard's syndrome and katarn
+
+700
+00:26:03,200 --> 00:26:06,880
+syndrome is you believe that you're dead
+
+701
+00:26:06,880 --> 00:26:08,559
+you believe that you're dead you you are
+
+702
+00:26:08,559 --> 00:26:09,679
+persuaded that you're dead you're
+
+703
+00:26:09,679 --> 00:26:10,880
+walking around you know you're walking
+
+704
+00:26:10,880 --> 00:26:12,000
+around you know you that there are
+
+705
+00:26:12,000 --> 00:26:14,720
+people around um but you think that
+
+706
+00:26:14,720 --> 00:26:15,760
+you're dead
+
+707
+00:26:15,760 --> 00:26:18,000
+and what's striking about these is it's
+
+708
+00:26:18,000 --> 00:26:19,760
+not these are not just sort of big
+
+709
+00:26:19,760 --> 00:26:22,000
+screwy problems of messed up people
+
+710
+00:26:22,000 --> 00:26:24,240
+rather they're located they're related
+
+711
+00:26:24,240 --> 00:26:26,080
+at a pinpoint level
+
+712
+00:26:26,080 --> 00:26:28,159
+to certain parts of your brain
+
+713
+00:26:28,159 --> 00:26:29,679
+and we're going to talk about the best
+
+714
+00:26:29,679 --> 00:26:31,520
+modern theories as to why these
+
+715
+00:26:31,520 --> 00:26:33,520
+syndromes occur
+
+716
+00:26:33,520 --> 00:26:35,279
+now
+
+717
+00:26:35,279 --> 00:26:36,960
+the reason to be interested in them
+
+718
+00:26:36,960 --> 00:26:39,760
+again is not because they're frequent
+
+719
+00:26:39,760 --> 00:26:41,840
+they aren't and it's not because of some
+
+720
+00:26:41,840 --> 00:26:45,440
+sort of gruesome morbid curiosity rather
+
+721
+00:26:45,440 --> 00:26:49,360
+by looking at extreme cases
+
+722
+00:26:50,320 --> 00:26:52,799
+they can help us best understand
+
+723
+00:26:52,799 --> 00:26:54,000
+normal life
+
+724
+00:26:54,000 --> 00:26:56,159
+often by looking at extremes it throws
+
+725
+00:26:56,159 --> 00:26:58,559
+into sharp contrast things we naturally
+
+726
+00:26:58,559 --> 00:27:00,559
+take for granted the issue of
+
+727
+00:27:00,559 --> 00:27:02,080
+psychopathy
+
+728
+00:27:02,080 --> 00:27:04,159
+of people who either do the brain damage
+
+729
+00:27:04,159 --> 00:27:06,400
+or because they're born that way have no
+
+730
+00:27:06,400 --> 00:27:09,200
+moral understanding can help us
+
+731
+00:27:09,200 --> 00:27:10,799
+cope with questions of free will and
+
+732
+00:27:10,799 --> 00:27:13,440
+responsibility of the relationship or
+
+733
+00:27:13,440 --> 00:27:15,039
+difference between mental illness and
+
+734
+00:27:15,039 --> 00:27:18,480
+evil multiple personality cases force us
+
+735
+00:27:18,480 --> 00:27:20,159
+to address the question of what is a
+
+736
+00:27:20,159 --> 00:27:21,520
+self
+
+737
+00:27:21,520 --> 00:27:24,159
+what to what extent do are all of us
+
+738
+00:27:24,159 --> 00:27:26,320
+composed of multiple people
+
+739
+00:27:26,320 --> 00:27:28,400
+and to what extent are we a single
+
+740
+00:27:28,400 --> 00:27:31,039
+unified person over time cases like cop
+
+741
+00:27:31,039 --> 00:27:33,200
+grass
+
+742
+00:27:33,200 --> 00:27:35,279
+are important because they tell us about
+
+743
+00:27:35,279 --> 00:27:37,440
+how we see the world they tell us for
+
+744
+00:27:37,440 --> 00:27:38,720
+instance that there's a difference
+
+745
+00:27:38,720 --> 00:27:40,799
+between recognizing something in a sense
+
+746
+00:27:40,799 --> 00:27:42,240
+that you could name it
+
+747
+00:27:42,240 --> 00:27:45,039
+and knowing what it is
+
+748
+00:27:45,039 --> 00:27:47,200
+and and and so by studying these
+
+749
+00:27:47,200 --> 00:27:49,440
+abnormal cases we get some insight into
+
+750
+00:27:49,440 --> 00:27:51,200
+regular life
+
+751
+00:27:51,200 --> 00:27:53,440
+so that's the end of the illustration of
+
+752
+00:27:53,440 --> 00:27:55,200
+the example topics
+
+753
+00:27:55,200 --> 00:27:58,559
+the syllabus lists many more
+
+754
+00:27:58,559 --> 00:28:01,440
+i'll end by telling you
+
+755
+00:28:01,440 --> 00:28:03,840
+that
+
+756
+00:28:03,840 --> 00:28:05,760
+there's a there's a lot of stuff that
+
+757
+00:28:05,760 --> 00:28:07,520
+we'll be talking about that i want to
+
+758
+00:28:07,520 --> 00:28:10,640
+talk about that i am not expert in
+
+759
+00:28:10,640 --> 00:28:13,760
+and fortunately um there is a community
+
+760
+00:28:13,760 --> 00:28:15,520
+at yale of the best scholars and
+
+761
+00:28:15,520 --> 00:28:17,520
+teachers on the planet
+
+762
+00:28:17,520 --> 00:28:19,520
+and so it would be a shame for me not to
+
+763
+00:28:19,520 --> 00:28:20,640
+use them
+
+764
+00:28:20,640 --> 00:28:23,039
+to cover some of these issues and so i'm
+
+765
+00:28:23,039 --> 00:28:24,799
+going to have include
+
+766
+00:28:24,799 --> 00:28:27,679
+four guest lectures
+
+767
+00:28:27,679 --> 00:28:30,240
+the first one is dr marvin chun
+
+768
+00:28:30,240 --> 00:28:31,840
+who is teaches the introduction
+
+769
+00:28:31,840 --> 00:28:33,360
+psychology course
+
+770
+00:28:33,360 --> 00:28:36,720
+in the fall and is my competition
+
+771
+00:28:36,720 --> 00:28:38,720
+and he's going to give an amazing
+
+772
+00:28:38,720 --> 00:28:41,200
+lecture on cognitive neuroscience
+
+773
+00:28:41,200 --> 00:28:43,520
+especially the cognitive neuroscience of
+
+774
+00:28:43,520 --> 00:28:45,840
+faces
+
+775
+00:28:47,440 --> 00:28:49,840
+dr susan nolan huxima
+
+776
+00:28:49,840 --> 00:28:52,240
+is the world's authority on depression
+
+777
+00:28:52,240 --> 00:28:54,559
+and in particular on sex differences in
+
+778
+00:28:54,559 --> 00:28:56,399
+depression and she's going to talk about
+
+779
+00:28:56,399 --> 00:28:59,600
+this towards the end of the course
+
+780
+00:28:59,600 --> 00:29:02,480
+kelly brownell
+
+781
+00:29:02,480 --> 00:29:05,120
+is going to talk is the head of the rudd
+
+782
+00:29:05,120 --> 00:29:06,480
+center
+
+783
+00:29:06,480 --> 00:29:09,120
+focuses on obesity eating disorders
+
+784
+00:29:09,120 --> 00:29:10,960
+dieting and he'll talk about the
+
+785
+00:29:10,960 --> 00:29:12,960
+psychology of food
+
+786
+00:29:12,960 --> 00:29:15,679
+and finally
+
+787
+00:29:18,240 --> 00:29:21,600
+dr peter salovey dean of yale college is
+
+788
+00:29:21,600 --> 00:29:24,080
+going to come to us on valentine's day
+
+789
+00:29:24,080 --> 00:29:25,120
+and tell us
+
+790
+00:29:25,120 --> 00:29:26,880
+everything he knows about the mysteries
+
+791
+00:29:26,880 --> 00:29:29,440
+of love
+
+792
+00:29:30,000 --> 00:29:32,240
+all of these details are in the syllabus
+
+793
+00:29:32,240 --> 00:29:34,159
+um and i'll stick around and answer
+
+794
+00:29:34,159 --> 00:29:38,200
+questions hope to see you next week
+
