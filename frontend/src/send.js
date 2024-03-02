@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 
-function YouTubeLinkSender() {
-    const [input, setInput] = useState("");
+function VideoUploader() {
+    const [file, setFile] = useState(null);
     const [response, setResponse] = useState("");
 
-    const youtubeLinkRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    async function uploadVideo(file) {
+        const formData = new FormData();
+        formData.append("video", file);
 
-    async function sendYouTubeLink(link) {
         try {
-            const response = await fetch('http://127.0.0.1:8000/test', {
+            const response = await fetch('http://127.0.0.1:8000/upload', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ x: link }),
+                body: formData, // FormData will set the `Content-Type` to `multipart/form-data` and include the boundary automatically
             });
             const data = await response.json();
             setResponse(data.message);
@@ -24,30 +22,32 @@ function YouTubeLinkSender() {
     }
 
     function inputChanged(e) {
-        const value = e.target.value;
-        setInput(value);
+        // Check if user has selected a file and set it to state
+        if (e.target.files.length > 0) {
+            setFile(e.target.files[0]);
+        }
     }
 
-    function handleSendClick() {
-        if (youtubeLinkRegex.test(input)) {
-            sendYouTubeLink(input);
+    function handleUploadClick() {
+        if (file && file.type === "video/mp4") {
+            uploadVideo(file);
+            setResponse("file uploaded");
         } else {
-            setResponse("Invalid YouTube link.");
+            setResponse("Please select a valid MP4 video file.");
         }
     }
 
     return (
         <>
             <input
-                type="text"
-                value={input}
+                type="file"
                 onChange={inputChanged}
-                placeholder="Paste a YouTube link here..."
+                accept="video/mp4"
             />
-            <button onClick={handleSendClick}>Send Link</button>
+            <button onClick={handleUploadClick}>Upload Video</button>
             <p>{response}</p>
         </>
     );
 }
 
-export default YouTubeLinkSender;
+export default VideoUploader;
