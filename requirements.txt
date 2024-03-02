@@ -3,4 +3,4 @@ uvicorn
 transformers
 tiktoken
 openai
-dotenv
+python-dotenv

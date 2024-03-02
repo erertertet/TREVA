@@ -144,32 +144,9 @@ class AICaller:
 
         return completion.choices[0].message.content
 
-def test_token_length(m, n):
-    counter = TokenCounter("cl100k_base")
-    a = SrtFile("./backend/model/test.srt")
-    windows = a.generate_slices(counter, m, n)
-    print(windows)
-    for window in windows:
-        lst = a.get_slice(*window)
-        lst = [item[2] for item in lst]
-        assert counter.count_tokens(lst) <= m
 
-    for i in range(len(windows) - 1):
-        l, r = windows[i + 1][0], windows[i][1]
-        lst = a.get_slice(l, r)
-        lst = [item[2] for item in lst]
-        assert counter.count_tokens(lst) >= n
 
-if __name__ == "__main__":
-    # TokenCounter test
-    test_token_length(100, 20)
-
-    # with open("./backend/model/test.srt", "r") as file:
-    #     counter = TokenCounter()
-    #     text_list = counter.reader(file)
-    #     counter.create_batches(text_list, 100, 10)
-        
-    # AICaller test
+def test_ai():
     text_text = """
     Professor Paul Bloom:
 What we've been talking about
@@ -238,15 +215,20 @@ Well, there's all sorts of ways.
 Your sexual identity--It is at
 """
     assistant = AICaller()
+    print(assistant.api_key)
     result = assistant.common_sentence_connect(
         text_text
     )
     print (result)
 
-# Example usage:
-# sentences = ["Your sentences go here.", "Another one here."]
-# Define your tokenizer function based on your specific requirements
-# tokenizer = your_tokenizer_function
-# max_tokens_per_batch = 512  # For example
-# min_overlap = 50  # For example
-# batches = create_batches(sentences, tokenizer, max_tokens_per_batch, min_overlap)
+if __name__ == "__main__":
+    pass
+    # test_token_length(100, 20)
+    # test_ai()
+
+    # with open("./backend/model/test.srt", "r") as file:
+    #     counter = TokenCounter()
+    #     text_list = counter.reader(file)
+    #     counter.create_batches(text_list, 100, 10)
+        
+    # AICaller test
