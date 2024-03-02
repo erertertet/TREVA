@@ -1,4 +1,4 @@
-from util import *
+from utils import *
 
 def generate_punctuated_info(srt_file: SrtFile, sliding_window: list[(int, int)]):
     pass
