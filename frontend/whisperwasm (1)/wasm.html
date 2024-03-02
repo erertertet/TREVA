@@ -94,10 +94,7 @@
                 <input type="file" id="file" name="file" onchange="loadAudio(event)" />
             </div>
 
-            <div id="input_mic" style="display: none;">
-                Microphone:
-                <button id="start" onclick="startRecording()">Start</button>
-                <button id="stop" onclick="stopRecording()" disabled>Stop</button>
+
 
                 <!-- progress bar to show recording progress -->
                 <br><br>
@@ -262,7 +259,7 @@
 
             // the whisper instance
             var instance = null;
-            var model_whisper = '';
+            var model_whisper = 'tiny';
 
             // helper function
             function convertTypedArray(src, type) {
