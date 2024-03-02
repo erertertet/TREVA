@@ -1,5 +1,6 @@
 import tiktoken
 
+
 class TokenCounter:
     def __init__(self) -> None:
         self.TOKENER = tiktoken.get_encoding("cl100k_base")
@@ -8,11 +9,11 @@ class TokenCounter:
         # Tokenize sentences and calculate their lengths
         tokenized_sentences = [self.TOKENER.encode(sentence) for sentence in sentences]
         sentence_lengths = [len(tokens) for tokens in tokenized_sentences]
-        
+
         batches = []
 
         print(len(tokenized_sentences))
-        
+
         ptr = 0
         current_length = 0
 
@@ -34,7 +35,7 @@ class TokenCounter:
                 start = ptr
 
             ptr += 1
-        
+
         return batches
 
     def reader(self, file):
@@ -42,26 +43,30 @@ class TokenCounter:
         lines = file.readlines()[2::4]
         return list(map(lambda x: x[:-1], lines))
 
+
 class SrtFile:
-    # 
-    def __init__(self) -> None:
-        ...
-    
+    def __init__(self, filename=None) -> None:
+        self.content = []
+        pass
+
     def read_file(self, filename):
         # read and parse
-        ...
-    
+        pass
+
     def get(self, id):
-        ...
-    
+        pass
+
     def get_slice():
-        ...
+        pass
+
 
 class AICaller:
     def __init__(self) -> None:
         pass
+
     def send():
-        ...
+        pass
+
 
 if __name__ == "__main__":
     with open("./backend/model/test.srt", "r") as file:
