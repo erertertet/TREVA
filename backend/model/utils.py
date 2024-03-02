@@ -59,7 +59,6 @@ class TokenCounter:
         return batches
 
     def reader(self, file):
-        # TODO : check srt spec
         lines = file.readlines()[2::4]
         return list(map(lambda x: x[:-1], lines))
 
@@ -99,6 +98,8 @@ class AICaller:
     def __init__(self, provider="OPENAI", model="gpt-3.5-turbo") -> None:
         if provider == "OPENAI":
             self.provider = provider
+            # Read environment variables from .env file
+            dotenv.load_dotenv()
             self.api_key = os.environ.get("OPENAI_API_KEY")
             self.model = model
             self.settings = GLOBAL_DEFAULT_SETTINGS
