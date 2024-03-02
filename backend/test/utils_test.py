@@ -1,15 +1,12 @@
 import sys
 from pathlib import Path
 
-# Add the parent directory of the current script to sys.path
 current_dir = Path(__file__).parent
 parent_dir = current_dir.parent
 model_dir = parent_dir / 'model'
 sys.path.append(str(model_dir))
 
-# Now you can import the test module
 from utils import *
-from sliding_window import *
 
 def test_token_length(m, n):
     counter = TokenCounter("cl100k_base")

@@ -1,10 +1,10 @@
 import sys
-import os
-# Get the parent directory path
-parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
 
-# Add the parent directory to the Python path
-sys.path.append(parent_dir)
+current_dir = Path(__file__).parent
+parent_dir = current_dir.parent
+model_dir = parent_dir / 'model'
+sys.path.append(str(model_dir))
 
-from model import utils
-from model import sliding_window
+from utils import *
+from sliding_window import *
