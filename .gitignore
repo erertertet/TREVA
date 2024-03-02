@@ -1,2 +1,6 @@
 frontend/node_modules/
 backend/__pycache__/
+
+.env
+.vscode
+backend/model/__pycache__
