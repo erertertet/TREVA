@@ -2,6 +2,8 @@ import os
 import tornado.ioloop
 import tornado.web
 
+from model.utils import *
+
 class FileUploadHandler(tornado.web.RequestHandler):
     def set_default_headers(self):
         # Set CORS headers
@@ -13,9 +15,13 @@ class FileUploadHandler(tornado.web.RequestHandler):
         files = self.request.files["file"]
         for f in files:
             filename = f["filename"]
-            with open(os.path.join("uploads", filename), "wb") as out_file:
+            storing = os.path.join("uploads", filename)
+            with open(storing, "wb") as out_file:
                 out_file.write(f["body"])
+            a = SrtFile(storing)
+            print(a.content)
         self.write({"status": "success", "message": f"Uploaded {len(files)} files."})
+
 
     def options(self):
         # No body

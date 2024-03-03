@@ -74,7 +74,7 @@ class SrtFile:
             lines = file.readlines()
             temp = []
             for line in lines:
-                if line == "\n":
+                if line == "\n" and len(temp) >= 3:
                     self.content.append(self.parse_line(temp))
                     temp = []
                     continue
