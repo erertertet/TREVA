@@ -161,3 +161,4 @@ cython_debug/
 #.idea/
 
 full_text.txt
+punctuation_info.txt
