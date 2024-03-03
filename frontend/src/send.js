@@ -31,7 +31,7 @@ function VideoUploader() {
     function handleUploadClick() {
         if (file && file.type === "video/mp4") {
             uploadVideo(file);
-            setResponse("file uploaded");
+            setResponse("file uploaded")
         } else {
             setResponse("Please select a valid MP4 video file.");
         }
