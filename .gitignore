@@ -4,6 +4,7 @@ model_test
 frontend/.env
 backend/.env
 .vscode/
+<<<<<<< HEAD
 frontend/node_modules/
 backend/__pycache__/
 backend/model/__pycache__
@@ -11,3 +12,9 @@ backend/uploads/*
 backend/parsed/*
 
 ya-frontend/node_modules/
+=======
+
+ya-frontend/node_modules
+backend/parsed/*
+backend/uploads/*
+>>>>>>> model-dev

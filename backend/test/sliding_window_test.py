@@ -1,5 +1,6 @@
 import sys
 from pathlib import Path
+import multiprocessing
 
 current_dir = Path(__file__).parent
 parent_dir = current_dir.parent
@@ -45,4 +46,9 @@ from sliding_window import *
 # print(merge_sliding_windows(punctuation_info, windows))
 
 # * basic generator test
-bg = basic_generate("../backend/test/test.srt")
+if __name__ == "__main__":
+    pool = multiprocessing.Pool(processes=8)
+    bg = basic_generate("../backend/test/small_test.srt", pool)
+    print(bg)
+    with open("full_text.txt", "w") as file:
+        file.write(str(bg))

@@ -6,22 +6,17 @@ import re
 import multiprocessing
 
 
-def basic_generate(srt_file_path):
+def basic_generate(srt_file_path, pool=None):
     srt_file = SrtFile(srt_file_path)
     counter = TokenCounter("cl100k_base")
     windows = srt_file.generate_slices(counter, 200, 40)
-    punctuation_info = generate_punctuated_info(srt_file, windows)
+    punctuation_info = generate_punctuated_info(srt_file, windows, pool)
     # with open("punctuation_info.txt", "w") as file:
     #     file.write(str(punctuation_info))
-    list1 = punctuation_info[0]
-    list2 = punctuation_info[1]
-
-    final_list1, final_list2 = merge_sliding_windows(punctuation_info, windows)
-    full_text = direct_connnect(final_list1, final_list2)
-    
+    single_sentence, time_range = merge_sliding_windows(srt_file, punctuation_info, windows)
     # with open("full_text.txt", "w") as file:
     #     file.write(full_text)
-    return full_text
+    return (single_sentence, time_range)
 
 
 def edit_distance(str1, str2):
@@ -141,6 +136,7 @@ def allocate_sentence_in_annotated_text(
     origin_text = pure_letter_origin_text
     # use the first word as the flag word
     flag_word = origin_text.split()[0]
+    split_annotated_text = annotated_text.split()
 
     # * Initialize the variables
     # scan_index, index in the annotated text
@@ -166,12 +162,12 @@ def allocate_sentence_in_annotated_text(
     # and then, it moves future, the match ratio will decrease again. We call this the match region, and use match_region
     # to record it
     while scan_index < annotated_text_word_count:
-        word_count_delta = 3
+        word_count_delta = 2
         best_dist = 100000
         best_word_count = 0
         word_count_begin = word_count - word_count_delta
         word_count_end = word_count + word_count_delta
-        if edit_distance(flag_word, annotated_text.split()[scan_index]) > max(
+        if edit_distance(flag_word, split_annotated_text[scan_index]) > max(
             5, len(flag_word)
         ):
             scan_index += 1
@@ -215,14 +211,14 @@ def allocate_sentence_in_annotated_text(
     final_end_index = -1
     # Use same algorithm as step 1
     while scan_index < annotated_text_word_count:
-        word_count_delta = 3
+        word_count_delta = 2
         best_score = 0
         best_word_count = 0
         word_count_begin = word_count - word_count_delta
         word_count_end = word_count + word_count_delta
         # word delta measn we are not really sure about how many words in the sentence
         # so we need to try a range of word count
-        if edit_distance(flag_word, annotated_text.split()[scan_index]) > max(
+        if edit_distance(flag_word, split_annotated_text[scan_index]) > max(
             5, len(flag_word)
         ):
             scan_index += 1
@@ -387,7 +383,7 @@ def direct_connnect(annotated_srt, srt_relations):
 
 
 def generate_punctuated_info(
-    srt_file: SrtFile, sliding_windows: List[Tuple[int, int]]
+    srt_file: SrtFile, sliding_windows: List[Tuple[int, int]], pool=None
 ):
     # @ generate the punctuated info for the sliding windows
     # @ input:
@@ -397,15 +393,34 @@ def generate_punctuated_info(
     # @ output:
     # @ - the punctuated info for the sliding windows, List[Tuple[List[str], List[str]]], each item is a tuple,
     result = []
+    if pool is None:
+        print("Single process")
+        # Run it in a single process
+        for window in sliding_windows:
+            result.append(
+                generate_single_sliding_window_annotation_info(
+                    srt_file, window[0], window[1]
+                )
+            )
+        return result
+    
+    # Create a multiprocessing pool with the number of available CPUs
+    # Use the pool to parallelize the generation of punctuated info for each sliding window
     for window in sliding_windows:
-        annotated_srt, srt_relations = generate_single_sliding_window_annotation_info(
-            srt_file, window[0], window[1]
-        )
-        result.append((annotated_srt, srt_relations))
+        # Apply the generate_single_sliding_window_annotation_info function to each sliding window
+        # and store the result in the result list
+        result.append(pool.apply_async(generate_single_sliding_window_annotation_info, (srt_file, window[0], window[1])))
+    
+    # Close the pool and wait for all processes to finish
+    pool.close()
+    pool.join()
+    # Retrieve the results from the multiprocessing pool
+    result = [res.get() for res in result]
+    print()
     return result
 
 
-def merge_sliding_windows(windows, windows_slice):
+def merge_sliding_windows(srt_file, windows, windows_slice):
     # @ merge the sliding windows
     # @ input:
     # @ - windows: the windows, List[Tuple[List[str], List[str]]], each item is a tuple, represents the
@@ -432,19 +447,18 @@ def merge_sliding_windows(windows, windows_slice):
     for annotated_sentences, (l, r) in zip(windows[::-1], windows_slice[::-1]):
         for i in range(l, r):
             all_sentences[i] = annotated_sentences[0][i - l]
-            print(i - l, annotated_sentences)
         for i in range(l, r - 1):
             if i in all_connections:
-                if (
-                    all_connections[i],
-                    annotated_sentences[1][i - l],
-                ) in HIER_DCT:
+                if all_connections[i] != "\n" and annotated_sentences[1][i - l] == "\n":
                     continue
             all_connections[i] = annotated_sentences[1][i - l]
 
     num = max(all_sentences)
 
+    for i in range(num - 1):
+        all_sentences[i] = all_sentences[i] + all_connections[i]
+        
     return (
         [all_sentences[i] for i in range(num)],
-        [all_connections[i] for i in range(num - 1)],
+        [(srt_file.content[i][0], srt_file.content[i + 1][0]) for i in range(num)],
     )
