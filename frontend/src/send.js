@@ -6,12 +6,12 @@ function VideoUploader() {
 
     async function uploadVideo(file) {
         const formData = new FormData();
-        formData.append("video", file);
+        formData.append("file", file);
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/upload', {
+            const response = await fetch('http://localhost:8000/upload', {
                 method: 'POST',
-                body: formData, // FormData will set the `Content-Type` to `multipart/form-data` and include the boundary automatically
+                body: formData,
             });
             const data = await response.json();
             setResponse(data.message);
@@ -29,7 +29,8 @@ function VideoUploader() {
     }
 
     function handleUploadClick() {
-        if (file && file.type === "video/mp4") {
+        console.log(file.type)
+        if (file) {
             uploadVideo(file);
             setResponse("file uploaded")
         } else {
@@ -42,7 +43,7 @@ function VideoUploader() {
             <input
                 type="file"
                 onChange={inputChanged}
-                accept="video/mp4"
+                accept="multipart/form-data"
             />
             <button onClick={handleUploadClick}>Upload Video</button>
             <p>{response}</p>

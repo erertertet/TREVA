@@ -3,3 +3,4 @@ backend/__pycache__/
 .vscode
 backend/model/__pycache__
 .env
+backend/uploads/*
