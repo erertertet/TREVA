@@ -342,6 +342,10 @@ def generate_single_sliding_window_annotation_info(
             annotated_srt[i] = srt_file.get(i)
             srt_ranges[i] = (str_begin_index, str_end_index)
 
+    # * Step 3: get the relations between the annotated srt
+    # * For example, we have 2 sentences, (word_index_left1, word_index_right1) and (word_index_left2, word_index_right2)
+    # * we convert the word index to the str index, and then we get the punctuation between the 2 sentences
+    # * in another word, range = (word_range[word_index_right1].right, word_range[word_index_left2].left)
     for i in range(len(srt_ranges) - 1):
         # put the punctuation between 2 sentences
         sentence_end_index = srt_ranges[i][1]
@@ -355,6 +359,14 @@ def generate_single_sliding_window_annotation_info(
 
 
 def direct_connnect(annotated_srt, srt_relations):
+    # @ direct connect the annotated srt and srt relations
+    # @ input:
+    # @ - annotated_srt: the annotated srt, List[str], each item is a string, comes from the srt.content,
+    # @                  but with the correct punctuation
+    # @ - srt_relations: the relations between the annotated srt, List[str], each item is a string, represents the
+    # @                  punctuation between 2 sentences
+    # @ output:
+    # @ - the direct connected annotated srt, str
     result = ""
     for i in range(len(annotated_srt)):
         result += annotated_srt[i]
@@ -366,10 +378,23 @@ def direct_connnect(annotated_srt, srt_relations):
 def generate_punctuated_info(
     srt_file: SrtFile, sliding_windows: List[Tuple[int, int]]
 ):
-    assistant = AICaller()
-
+    # @ generate the punctuated info for the sliding windows
+    # @ input:
+    # @ - srt_file: the srt file
+    # @ - sliding_windows: the sliding windows, List[Tuple[int, int]], each item is a tuple, represents the
+    # @                    begin index and end index of the sliding window
+    # @ output:
+    # @ - the punctuated info for the sliding windows, List[Tuple[List[str], List[str]]], each item is a tuple,
+    result = []
+    for window in sliding_windows:
+        annotated_srt, srt_relations = generate_single_sliding_window_annotation_info(
+            srt_file, window[0], window[1]
+        )
+        result.append(annotated_srt, srt_relations)
+    return result
 
 def merge_sliding_windows(srt_file: SrtFile, windows, windows_slice):
+    # @ merge the sliding windows
     # Assumption: windows is in the format of
     # [([annotated sentences], [annotations])]
     # windows_slice is in the form of [(l, r)]
