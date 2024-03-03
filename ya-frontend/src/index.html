@@ -4,22 +4,29 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Base - Tailwind CSS Startup Template</title>
+  <title>T.R.E.V.A Your new transcription system</title>
+  <link rel="icon" href="./images/logo/logo_light.svg" type="./images/logo/logo_light.svg" />
+
 </head>
-<body x-data="{ page: 'home', darkMode: true, stickyMenu: false, navigationOpen: false, scrollTop: false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode')); $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))" :class="{'dark bg-black': darkMode === true}">  <!-- ===== Header Start ===== -->
+<body x-data="{ page: 'home', darkMode: true, stickyMenu: false, navigationOpen: false, scrollTop: false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode')); $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))" :class="{'dark bg-black': darkMode === true}">  
+  <!-- ===== Header Start ===== -->
   <include src="./partials/header.html" />
   <!-- ===== Header End ===== -->
 
   <main>
     <section class="pt-35 md:pt-40 xl:pt-52 pb-20 lg:pb-30 xl:pb-59 relative overflow-hidden">
       <div class="mt-32 bg-gray-200 dark:bg-gray-800 p-10 rounded-lg shadow-lg relative">
-        <input type="file" id="fileInput" class="hidden" />
-        <button type="button" :class="{'bg-blue-500 hover:bg-blue-600 text-white': !darkMode, 'bg-white hover:bg-gray-200 text-black': darkMode}" class="py-2 px-4 flex justify-center items-center focus:ring-2 focus:ring-offset-2 rounded-lg transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none w-full" onclick="document.getElementById('fileInput').click();">
-          <svg width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1344 1472q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h427q21 56 70.5 92t110.5 36h256q61 0 110.5-36t70.5-92h427q40 0 68 28t28 68zm-325-648q-17 40-59 40h-256v448q0 26-19 45t-45 19h-256q-26 0-45-19t-19-45v-448h-256q-42 0-59-40-17-39 14-69l448-448q18-19 45-19t45 19l448 448q31 30 14 69z"></path>
-          </svg>
-          Upload
-        </button>
+        <!-- File input and upload button -->
+        <label for="fileInput" class="cursor-pointer">
+          <input type="file" id="fileInput" class="hidden" @change="handleFileUpload($event)" />
+          <button type="button" :class="{'bg-blue-500 hover:bg-blue-600 text-white': !darkMode, 'bg-white hover:bg-gray-200 text-black': darkMode}" class="py-2 px-4 flex justify-center items-center focus:ring-2 focus:ring-offset-2 rounded-lg transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none w-full">
+            <svg width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1344 1472q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h427q21 56 70.5 92t110.5 36h256q61 0 110.5-36t70.5-92h427q40 0 68 28t28 68zm-325-648q-17 40-59 40h-256v448q0 26-19 45t-45 19h-256q-26 0-45-19t-19-45v-448h-256q-42 0-59-40-17-39 14-69l448-448q18-19 45-19t45 19l448 448q31 30 14 69z"></path>
+            </svg>
+            Upload
+          </button>
+        </label>
+        <!-- Placeholder for drag and drop -->
         <div class="absolute -bottom-10 left-0 right-0 bg-gray-300 dark:bg-gray-700 p-5 rounded-lg shadow-lg transform translate-y-1/2">
           <p class="text-center text-sm text-gray-900 dark:text-white">Drag and drop files here</p>
         </div>
@@ -34,5 +41,15 @@
   <!-- ====== Back To Top Start ===== -->
   <include src="./partials/scrolltop.html" />
   <!-- ====== Back To Top End ===== -->
+
+  <script>
+    function handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        // You can perform actions with the uploaded file here
+        console.log("File uploaded:", file);
+      }
+    }
+  </script>
 </body>
 </html>
