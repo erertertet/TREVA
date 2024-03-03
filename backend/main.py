@@ -4,13 +4,15 @@ import tornado.web
 import uuid
 
 from model.utils import *
+from model.sliding_window import *
 import asyncio
 
 
 async def process_file(filename):
+    txt = basic_generate(filename)
     parsed_name = uuid.uuid1()
     with open("./parsed/%s.txt" % parsed_name, "w") as file:
-        file.write("233333")
+        file.write(txt)
     return parsed_name
 
 
@@ -33,7 +35,7 @@ class FileUploadHandler(BaseHandler):
                 out_file.write(f["body"])
             a = SrtFile(storing)
             print(a.content)
-            resulting = await process_file("11233")
+            resulting = await process_file(storing)
             # a hypothetical model
             await asyncio.sleep(10)
         self.write(

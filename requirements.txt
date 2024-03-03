@@ -6,3 +6,4 @@ transformers
 tiktoken
 openai
 python-dotenv
+thefuzz

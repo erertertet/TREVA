@@ -1,4 +1,4 @@
-from utils import *
+from model.utils import *
 from itertools import combinations, product
 from typing import List, Tuple
 from thefuzz import fuzz
