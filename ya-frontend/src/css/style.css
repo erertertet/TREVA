@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* third-party libraries CSS */
+
+#supportCheckbox:checked ~ div span {
+  @apply opacity-100;
+}
+
+@layer base {
+  body {
+    @apply font-inter font-normal text-regular text-body relative z-1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit;
+  }
+}
+
+@layer components {
+  .dropdown {
+    @apply flex-col gap-4 min-w-max lg:w-[250px] mt-2 lg:mt-0 bg-white dark:bg-black border border-strokedark dark:border-stroke shadow-lg ease-in duration-300 px-8 py-5 rounded-md -left-7.5 hidden
+    lg:translate-y-10 lg:opacity-0 lg:invisible lg:absolute lg:flex
+    lg:before:absolute lg:before:-top-1.5 lg:before:left-10 lg:before:w-3 lg:before:h-3 lg:before:border-l lg:before:border-t lg:before:border-strokedark lg:dark:before:border-stroke lg:before:bg-white lg:dark:before:bg-black lg:before:rotate-45
+    lg:group-hover:translate-y-6.5 lg:group-hover:opacity-100 lg:group-hover:visible;
+  }
+
+  .project-sizer {
+  @apply w-full md:w-1/2 lg:w-1/3;
+}
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .img-white {
+    filter: invert(0%) sepia(96%) saturate(15%) hue-rotate(249deg) brightness(100%) contrast(105%);
+  }
+}

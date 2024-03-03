@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Grids | Base - Tailwind CSS Startup Template</title>
+  </head>
+  <body
+    x-data="{ page: 'blog-grid', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'ud-dark ud-bg-black': darkMode === true}"
+  >
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Blog Grid Start ===== -->
+      <section class="ud-py-20 lg:ud-py-25 xl:ud-py-30">
+        <div class="ud-mx-auto ud-max-w-1280 ud-px-4 md:ud-px-8 xl:ud-px-0 ud-mt-12.5 lg:ud-mt-17.5">
+          <div class="ud-grid ud-grid-cols-1 md:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-7.5 xl:ud-gap-10">
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-01.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-02.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-03.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-01.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-02.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-03.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="ud-mt-10 lg:ud-mt-15 xl:ud-mt-20 ud-relative ud-z-1">
+            <nav>
+              <ul class="ud-flex ud-items-center ud-justify-center ud-gap-3">
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-full ud-text-xs md:ud-text-base ud-shadow-6 dark:ud-shadow-none ud-ease-in-out ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white dark:hover:ud-text-white"
+                    href="#"
+                  >
+                    <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.93884 6.99999L7.88884 11.95L6.47484 13.364L0.11084 6.99999L6.47484 0.635986L7.88884 2.04999L2.93884 6.99999Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-full ud-text-xs md:ud-text-base ud-shadow-6 dark:ud-shadow-none ud-ease-in-out ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white dark:hover:ud-text-white"
+                    href="#"
+                  >
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-full ud-text-xs md:ud-text-base ud-shadow-6 dark:ud-shadow-none ud-ease-in-out ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white dark:hover:ud-text-white"
+                    href="#"
+                  >
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-full ud-text-xs md:ud-text-base ud-shadow-6 dark:ud-shadow-none ud-ease-in-out ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white dark:hover:ud-text-white"
+                    href="#"
+                  >
+                    4
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-full ud-text-xs md:ud-text-base ud-shadow-6 dark:ud-shadow-none ud-ease-in-out ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white dark:hover:ud-text-white"
+                    href="#"
+                  >
+                    ...
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-full ud-text-xs md:ud-text-base ud-shadow-6 dark:ud-shadow-none ud-ease-in-out ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white dark:hover:ud-text-white"
+                    href="#"
+                  >
+                    12
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-full ud-text-xs md:ud-text-base ud-shadow-6 dark:ud-shadow-none ud-ease-in-out ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white dark:hover:ud-text-white"
+                    href="#"
+                  >
+                    <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.06067 7.00001L0.110671 2.05001L1.52467 0.636014L7.88867 7.00001L1.52467 13.364L0.110672 11.95L5.06067 7.00001Z" fill="#fefdfo" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Pagination -->
+        </div>
+      </section>
+      <!-- ===== Blog Grid End ===== -->
+
+      <!-- ===== CTA Start ===== -->
+      <include src="./partials/cta.html" />
+      <!-- ===== CTA End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

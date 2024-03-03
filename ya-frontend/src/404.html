@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Base - Tailwind CSS Startup Template</title>
+  </head>
+  <body
+    x-data="{ page: '404', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark bg-black': darkMode === true}"
+  >
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== 404 Start ===== -->
+      <section class="relative overflow-hidden bg-whiter dark:bg-blacksection pt-40 lg:pt-50 xl:pt-60 pb-25 lg:pb-32.5 xl:pb-37.5">
+        <!-- Bg Shapes -->
+        <img src="./images/shape/shape-06.svg" alt="Shape" class="absolute top-[30%] left-[2%]">
+        <img src="./images/shape/shape-03.svg" alt="Shape" class="absolute bottom-[40%] right-[15%]">
+        <img src="./images/shape/shape-17.svg" alt="Shape" class="absolute bottom-[5%] right-[2%]">
+        <img src="./images/shape/shape-18.svg" alt="Shape" class="absolute bottom-0 right-0">
+
+        <div class="animate_top mx-auto max-w-[518px] text-center">
+          <img src="./images/shape/404.svg" alt="404" class="mx-auto mb-10" />
+
+          <h2 class="font-medium text-2xl md:text-4xl text-black dark:text-white mb-5">Sorry, the page can’t be found</h2>
+          <p class="mb-8.5">The page you were looking for appears to have been moved, deleted or does not exist.</p>
+
+          <a href="./index.html" class="font-medium inline-flex rounded-full bg-primary text-white ease-in-out duration-300 hover:shadow-1 py-3 px-7.5">Back to Home</a>
+        </div>
+      </section>
+      <!-- ===== 404 End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

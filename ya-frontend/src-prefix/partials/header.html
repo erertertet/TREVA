@@ -1,0 +1,86 @@
+<header
+  class="ud-fixed ud-left-0 ud-top-0 ud-w-full ud-z-99999 ud-py-7"
+  :class="{ 'ud-bg-white dark:ud-bg-black ud-shadow !ud-py-4 ud-transition ud-duration-100' : stickyMenu }"
+  @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
+>
+  <div class="ud-mx-auto ud-max-w-1390 ud-px-4 md:ud-px-8 2xl:ud-px-0 lg:ud-flex ud-items-center ud-justify-between ud-relative">
+    <div class="ud-w-full lg:ud-w-1/4 ud-flex ud-items-center ud-justify-between">
+      <a href="index.html">
+        <img class="dark:ud-hidden" src="./images/logo/logo-light.svg" alt="Logo Light" />
+        <img class="ud-hidden dark:ud-block" src="./images/logo/logo-dark.svg" alt="Logo Dark" />
+      </a>
+
+      <!-- Hamburger Toggle BTN -->
+      <button class="lg:ud-hidden ud-block" @click="navigationOpen = !navigationOpen">
+        <span class="ud-block ud-relative ud-cursor-pointer ud-w-5.5 ud-h-5.5">
+          <span class="du-block ud-absolute ud-right-0 ud-w-full ud-h-full">
+            <span class="ud-block ud-relative ud-top-0 ud-left-0 ud-bg-black dark:ud-bg-white ud-rounded-sm ud-w-0 ud-h-0.5 ud-my-1 ud-ease-in-out ud-duration-200 ud-delay-[0]" :class="{ '!ud-w-full ud-delay-300': !navigationOpen }"></span>
+            <span class="ud-block ud-relative ud-top-0 ud-left-0 ud-bg-black dark:ud-bg-white ud-rounded-sm ud-w-0 ud-h-0.5 ud-my-1 ud-ease-in-out ud-duration-200 ud-delay-150" :class="{ '!ud-w-full ud-delay-400': !navigationOpen }"></span>
+            <span class="ud-block ud-relative ud-top-0 ud-left-0 ud-bg-black dark:ud-bg-white ud-rounded-sm ud-w-0 ud-h-0.5 ud-my-1 ud-ease-in-out ud-duration-200 ud-delay-200" :class="{ '!ud-w-full ud-delay-500': !navigationOpen }"></span>
+          </span>
+          <span class="du-block ud-absolute ud-right-0 ud-w-full ud-h-full ud-rotate-45">
+            <span class="ud-block ud-bg-black dark:ud-bg-white ud-rounded-sm ud-ease-in-out ud-duration-200 ud-delay-300 ud-absolute ud-left-2.5 ud-top-0 ud-w-0.5 ud-h-full" :class="{ 'ud-h-0 ud-delay-[0]': !navigationOpen }"></span>
+            <span class="ud-block ud-bg-black dark:ud-bg-white ud-rounded-sm ud-ease-in-out ud-duration-200 ud-delay-400 ud-absolute ud-left-0 ud-top-2.5 ud-w-full ud-h-0.5" :class="{ 'ud-h-0 ud-dealy-200': !navigationOpen }"></span>
+          </span>
+        </span>
+      </button>
+      <!-- Hamburger Toggle BTN -->
+    </div>
+
+    <div
+      class="ud-w-full lg:ud-w-3/4 ud-h-0 lg:ud-h-auto ud-invisible lg:ud-visible lg:ud-flex ud-items-center ud-justify-between"
+      :class="{ '!ud-visible ud-bg-white dark:ud-bg-blacksection ud-shadow-solid-5 !ud-h-auto ud-max-h-[400px] ud-overflow-y-scroll ud-rounded-md ud-mt-4 ud-p-7.5': navigationOpen }"
+    >
+      <nav>
+        <ul class="ud-flex lg:ud-items-center ud-flex-col lg:ud-flex-row ud-gap-5 lg:ud-gap-10">
+          <li><a href="index.html" class="hover:ud-text-primary" :class="{ 'ud-text-primary': page === 'home' }">Home</a></li>
+          <li><a href="index.html#features" class="hover:ud-text-primary">Features</a></li>
+          <li class="ud-group ud-relative" x-data="{ dropdown: false }">
+            <a
+              href="#"
+              class="hover:ud-text-primary ud-flex ud-items-center ud-justify-between ud-gap-3"
+              @click.prevent="dropdown = !dropdown"
+              :class="{ 'ud-text-primary': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+            >
+              Pages
+
+              <svg
+              :class="{ 'ud-fill-primary': dropdown }"
+              class="ud-fill-body group-hover:ud-fill-primary ud-w-3 ud-h-3 ud-cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+              </svg>
+            </a>
+
+            <!-- Dropdown Start -->
+            <ul class="ud-dropdown" :class="{ 'ud-flex': dropdown }">
+              <li><a href="blog-grid.html" class="hover:ud-text-primary" :class="{ 'ud-text-primary': page === 'blog-grid' }">Blog Grid</a></li>
+              <li><a href="blog-single.html" class="hover:ud-text-primary" :class="{ 'ud-text-primary': page === 'blog-single' }">Blog Single</a></li>
+              <li><a href="signin.html" class="hover:ud-text-primary" :class="{ 'ud-text-primary': page === 'signin' }">Sign In</a></li>
+              <li><a href="signup.html" class="hover:ud-text-primary" :class="{ 'ud-text-primary': page === 'signup' }">Sign Up</a></li>
+              <li><a href="404.html" class="hover:ud-text-primary" :class="{ 'ud-text-primary': page === '404' }">404</a></li>
+            </ul>
+            <!-- Dropdown End -->
+          </li>
+          <li><a href="index.html#support" class="hover:ud-text-primary">Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="ud-flex ud-items-center ud-gap-6 ud-mt-7 lg:ud-mt-0">
+        <div class="ud-mr-1.5 ud-absolute lg:ud-static ud-top-2.5 ud-right-17" :class="navigationOpen ? '!-ud-visible' : '!ud-visible'">
+          <label class="ud-block ud-m-0 ud-relative">
+            <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="ud-cursor-pointer ud-w-full ud-h-full ud-opacity-0 ud-absolute ud-top-0 ud-z-50 ud-m-0" />
+            <!-- Icon Sun -->
+            <svg :class="{ 'md:ud-fill-white' : page === 'home', '!ud-fill-body' : page === 'home' && stickyMenu }" class="ud-fill-body dark:ud-hidden" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill=""/>
+            </svg>
+            <!-- Icon Sun -->
+            <img class="ud-hidden dark:ud-block" src="./images/icon/icon-moon.svg" alt="Moon" />
+          </label>
+        </div>
+
+        <a href="signin.html" :class="{ '!ud-text-white hover:ud-text-white' : page === 'home', '!ud-text-body' : page === 'home' && stickyMenu }" class="ud-font-medium ud-text-body hover:ud-text-primary">Sign In</a>
+        <a href="signup.html" :class="{ 'ud-bg-white/[0.15]' : page === 'home', '!ud-bg-primary' : page === 'home' && stickyMenu }" class="ud-text-white ud-bg-primary ud-text-regular ud-rounded-full ud-flex ud-items-center ud-justify-center hover:ud-shadow-1 ud-py-3 ud-px-7.5">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</header>

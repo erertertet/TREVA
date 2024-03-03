@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Base - Tailwind CSS Startup Template</title>
+  </head>
+  <body
+    x-data="{ page: '404', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'ud-dark ud-bg-black': darkMode === true}"
+  >
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== 404 Start ===== -->
+      <section class="ud-relative ud-overflow-hidden ud-bg-whiter dark:ud-bg-blacksection ud-pt-40 lg:ud-pt-50 xl:ud-pt-60 ud-pb-25 lg:ud-pb-32.5 xl:ud-pb-37.5">
+        <!-- Bg Shapes -->
+        <img src="./images/shape/shape-06.svg" alt="Shape" class="ud-absolute ud-top-[30%] ud-left-[2%]">
+        <img src="./images/shape/shape-03.svg" alt="Shape" class="ud-absolute ud-bottom-[40%] ud-right-[15%]">
+        <img src="./images/shape/shape-17.svg" alt="Shape" class="ud-absolute ud-bottom-[5%] ud-right-[2%]">
+        <img src="./images/shape/shape-18.svg" alt="Shape" class="ud-absolute ud-bottom-0 ud-right-0">
+
+        <div class="animate_top ud-mx-auto ud-max-w-[518px] ud-text-center">
+          <img src="./images/shape/404.svg" alt="404" class="ud-mx-auto ud-mb-10" />
+
+          <h2 class="ud-font-medium ud-text-2xl md:ud-text-4xl ud-text-black dark:ud-text-white ud-mb-5">Sorry, the page can’t be found</h2>
+          <p class="ud-mb-8.5">The page you were looking for appears to have been moved, deleted or does not exist.</p>
+
+          <a href="./index.html" class="ud-font-medium ud-inline-flex ud-rounded-full ud-bg-primary ud-text-white ud-ease-in-out ud-duration-300 hover:ud-shadow-1 ud-py-3 ud-px-7.5">Back to Home</a>
+        </div>
+      </section>
+      <!-- ===== 404 End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

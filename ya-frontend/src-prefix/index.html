@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base - Tailwind CSS Startup Template</title>
+  </head>
+  <body
+    x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'ud-dark ud-bg-black': darkMode === true}"
+  >
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Hero Start ===== -->
+      <section class="ud-pt-35 md:ud-pt-40 xl:ud-pt-52 ud-pb-20 lg:ud-pb-30 xl:ud-pb-59 ud-relative ud-overflow-hidden">
+        <!-- Hero Images -->
+        <div class="ud-hidden md:ud-block ud-w-1/2 2xl:ud-w-187.5 ud-h-auto 2xl:ud-h-171.5 ud-absolute ud-right-0 ud-top-0">
+          <img src="./images/shape/shape-01.svg" alt="shape" class="ud-hidden 2xl:ud-block ud-absolute ud-top-[40%] -ud-left-[10%] ud-z-1" />
+          <img src="./images/shape/shape-02.svg" alt="shape" class="ud-hidden 2xl:ud-block ud-absolute ud-right-[20%] ud-bottom-0 ud-z-10" />
+          <img src="./images/shape/shape-03.svg" alt="shape" class="ud-hidden 2xl:ud-block ud-absolute ud-left-[15%] ud-bottom-[10%] ud-z-10" />
+          <img src="./images/shape/shape-04.svg" alt="shape" class="ud-absolute ud-right-0 ud-top-0" />
+          <img src="./images/hero/hero.png" alt="Woman" class="ud-absolute ud-right-0 ud-top-0 ud-z-1" />
+        </div>
+
+        <!-- Hero Content -->
+        <div class="ud-mx-auto ud-max-w-1390 ud-px-4 md:ud-px-8 2xl:ud-px-0">
+          <div class="ud-flex lg:ud-items-center">
+            <div class="animate_left md:ud-w-1/2">
+              <h1 class="ud-font-semibold ud-text-3xl lg:ud-text-4xl xl:ud-text-title-xxl ud-text-black dark:ud-text-white ud-mb-6">We specialize in UI/UX, Web Development, Digital Marketing.</h1>
+              <p class="xl:ud-w-[79%]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla magna mauris. Nulla fermentum viverra sem eu rhoncus consequat varius nisi quis, posuere magna.
+              </p>
+
+              <div class="ud-flex ud-flex-col-reverse lg:ud-flex-row ud-gap-7.5 ud-mt-10">
+                <a href="#" class="ud-font-medium ud-leading-7 ud-text-white ud-bg-primary ud-py-3 ud-px-7.5 ud-rounded-full ud-ease-in-out ud-duration-300 ud-inline-flex ud-w-fit hover:ud-shadow-1"
+                  >Get Started Now</a
+                >
+
+                <span class="ud-flex ud-flex-col">
+                  <a href="#" class="inline-block ud-font-medium ud-text-lg ud-text-black dark:ud-text-white"> Call us (0123) 456 – 789 </a>
+                  <span class="inline-block">For any question or concern</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Hero End ===== -->
+
+      <!-- ===== Small Features Start ===== -->
+      <section id="features">
+        <div class="ud-mx-auto ud-max-w-1390 ud-px-4 md:ud-px-7.5 2xl:ud-px-12.5">
+          <div class="ud-flex ud-flex-wrap lg:ud-flex-nowrap ud-justify-center lg:ud-justify-between ud-gap-7.5 lg:ud-gap-5 xl:ud-gap-22.5">
+            <!-- Small Features Item -->
+            <div class="animate_top md:ud-w-[45%] lg:ud-w-1/3 ud-flex ud-gap-5 xl:ud-gap-7.5">
+              <div class="ud-flex ud-items-center ud-justify-center ud-shrink-0 ud-w-21 ud-h-21 ud-rounded-full ud-bg-secondary">
+                <img src="./images/icon/icon-01.svg" alt="Icon" />
+              </div>
+              <div>
+                <h4 class="ud-font-medium ud-text-xl md:ud-text-title-sm ud-text-black dark:ud-text-white ud-mb-2.5">24/7 Support</h4>
+                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+              </div>
+            </div>
+
+            <!-- Small Features Item -->
+            <div class="animate_top md:ud-w-[45%] lg:ud-w-1/3 ud-flex ud-gap-5 xl:ud-gap-7.5">
+              <div class="ud-flex ud-items-center ud-justify-center ud-shrink-0 ud-w-21 ud-h-21 ud-rounded-full ud-bg-meta-green">
+                <img src="./images/icon/icon-02.svg" alt="Icon" />
+              </div>
+              <div>
+                <h4 class="ud-font-medium ud-text-xl md:ud-text-title-sm ud-text-black dark:ud-text-white ud-mb-2.5">Take Ownership</h4>
+                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+              </div>
+            </div>
+
+            <!-- Small Features Item -->
+            <div class="animate_top md:ud-w-[45%] lg:ud-w-1/3 ud-flex ud-gap-5 xl:ud-gap-7.5">
+              <div class="ud-flex ud-items-center ud-justify-center ud-shrink-0 ud-w-21 ud-h-21 ud-rounded-full ud-bg-meta-orange">
+                <img src="./images/icon/icon-03.svg" alt="Icon" />
+              </div>
+              <div>
+                <h4 class="ud-font-medium ud-text-xl md:ud-text-title-sm ud-text-black dark:ud-text-white ud-mb-2.5">Team Work</h4>
+                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Small Features End ===== -->
+
+      <!-- ===== About Start ===== -->
+      <section class="ud-py-20 lg:ud-py-25 xl:ud-py-30 2xl:ud-py-35 ud-overflow-hidden">
+        <div class="ud-mx-auto ud-max-w-1390 ud-px-4 md:ud-px-8 xl:ud-px-9">
+          <div class="ud-flex ud-items-center ud-gap-8 xl:ud-gap-30">
+            <!-- About Images -->
+            <div class="animate_left ud-hidden md:ud-flex ud-gap-8 md:ud-w-1/2 ud-relative">
+              <div>
+                <img src="./images/shape/shape-05.svg" alt="Shape" class="ud-absolute -ud-left-5 ud-top-5" />
+                <img src="./images/about/about-01.png" alt="About" class="ud-mb-8" />
+                <img src="./images/about/about-02.png" alt="About" />
+              </div>
+              <div>
+                <img src="./images/shape/shape-06.svg" alt="Shape" />
+                <img src="./images/about/about-03.png" alt="About" class="ud-mt-7.5 ud-mb-5" />
+                <img src="./images/shape/shape-07.svg" alt="Shape" class="ud-mx-auto" />
+              </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="animate_right md:ud-w-1/2">
+              <h4 class="ud-font-medium ud-text-xl ud-text-primary ud-mb-5">Why Choose Us</h4>
+              <h2 class="ud-font-semibold ud-text-3xl lg:ud-text-4xl xl:ud-text-title-xl ud-text-black dark:ud-text-white ud-mb-7.5">We Make Our customers happy by giving Best services.</h2>
+              <p class="lg:ud-w-[95%]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+
+              <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" data-fslightbox class="ud-inline-flex ud-items-center ud-gap-6.5 ud-mt-10">
+                <span class="ud-flex ud-items-center ud-justify-center ud-w-12.5 ud-h-12.5 ud-rounded-full ud-relative ud-bg-primary ud-z-1">
+                  <span class="ud-animate-ping ud-absolute ud-inline-flex ud-h-full ud-w-full ud-rounded-full ud-bg-primary ud-opacity-75 -ud-z-1"></span>
+                  <img src="./images/icon/icon-play.svg" alt="Play" />
+                </span>
+                <span class="ud-text-black">SEE HOW WE WORK</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== About End ===== -->
+
+      <!-- ===== Team Start ===== -->
+      <section class="ud-relative ud-overflow-hidden ud-py-20 lg:ud-py-25 xl:ud-py-30">
+        <!-- Bg Shapes -->
+        <span class="ud-block ud-absolute ud-left-0 ud-top-0 ud-w-full ud-h-3/5 ud-bg-whiter dark:ud-bg-blacksection"></span>
+        <img src="./images/shape/shape-08.svg" alt="Shape Bg" class="ud-absolute ud-right-0 ud-top-0" />
+        <img src="./images/shape/shape-09.svg" alt="Shape" class="ud-animate-rotating ud-absolute ud-left-[10%] ud-top-1/2" />
+        <img src="./images/shape/shape-10.svg" alt="Shape" class="ud-absolute ud-left-[20%] ud-top-[5%]" />
+        <img src="./images/shape/shape-11.svg" alt="Shape" class="ud-animate-rotating ud-absolute ud-right-[15%] ud-top-[15%]" />
+
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `Meet With Our Creative Dedicated Team`, sectionTitleText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+        >
+          <include src="./partials/section-title.html" />
+        </div>
+        <!-- Section Title End -->
+
+        <div class="ud-mx-auto ud-max-w-1390 ud-relative ud-z-10 ud-px-4 md:ud-px-8 xl:ud-px-26 ud-mt-12.5 lg:ud-mt-17.5">
+          <div class="ud-grid ud-grid-cols-1 md:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-8 lg:ud-gap-12.5">
+            <!-- Team Item -->
+            <div class="animate_top ud-text-center">
+              <div class="ud-group ud-relative ud-overflow-hidden z-1">
+                <img class="ud-w-full" src="./images/team/team-01.png" alt="Team" />
+
+                <div class="ud-translate-y-25 group-hover:ud-translate-y-0 ud-ease-linear ud-duration-300">
+                  <span class="ud-absolute -ud-left-5 -ud-bottom-21 ud-block ud-w-[120%] ud-h-37.5 ud-bg-primary ud-rotate-6 ud-z-20"></span>
+                  <span class="ud-absolute ud-left-0 ud-bottom-0 ud-block ud-w-full ud-h-17 ud-bg-secondary ud-z-10"></span>
+                  <div class="ud-absolute ud-left-0 ud-bottom-0 ud-w-full ud-pt-7.5 ud-pb-5 ud-z-30">
+                    <ul class="ud-flex ud-justify-center ud-items-center ud-gap-8">
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.66634 10.25H8.74968L9.58301 6.91669H6.66634V5.25002C6.66634 4.39169 6.66634 3.58335 8.33301 3.58335H9.58301V0.783354C9.31134 0.74752 8.28551 0.666687 7.20218 0.666687C4.93968 0.666687 3.33301 2.04752 3.33301 4.58335V6.91669H0.833008V10.25H3.33301V17.3334H6.66634V10.25Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.4683 1.71333C16.8321 1.99475 16.1574 2.17956 15.4666 2.26167C16.1947 1.82619 16.7397 1.14085 16.9999 0.333333C16.3166 0.74 15.5674 1.025 14.7866 1.17917C14.2621 0.617982 13.5669 0.245803 12.809 0.120487C12.0512 -0.00482822 11.2732 0.123742 10.596 0.486211C9.91875 0.848679 9.38024 1.42474 9.06418 2.12483C8.74812 2.82492 8.67221 3.60982 8.84825 4.3575C7.46251 4.28805 6.10686 3.92794 4.86933 3.30055C3.63179 2.67317 2.54003 1.79254 1.66492 0.715833C1.35516 1.24788 1.19238 1.85269 1.19326 2.46833C1.19326 3.67667 1.80826 4.74417 2.74326 5.36917C2.18993 5.35175 1.64878 5.20232 1.16492 4.93333V4.97667C1.16509 5.78142 1.44356 6.56135 1.95313 7.18422C2.46269 7.80709 3.17199 8.23456 3.96075 8.39417C3.4471 8.53337 2.90851 8.55388 2.38576 8.45417C2.60814 9.14686 3.04159 9.75267 3.62541 10.1868C4.20924 10.6209 4.9142 10.8615 5.64159 10.875C4.91866 11.4428 4.0909 11.8625 3.20566 12.1101C2.32041 12.3578 1.39503 12.4285 0.482422 12.3183C2.0755 13.3429 3.93 13.8868 5.82409 13.885C12.2349 13.885 15.7408 8.57417 15.7408 3.96833C15.7408 3.81833 15.7366 3.66667 15.7299 3.51833C16.4123 3.02514 17.0013 2.41418 17.4691 1.71417L17.4683 1.71333Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.78353 2.16665C3.78331 2.60867 3.6075 3.03251 3.29478 3.34491C2.98207 3.65732 2.55806 3.8327 2.11603 3.83248C1.674 3.83226 1.25017 3.65645 0.937761 3.34373C0.625357 3.03102 0.449975 2.60701 0.450196 2.16498C0.450417 1.72295 0.626223 1.29912 0.93894 0.986712C1.25166 0.674307 1.67567 0.498925 2.1177 0.499146C2.55972 0.499367 2.98356 0.675173 3.29596 0.98789C3.60837 1.30061 3.78375 1.72462 3.78353 2.16665V2.16665ZM3.83353 5.06665H0.500195V15.5H3.83353V5.06665ZM9.1002 5.06665H5.78353V15.5H9.06686V10.025C9.06686 6.97498 13.0419 6.69165 13.0419 10.025V15.5H16.3335V8.89165C16.3335 3.74998 10.4502 3.94165 9.06686 6.46665L9.1002 5.06665V5.06665Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="ud-text-xl md:ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-1">Olivia Andrium</h4>
+              <p>Product Manager</p>
+            </div>
+
+            <!-- Team Item -->
+            <div class="animate_top ud-text-center">
+              <div class="ud-group ud-relative ud-overflow-hidden z-1">
+                <img class="ud-w-full" src="./images/team/team-02.png" alt="Team" />
+
+                <div class="ud-translate-y-25 group-hover:ud-translate-y-0 ud-ease-linear ud-duration-300">
+                  <span class="ud-absolute -ud-left-5 -ud-bottom-21 ud-block ud-w-[120%] ud-h-37.5 ud-bg-primary ud-rotate-6 ud-z-20"></span>
+                  <span class="ud-absolute ud-left-0 ud-bottom-0 ud-block ud-w-full ud-h-17 ud-bg-secondary ud-z-10"></span>
+                  <div class="ud-absolute ud-left-0 ud-bottom-0 ud-w-full ud-pt-7.5 ud-pb-5 ud-z-30">
+                    <ul class="ud-flex ud-justify-center ud-items-center ud-gap-8">
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.66634 10.25H8.74968L9.58301 6.91669H6.66634V5.25002C6.66634 4.39169 6.66634 3.58335 8.33301 3.58335H9.58301V0.783354C9.31134 0.74752 8.28551 0.666687 7.20218 0.666687C4.93968 0.666687 3.33301 2.04752 3.33301 4.58335V6.91669H0.833008V10.25H3.33301V17.3334H6.66634V10.25Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.4683 1.71333C16.8321 1.99475 16.1574 2.17956 15.4666 2.26167C16.1947 1.82619 16.7397 1.14085 16.9999 0.333333C16.3166 0.74 15.5674 1.025 14.7866 1.17917C14.2621 0.617982 13.5669 0.245803 12.809 0.120487C12.0512 -0.00482822 11.2732 0.123742 10.596 0.486211C9.91875 0.848679 9.38024 1.42474 9.06418 2.12483C8.74812 2.82492 8.67221 3.60982 8.84825 4.3575C7.46251 4.28805 6.10686 3.92794 4.86933 3.30055C3.63179 2.67317 2.54003 1.79254 1.66492 0.715833C1.35516 1.24788 1.19238 1.85269 1.19326 2.46833C1.19326 3.67667 1.80826 4.74417 2.74326 5.36917C2.18993 5.35175 1.64878 5.20232 1.16492 4.93333V4.97667C1.16509 5.78142 1.44356 6.56135 1.95313 7.18422C2.46269 7.80709 3.17199 8.23456 3.96075 8.39417C3.4471 8.53337 2.90851 8.55388 2.38576 8.45417C2.60814 9.14686 3.04159 9.75267 3.62541 10.1868C4.20924 10.6209 4.9142 10.8615 5.64159 10.875C4.91866 11.4428 4.0909 11.8625 3.20566 12.1101C2.32041 12.3578 1.39503 12.4285 0.482422 12.3183C2.0755 13.3429 3.93 13.8868 5.82409 13.885C12.2349 13.885 15.7408 8.57417 15.7408 3.96833C15.7408 3.81833 15.7366 3.66667 15.7299 3.51833C16.4123 3.02514 17.0013 2.41418 17.4691 1.71417L17.4683 1.71333Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.78353 2.16665C3.78331 2.60867 3.6075 3.03251 3.29478 3.34491C2.98207 3.65732 2.55806 3.8327 2.11603 3.83248C1.674 3.83226 1.25017 3.65645 0.937761 3.34373C0.625357 3.03102 0.449975 2.60701 0.450196 2.16498C0.450417 1.72295 0.626223 1.29912 0.93894 0.986712C1.25166 0.674307 1.67567 0.498925 2.1177 0.499146C2.55972 0.499367 2.98356 0.675173 3.29596 0.98789C3.60837 1.30061 3.78375 1.72462 3.78353 2.16665V2.16665ZM3.83353 5.06665H0.500195V15.5H3.83353V5.06665ZM9.1002 5.06665H5.78353V15.5H9.06686V10.025C9.06686 6.97498 13.0419 6.69165 13.0419 10.025V15.5H16.3335V8.89165C16.3335 3.74998 10.4502 3.94165 9.06686 6.46665L9.1002 5.06665V5.06665Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="ud-text-xl md:ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-1">Jemse Kemorun</h4>
+              <p>Product Designer</p>
+            </div>
+
+            <!-- Team Item -->
+            <div class="animate_top ud-text-center">
+              <div class="ud-group ud-relative ud-overflow-hidden z-1">
+                <img class="ud-w-full" src="./images/team/team-03.png" alt="Team" />
+
+                <div class="ud-translate-y-25 group-hover:ud-translate-y-0 ud-ease-linear ud-duration-300">
+                  <span class="ud-absolute -ud-left-5 -ud-bottom-21 ud-block ud-w-[120%] ud-h-37.5 ud-bg-primary ud-rotate-6 ud-z-20"></span>
+                  <span class="ud-absolute ud-left-0 ud-bottom-0 ud-block ud-w-full ud-h-17 ud-bg-secondary ud-z-10"></span>
+                  <div class="ud-absolute ud-left-0 ud-bottom-0 ud-w-full ud-pt-7.5 ud-pb-5 ud-z-30">
+                    <ul class="ud-flex ud-justify-center ud-items-center ud-gap-8">
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.66634 10.25H8.74968L9.58301 6.91669H6.66634V5.25002C6.66634 4.39169 6.66634 3.58335 8.33301 3.58335H9.58301V0.783354C9.31134 0.74752 8.28551 0.666687 7.20218 0.666687C4.93968 0.666687 3.33301 2.04752 3.33301 4.58335V6.91669H0.833008V10.25H3.33301V17.3334H6.66634V10.25Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.4683 1.71333C16.8321 1.99475 16.1574 2.17956 15.4666 2.26167C16.1947 1.82619 16.7397 1.14085 16.9999 0.333333C16.3166 0.74 15.5674 1.025 14.7866 1.17917C14.2621 0.617982 13.5669 0.245803 12.809 0.120487C12.0512 -0.00482822 11.2732 0.123742 10.596 0.486211C9.91875 0.848679 9.38024 1.42474 9.06418 2.12483C8.74812 2.82492 8.67221 3.60982 8.84825 4.3575C7.46251 4.28805 6.10686 3.92794 4.86933 3.30055C3.63179 2.67317 2.54003 1.79254 1.66492 0.715833C1.35516 1.24788 1.19238 1.85269 1.19326 2.46833C1.19326 3.67667 1.80826 4.74417 2.74326 5.36917C2.18993 5.35175 1.64878 5.20232 1.16492 4.93333V4.97667C1.16509 5.78142 1.44356 6.56135 1.95313 7.18422C2.46269 7.80709 3.17199 8.23456 3.96075 8.39417C3.4471 8.53337 2.90851 8.55388 2.38576 8.45417C2.60814 9.14686 3.04159 9.75267 3.62541 10.1868C4.20924 10.6209 4.9142 10.8615 5.64159 10.875C4.91866 11.4428 4.0909 11.8625 3.20566 12.1101C2.32041 12.3578 1.39503 12.4285 0.482422 12.3183C2.0755 13.3429 3.93 13.8868 5.82409 13.885C12.2349 13.885 15.7408 8.57417 15.7408 3.96833C15.7408 3.81833 15.7366 3.66667 15.7299 3.51833C16.4123 3.02514 17.0013 2.41418 17.4691 1.71417L17.4683 1.71333Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg class="ud-fill-white hover:ud-fill-secondary ud-ease-in-out ud-duration-300" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.78353 2.16665C3.78331 2.60867 3.6075 3.03251 3.29478 3.34491C2.98207 3.65732 2.55806 3.8327 2.11603 3.83248C1.674 3.83226 1.25017 3.65645 0.937761 3.34373C0.625357 3.03102 0.449975 2.60701 0.450196 2.16498C0.450417 1.72295 0.626223 1.29912 0.93894 0.986712C1.25166 0.674307 1.67567 0.498925 2.1177 0.499146C2.55972 0.499367 2.98356 0.675173 3.29596 0.98789C3.60837 1.30061 3.78375 1.72462 3.78353 2.16665V2.16665ZM3.83353 5.06665H0.500195V15.5H3.83353V5.06665ZM9.1002 5.06665H5.78353V15.5H9.06686V10.025C9.06686 6.97498 13.0419 6.69165 13.0419 10.025V15.5H16.3335V8.89165C16.3335 3.74998 10.4502 3.94165 9.06686 6.46665L9.1002 5.06665V5.06665Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="ud-text-xl md:ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-1">Avi Pestarica</h4>
+              <p>Web Designer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Team End ===== -->
+
+      <!-- ===== Services Start ===== -->
+      <section class="ud-pb-7.5 lg:ud-pb-12.5 xl:ud-pb-17.5">
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `We Offer The Best Quality Service for You`, sectionTitleText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+        >
+          <include src="./partials/section-title.html" />
+        </div>
+        <!-- Section Title End -->
+
+        <div class="ud-mx-auto ud-max-w-1390 ud-px-4 md:ud-px-8 xl:ud-px-21 ud-mt-10 md:ud-mt-5">
+          <div class="ud-grid ud-grid-cols-1 md:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-y-0">
+            <!-- Service Item -->
+            <div class="animate_top ud-rounded-lg ud-py-12.5 ud-px-8 xl:ud-px-12.5 ud-ease-in-out ud-duration-300 hover:ud-shadow-2 dark:hover:ud-shadow-none dark:hover:ud-bg-blacksection">
+              <img src="./images/icon/icon-04.svg" alt="Icon" />
+              <h4 class="ud-font-medium ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-11 ud-mb-4.5">Crafted for Startups</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+
+            <!-- Service Item -->
+            <div class="animate_top ud-rounded-lg ud-py-12.5 ud-px-8 xl:ud-px-12.5 ud-ease-in-out ud-duration-300 hover:ud-shadow-2 dark:hover:ud-shadow-none dark:hover:ud-bg-blacksection">
+              <img src="./images/icon/icon-05.svg" alt="Icon" />
+              <h4 class="ud-font-medium ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-11 ud-mb-4.5">High-quality Design</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+
+            <!-- Service Item -->
+            <div class="animate_top ud-rounded-lg ud-py-12.5 ud-px-8 xl:ud-px-12.5 ud-ease-in-out ud-duration-300 hover:ud-shadow-2 dark:hover:ud-shadow-none dark:hover:ud-bg-blacksection">
+              <img src="./images/icon/icon-06.svg" alt="Icon" />
+              <h4 class="ud-font-medium ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-11 ud-mb-4.5">All Essential Sections</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+
+            <!-- Service Item -->
+            <div class="animate_top ud-rounded-lg ud-py-12.5 ud-px-8 xl:ud-px-12.5 ud-ease-in-out ud-duration-300 hover:ud-shadow-2 dark:hover:ud-shadow-none dark:hover:ud-bg-blacksection">
+              <img src="./images/icon/icon-07.svg" alt="Icon" />
+              <h4 class="ud-font-medium ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-11 ud-mb-4.5">Speed Optimized</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+
+            <!-- Service Item -->
+            <div class="animate_top ud-rounded-lg ud-py-12.5 ud-px-8 xl:ud-px-12.5 ud-ease-in-out ud-duration-300 hover:ud-shadow-2 dark:hover:ud-shadow-none dark:hover:ud-bg-blacksection">
+              <img src="./images/icon/icon-05.svg" alt="Icon" />
+              <h4 class="ud-font-medium ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-11 ud-mb-4.5">Fully Customizable</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+
+            <!-- Service Item -->
+            <div class="animate_top ud-rounded-lg ud-py-12.5 ud-px-8 xl:ud-px-12.5 ud-ease-in-out ud-duration-300 hover:ud-shadow-2 dark:hover:ud-shadow-none dark:hover:ud-bg-blacksection">
+              <img src="./images/icon/icon-06.svg" alt="Icon" />
+              <h4 class="ud-font-medium ud-text-title-sm ud-text-black dark:ud-text-white ud-mt-11 ud-mb-4.5">Regular Updates</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Services End ===== -->
+
+      <!-- ===== Pricing Table Start ===== -->
+      <section x-data="setup()" class="ud-relative ud-overflow-hidden ud-bg-whiter dark:ud-bg-blacksection ud-py-20 lg:ud-py-25 xl:ud-py-30">
+        <!-- Bg Shapes -->
+        <img src="./images/shape/shape-06.svg" alt="Shape" class="ud-absolute ud-top-[5%] ud-left-[10%]" />
+        <img src="./images/shape/shape-03.svg" alt="Shape" class="ud-absolute ud-top-[25%] ud-right-[20%]" />
+        <img src="./images/shape/shape-07.svg" alt="Shape" class="ud-absolute ud-bottom-[10%] ud-right-[5%] ud-w-25" />
+        <img src="./images/shape/shape-12.svg" alt="Shape" class="ud-absolute ud-bottom-0 ud-left-0" />
+        <img src="./images/shape/shape-13.svg" alt="Shape" class="ud-absolute ud-top-0 ud-right-0" />
+
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `We Offer Great Affordable Premium Prices.`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+        >
+          <include src="./partials/section-title.html" />
+        </div>
+        <!-- Section Title End -->
+
+        <!-- Pricing switcher -->
+        <div class="ud-flex ud-items-center ud-justify-center ud-mt-12.5 ud-space-x-4">
+          <span class="ud-font-medium ud-text-black dark:ud-text-white">Bill Monthly</span>
+          <button class="ud-relative ud-rounded-full focus:ud-outline-none" x-cloak @click="billPlan == 'monthly' ? billPlan = 'annually' : billPlan = 'monthly'">
+            <div class="ud-w-11 ud-h-6 ud-transition ud-bg-primary ud-rounded-full ud-shadow-md outline-none"></div>
+            <div
+              class="ud-absolute ud-inline-flex ud-items-center ud-justify-center ud-w-4.5 ud-h-4.5 ud-transition-all ud-duration-200 ud-ease-in-out ud-transform ud-bg-white ud-rounded-full ud-shadow-sm ud-top-[3px] ud-left-1"
+              :class="{ 'ud-translate-x-0': billPlan == 'monthly', 'ud-translate-x-4.5': billPlan == 'annually' }"
+            ></div>
+          </button>
+          <span class="ud-font-medium ud-text-black dark:ud-text-white">Bill Annually</span>
+        </div>
+
+        <!-- Pricing Table -->
+        <div class="ud-mx-auto ud-max-w-1390 ud-relative ud-z-10 ud-px-4 md:ud-px-8 xl:ud-px-21 ud-mt-15">
+          <div class="ud-grid ud-grid-cols-1 md:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-10">
+            <template x-for="(plan, i) in plans" x-key="i">
+              <!-- Pricing Item -->
+              <div class="animate_top ud-text-center ud-rounded-lg ud-bg-white dark:ud-bg-black ud-shadow-3 dark:ud-shadow-none ud-px-7.5 ud-pt-11 ud-pb-10">
+                <h4 x-text="plan.name" class="ud-text-title-xsm ud-text-black dark:ud-text-white ud-mb-10"></h4>
+
+                <div class="ud-flex ud-items-center ud-justify-center ud-gap-1.5 ud-mb-1.5">
+                  <h2
+                    :class="plan.name == 'Basic' ? 'text-green-500' : ''"
+                    x-text="`$${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`"
+                    class="ud-font-semibold ud-text-title-lg ud-text-black dark:ud-text-white"
+                  ></h2>
+                  <span x-text="billPlan == 'monthly' ? '/per month' : '/per year'" class="ud-inline-block ud-text-sm ud-text-black dark:ud-text-white"></span>
+                </div>
+
+                <p class="ud-text-xm ud-mb-9.5">No credit card required</p>
+
+                <!-- Button -->
+                <a
+                  href="#"
+                  class="ud-font-medium ud-rounded-full ud-text-white ud-ease-in-out ud-duration-300 ud-py-3 ud-px-13"
+                  :class="plan.name == 'Growth Plan' ? 'ud-bg-primary hover:ud-bg-secondary' : 'ud-bg-secondary hover:ud-bg-primary'"
+                >
+                  Try for free
+                </a>
+
+                <!-- Features -->
+                <ul class="ud-flex ud-flex-col ud-gap-3 ud-mt-7.5 ud-mb-10">
+                  <template x-for="(feature, i) in plan.features" x-key="i">
+                    <li x-text="feature"></li>
+                  </template>
+                </ul>
+
+                <p class="ud-text-black dark:ud-text-white">7-day free trial</p>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Pricing Table End ===== -->
+
+      <!-- ===== Projects Start ===== -->
+      <section class="ud-overflow-hidden ud-pt-20 lg:ud-pt-25 xl:ud-pt-30 ud-pb-10 lg:ud-pb-15 xl:ud-pb-20">
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `We Offer Great Affordable Premium Prices.`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+        >
+          <include src="./partials/section-title.html" />
+        </div>
+        <!-- Section Title End -->
+
+        <div class="ud-mx-auto ud-max-w-1390 ud-px-4 md:ud-px-8 2xl:ud-px-0 ud-mt-12.5" x-data="{filterTab: 1}">
+          <!-- Porject Tab -->
+          <div
+            class="projects-tab ud-max-w-fit ud-mx-auto ud-flex ud-flex-wrap ud-items-center ud-justify-center ud-gap-5 ud-rounded-full ud-bg-white dark:ud-bg-blacksection ud-shadow-3 dark:ud-shadow-none ud-py-2 ud-px-2.5 ud-mb-17.5"
+          >
+            <button
+              data-filter="*"
+              @click="filterTab = 1"
+              :class="{ 'ud-bg-primary ud-text-white' : filterTab === 1 }"
+              class="project-tab-btn ud-font-medium ud-rounded-full ud-ease-in-out ud-duration-300 ud-py-1 ud-px-6"
+            >
+              All
+            </button>
+            <button
+              data-filter=".branding"
+              @click="filterTab = 2"
+              :class="{ 'ud-bg-primary ud-text-white' : filterTab === 2 }"
+              class="project-tab-btn ud-font-medium ud-rounded-full ud-ease-in-out ud-duration-300 ud-py-1 ud-px-6"
+            >
+              Branding Strategy
+            </button>
+            <button
+              data-filter=".digital"
+              @click="filterTab = 3"
+              :class="{ 'ud-bg-primary ud-text-white' : filterTab === 3 }"
+              class="project-tab-btn ud-font-medium ud-rounded-full ud-ease-in-out ud-duration-300 ud-py-1 ud-px-6"
+            >
+              Digital Experiences
+            </button>
+            <button
+              data-filter=".ecommerce"
+              @click="filterTab = 4"
+              :class="{ 'ud-bg-primary ud-text-white' : filterTab === 4 }"
+              class="project-tab-btn ud-font-medium ud-rounded-full ud-ease-in-out ud-duration-300 ud-py-1 ud-px-6"
+            >
+              Ecommerce
+            </button>
+          </div>
+
+          <!-- Projects item wrapper -->
+          <div class="projects-wrapper ud-flex -ud-mx-5">
+            <div class="project-sizer"></div>
+            <!-- Project Item -->
+            <div class="project-item ud-px-5 ud-mb-10 ud-w-full md:ud-w-1/2 lg:ud-w-1/3 branding ecommerce">
+              <div class="ud-group ud-relative ud-overflow-hidden ud-rounded-lg z-1">
+                <img src="./images/projects/project-01.png" alt="Project" />
+
+                <div 
+                  class="ud-absolute ud-left-0 ud-top-0 ud-translate-y-full ud-ease-linear ud-duration-700 group-hover:ud-translate-y-0 ud-flex ud-flex-col ud-items-center ud-justify-center ud-w-full ud-h-full ud-rounded-lg ud-backdrop-blur ud-bg-white/20 z-10"
+                >
+                  <h4 class="ud-font-medium ud-text-2xl ud-text-black ud-mb-0.5">Photo Retouching</h4>
+                  <p>Branded Ecommerce</p>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-border ud-border-body ud-ease-in-out ud-duration-300 ud-bg-transparent group-hover:ud-border-primary group-hover:ud-bg-primary ud-mt-4"
+                    href="#"
+                  >
+                    <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Item -->
+            <div class="project-item ud-px-5 ud-mb-10 ud-w-full md:ud-w-1/2 lg:ud-w-1/3 digital">
+              <div class="ud-group ud-relative ud-overflow-hidden ud-rounded-lg z-1">
+                <img src="./images/projects/project-02.png" alt="Project" />
+
+                <div
+                  class="ud-absolute ud-left-0 ud-top-0 ud-translate-y-full ud-ease-linear ud-duration-700 group-hover:ud-translate-y-0 ud-flex ud-flex-col ud-items-center ud-justify-center ud-w-full ud-h-full ud-rounded-lg ud-backdrop-blur ud-bg-white/20 z-10"
+                >
+                  <h4 class="ud-font-medium ud-text-2xl ud-text-black ud-mb-0.5">Photo Retouching</h4>
+                  <p>Branded Ecommerce</p>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-border ud-border-body ud-ease-in-out ud-duration-300 ud-bg-transparent group-hover:ud-border-primary group-hover:ud-bg-primary ud-mt-4"
+                    href="#"
+                  >
+                    <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Item -->
+            <div class="project-item ud-px-5 ud-mb-10 ud-w-full md:ud-w-1/2 lg:ud-w-1/3 branding ecommerce">
+              <div class="ud-group ud-relative ud-overflow-hidden ud-rounded-lg z-1">
+                <img src="./images/projects/project-04.png" alt="Project" />
+
+                <div
+                  class="ud-absolute ud-left-0 ud-top-0 ud-translate-y-full ud-ease-linear ud-duration-700 group-hover:ud-translate-y-0 ud-flex ud-flex-col ud-items-center ud-justify-center ud-w-full ud-h-full ud-rounded-lg ud-backdrop-blur ud-bg-white/20 z-10"
+                >
+                  <h4 class="ud-font-medium ud-text-2xl ud-text-black ud-mb-0.5">Photo Retouching</h4>
+                  <p>Branded Ecommerce</p>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-border ud-border-body ud-ease-in-out ud-duration-300 ud-bg-transparent group-hover:ud-border-primary group-hover:ud-bg-primary ud-mt-4"
+                    href="#"
+                  >
+                    <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Item -->
+            <div class="project-item ud-px-5 ud-mb-10 ud-w-full lg:ud-w-2/3 digital ecommerce">
+              <div class="ud-group ud-relative ud-overflow-hidden ud-rounded-lg z-1">
+                <img src="./images/projects/project-03.png" alt="Project" />
+
+                <div
+                  class="ud-absolute ud-left-0 ud-top-0 ud-translate-y-full ud-ease-linear ud-duration-700 group-hover:ud-translate-y-0 ud-flex ud-flex-col ud-items-center ud-justify-center ud-w-full ud-h-full ud-rounded-lg ud-backdrop-blur ud-bg-white/20 z-10"
+                >
+                  <h4 class="ud-font-medium ud-text-2xl ud-text-black ud-mb-0.5">Photo Retouching</h4>
+                  <p>Branded Ecommerce</p>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-border ud-border-body ud-ease-in-out ud-duration-300 ud-bg-transparent group-hover:ud-border-primary group-hover:ud-bg-primary ud-mt-4"
+                    href="#"
+                  >
+                    <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Projects End ===== -->
+
+      <!-- ===== Testimonials Start ===== -->
+      <section class="ud-pb-20 lg:ud-pb-25 xl:ud-pb-30">
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `Client’s Testimonials`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+        >
+          <include src="./partials/section-title.html" />
+        </div>
+        <!-- Section Title End -->
+
+        <div class="ud-mx-auto ud-max-w-1390 ud-px-4 md:ud-px-8 xl:ud-px-30">
+          <div class="animate_top ud-mt-12.5 xl:ud-mt-17.5">
+            <!-- Slider main container -->
+            <div class="swiper testimonial-01">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="ud-relative ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-3 dark:ud-shadow-none ud-p-9 ud-pr-10">
+                    <!-- Border Shape -->
+                    <span class="ud-block ud-w-1.5 ud-h-1/2 ud-bg-primary ud-rounded-tr-lg ud-absolute ud-right-0 ud-top-0"></span>
+                    <span class="ud-block ud-w-1.5 ud-h-1/2 ud-bg-secondary ud-rounded-br-lg ud-absolute ud-right-0 ud-bottom-0"></span>
+
+                    <div class="ud-flex ud-flex-col md:ud-flex-row md:ud-items-center md:ud-justify-between ud-gap-7.5 lg:ud-gap-12">
+                      <img class="ud-flex-shrink-0" src="./images/testimonial/testimonial.png" alt="User" />
+
+                      <div>
+                        <img src="./images/icon/icon-quote.svg" alt="Quote" />
+                        <p class="ud-font-medium ud-italic ud-text-lg lg:ud-text-2xl ud-mt-5.5 ud-mb-10">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dolor diam, feugiat quis enim sed, ullamcorper semper ligula. Mauris consequat justo volutpat.
+                        </p>
+
+                        <div class="ud-flex ud-justify-between ud-items-end">
+                          <div>
+                            <span class="ud-block ud-font-medium ud-text-lg ud-text-black dark:ud-text-white ud-mb-1">Devid Smith</span>
+                            <span class="ud-block">Founter @democompany</span>
+                          </div>
+
+                          <img class="ud-opacity-100" src="./images/brand/brand-light-02.svg" alt="Brand" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need navigation -->
+              <div class="ud-flex ud-items-center ud-justify-center ud-gap-4 ud-mt-12.5">
+                <div
+                  class="swiper-button-prev ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-border ud-border-body ud-cursor-pointer ud-ease-in-out ud-duratuon-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-border-primary dark:hover:ud-border-primary"
+                >
+                  <svg class="ud-fill-body group-hover:ud-fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.52366 7.83336L7.99366 12.3034L6.81533 13.4817L0.333663 7.00002L6.81533 0.518357L7.99366 1.69669L3.52366 6.16669L13.667 6.16669L13.667 7.83336L3.52366 7.83336Z"
+                      fill=""
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="swiper-button-next ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-border ud-border-body ud-cursor-pointer ud-ease-in-out ud-duratuon-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-border-primary dark:hover:ud-border-primary"
+                >
+                  <svg class="ud-fill-body group-hover:ud-fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" fill="" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Testimonials End ===== -->
+
+      <!-- ===== Counter Start ===== -->
+      <section class="ud-relative ud-overflow-hidden ud-bg-whiten dark:ud-bg-blacksection ud-py-20 lg:ud-py-22.5">
+        <img src="./images/shape/shape-11.svg" alt="Shape" class="ud-animate-rotating ud-absolute ud-left-[3%] ud-bottom-[3%] ud-w-14.5" />
+        <img src="./images/shape/shape-07.svg" alt="Shape" class="ud-absolute ud-top-[6%] ud-right-[2%] ud-w-21 ud-rotate-90" />
+        <img src="./images/shape/shape-14.svg" alt="Shape" class="ud-absolute ud-left-[35%] ud-top-[1%]" />
+        <img src="./images/shape/shape-15.svg" alt="Shape" class="ud-absolute ud-right-0 ud-bottom-0" />
+
+        <div class="ud-mx-auto ud-max-w-1390 ud-relative ud-z-10 ud-px-4 md:ud-px-8 xl:ud-px-36.5">
+          <div class="ud-flex ud-flex-wrap md:ud-flex-nowrap md:ud-items-center ud-justify-center md:ud-justify-between ud-gap-8">
+            <div class="animate_top ud-w-2/5 md:ud-w-auto ud-text-center">
+              <h2 class="ud-font-bold ud-text-3xl lg:ud-text-4xl xl:ud-text-title-xxl ud-text-black dark:ud-text-white ud-mb-0.5">785</h2>
+              <p class="ud-font-medium ud-text-base lg:ud-text-title-xsm2">Global Brands</p>
+            </div>
+            <div class="animate_top ud-w-2/5 md:ud-w-auto ud-text-center">
+              <h2 class="ud-font-bold ud-text-3xl lg:ud-text-4xl xl:ud-text-title-xxl ud-text-black dark:ud-text-white ud-mb-0.5">533</h2>
+              <p class="ud-font-medium ud-text-base lg:ud-text-title-xsm2">Happy Clients</p>
+            </div>
+            <div class="animate_top ud-w-2/5 md:ud-w-auto ud-text-center">
+              <h2 class="ud-font-bold ud-text-3xl lg:ud-text-4xl xl:ud-text-title-xxl ud-text-black dark:ud-text-white ud-mb-0.5">865</h2>
+              <p class="ud-font-medium ud-text-base lg:ud-text-title-xsm2">Winning Award</p>
+            </div>
+            <div class="animate_top ud-w-2/5 md:ud-w-auto ud-text-center">
+              <h2 class="ud-font-bold ud-text-3xl lg:ud-text-4xl xl:ud-text-title-xxl ud-text-black dark:ud-text-white ud-mb-0.5">346</h2>
+              <p class="ud-font-medium ud-text-base lg:ud-text-title-xsm2">Happy Clients</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Counter End ===== -->
+
+      <!-- ===== Clients Start ===== -->
+      <section class="ud-pt-20 lg:ud-pt-25 xl:ud-pt-30">
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `Trusted by Global Brands`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+        >
+          <include src="./partials/section-title.html" />
+        </div>
+        <!-- Section Title End -->
+
+        <div class="ud-mx-auto ud-max-w-1390 ud-border-b ud-border-strokedark dark:ud-border-stroke ud-pb-20 lg:ud-pb-22.5 ud-px-4 md:ud-px-8 2xl:ud-px-49 ud-mt-15">
+          <div class="ud-grid ud-grid-cols-3 md:ud-grid-cols-6 ud-gap-7.5 lg:ud-gap-12.5 xl:ud-gap-17.5 ud-justify-center ud-items-center">
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-fill-body hover:ud-fill-black ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-01.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-01.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-02.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-02.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-03.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-03.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-04.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-04.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-05.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-05.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-06.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-ease-in-out ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-06.svg" alt="Clients" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Clients End ===== -->
+
+      <!-- ===== Blog Start ===== -->
+      <section class="ud-py-20 lg:ud-py-25 xl:ud-py-30">
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `Latest Blogs & News`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+        >
+          <include src="./partials/section-title.html" />
+        </div>
+        <!-- Section Title End -->
+
+        <div class="ud-mx-auto ud-max-w-1280 ud-px-4 md:ud-px-8 xl:ud-px-0 ud-mt-12.5 lg:ud-mt-17.5">
+          <div class="ud-grid ud-grid-cols-1 md:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-7.5 xl:ud-gap-10">
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-01.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-02.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-rounded-lg ud-shadow-3 dark:ud-bg-blacksection dark:ud-shadow-none">
+              <div class="ud-group ud-block ud-relative z-1 ud-overflow-hidden">
+                <img class="w-full" src="./images/blog/blog-03.png" alt="Blog" />
+
+                <div
+                  class="group-hover:ud-translate-y-0 ud-absolute ud-top-0 ud-left-0 ud-translate-y-full ud-w-full ud-h-full ud-rounded-t-lg ud-flex ud-items-center ud-justify-center ud-backdrop-blur ud-bg-white/20 ud-ease-linear ud-duration-300 z-10"
+                >
+                  <a href="./blog-single.html" class="ud-inline-flex ud-font-medium ud-rounded-full ud-text-white ud-bg-primary hover:ud-bg-secondary ud-ease-in-out ud-duration-300 ud-py-3 ud-px-7.5"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <div class="ud-p-7.5">
+                <div class="ud-flex ud-flex-wrap ud-items-center ud-gap-2 xl:ud-gap-5">
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-man.svg" alt="User" />
+                    <p>Musharof Chy</p>
+                  </div>
+                  <div class="ud-flex ud-items-center ud-gap-2">
+                    <img src="./images/icon/icon-calender.svg" alt="Calender" />
+                    <p>25 Dec, 2025</p>
+                  </div>
+                </div>
+                <h4 class="ud-font-medium ud-text-2xl ud-ease-in-out ud-duration-300 ud-text-black dark:ud-text-white hover:ud-text-primary xl:ud-w-[90%] ud-mt-3">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Blog End ===== -->
+
+      <!-- ===== Contact Start ===== -->
+      <section id="support" class="ud-relative ud-overflow-hidden ud-bg-whiter dark:ud-bg-blacksection ud-py-20 lg:ud-py-25 xl:ud-py-30">
+        <!-- Bg Shapes -->
+        <img src="./images/shape/shape-06.svg" alt="Shape" class="ud-absolute ud-top-[5%] ud-left-[10%]" />
+        <img src="./images/shape/shape-03.svg" alt="Shape" class="ud-absolute ud-top-[25%] ud-right-[20%]" />
+        <img src="./images/shape/shape-07.svg" alt="Shape" class="ud-absolute ud-bottom-[10%] ud-right-[5%] ud-w-25" />
+        <img src="./images/shape/shape-12.svg" alt="Shape" class="ud-absolute ud-bottom-0 ud-left-0" />
+        <img src="./images/shape/shape-13.svg" alt="Shape" class="ud-absolute ud-top-0 ud-right-0" />
+
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `Let’s Stay Connected`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+        >
+          <include src="./partials/section-title.html" />
+        </div>
+        <!-- Section Title End -->
+
+        <div class="ud-relative ud-z-10 ud-mx-auto ud-max-w-1280 ud-px-4 md:ud-px-8 xl:ud-px-9 ud-mt-12.5 lg:ud-mt-20">
+          <div class="ud-flex ud-flex-wrap md:ud-flex-nowrap ud-flex-col-reverse md:ud-flex-row md:ud-justify-between ud-gap-7.5 xl:gap-10">
+            <div class="animate_top w-full md:ud-w-2/5 lg:ud-w-1/3 ud-shadow-3 ud-rounded-lg ud-bg-white dark:ud-bg-black ud-p-7.5 xl:ud-p-12.5 ud-relative ud-overflow-hidden">
+              <!-- Bg Shapes -->
+              <img src="./images/shape/shape-03.svg" alt="Shape" class="ud-absolute ud-right-5 ud-top-5 ud-w-7.5" />
+              <img src="./images/shape/shape-06.svg" alt="Shape" class="ud-absolute ud-right-5 ud-bottom-5 ud-w-6 ud-rotate-180" />
+
+              <div class="ud-mb-10">
+                <h4 class="ud-text-title-xsm ud-text-black dark:ud-text-white ud-mb-1.5">Email Address</h4>
+                <p><a href="#">support@startup.com</a></p>
+              </div>
+              <div class="ud-mb-10">
+                <h4 class="ud-text-title-xsm ud-text-black dark:ud-text-white ud-mb-1.5">Office Location</h4>
+                <p>76/A, Green valle, Califonia USA.</p>
+              </div>
+              <div class="ud-mb-10">
+                <h4 class="ud-text-title-xsm ud-text-black dark:ud-text-white ud-mb-1.5">Phone Number</h4>
+                <p><a href="#">+009 8754 3433 223</a></p>
+              </div>
+              <div class="ud-mb-10">
+                <h4 class="ud-text-title-xsm ud-text-black dark:ud-text-white ud-mb-1.5">Skype Email</h4>
+                <p><a href="#">example@yourmail.com</a></p>
+              </div>
+
+              <span class="ud-block ud-h-[1px] ud-bg-strokedark dark:ud-bg-stroke ud-mt-5 ud-mb-10"></span>
+
+              <div>
+                <h4 class="ud-text-title-xsm ud-text-black dark:ud-text-white ud-mb-7.5">Social Media</h4>
+                <ul class="ud-flex ud-items-center ud-gap-4">
+                  <li>
+                    <a href="#" class="ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-ease-in-out ud-duration-300 hover:ud-bg-primary">
+                      <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.83366 11.3752H9.12533L10.042 7.7085H6.83366V5.87516C6.83366 4.931 6.83366 4.04183 8.667 4.04183H10.042V0.96183C9.74316 0.922413 8.61475 0.833496 7.42308 0.833496C4.93433 0.833496 3.16699 2.35241 3.16699 5.14183V7.7085H0.416992V11.3752H3.16699V19.1668H6.83366V11.3752Z"
+                          fill=""
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-ease-in-out ud-duration-300 hover:ud-bg-primary">
+                      <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M19.3153 2.18484C18.6155 2.4944 17.8733 2.6977 17.1134 2.78801C17.9144 2.30899 18.5138 1.55511 18.8001 0.666844C18.0484 1.11418 17.2244 1.42768 16.3654 1.59726C15.7885 0.979958 15.0238 0.57056 14.1901 0.432713C13.3565 0.294866 12.5007 0.436294 11.7558 0.835009C11.0108 1.23372 10.4185 1.86739 10.0708 2.63749C9.72313 3.40759 9.63963 4.27098 9.83327 5.09343C8.30896 5.01703 6.81775 4.62091 5.45645 3.93079C4.09516 3.24067 2.89423 2.27197 1.93161 1.08759C1.59088 1.67284 1.41182 2.33814 1.41278 3.01534C1.41278 4.34451 2.08928 5.51876 3.11778 6.20626C2.50912 6.1871 1.91386 6.02273 1.38161 5.72685V5.77451C1.38179 6.65974 1.68811 7.51766 2.24864 8.20282C2.80916 8.88797 3.58938 9.3582 4.45703 9.53376C3.89201 9.68688 3.29956 9.70945 2.72453 9.59976C2.96915 10.3617 3.44595 11.0281 4.08815 11.5056C4.73035 11.9831 5.50581 12.2478 6.30594 12.2627C5.51072 12.8872 4.60019 13.3489 3.62642 13.6213C2.65264 13.8938 1.63473 13.9716 0.630859 13.8503C2.38325 14.9773 4.4232 15.5756 6.50669 15.5737C13.5586 15.5737 17.415 9.73176 17.415 4.66535C17.415 4.50035 17.4104 4.33351 17.4031 4.17035C18.1537 3.62783 18.8016 2.95578 19.3162 2.18576L19.3153 2.18484Z"
+                          fill=""
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-ease-in-out ud-duration-300 hover:ud-bg-primary">
+                      <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.36198 2.58327C4.36174 3.0695 4.16835 3.53572 3.82436 3.87937C3.48037 4.22301 3.01396 4.41593 2.52773 4.41569C2.0415 4.41545 1.57528 4.22206 1.23164 3.87807C0.887991 3.53408 0.69507 3.06767 0.695313 2.58144C0.695556 2.09521 0.888943 1.62899 1.23293 1.28535C1.57692 0.941701 2.04333 0.748781 2.52956 0.749024C3.01579 0.749267 3.48201 0.942654 3.82566 1.28664C4.1693 1.63063 4.36222 2.09704 4.36198 2.58327ZM4.41698 5.77327H0.750313V17.2499H4.41698V5.77327ZM10.2103 5.77327H6.56198V17.2499H10.1736V11.2274C10.1736 7.87244 14.5461 7.56077 14.5461 11.2274V17.2499H18.167V9.98077C18.167 4.32494 11.6953 4.53577 10.1736 7.31327L10.2103 5.77327Z"
+                          fill=""
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="ud-group ud-flex ud-items-center ud-justify-center ud-w-10 ud-h-10 ud-rounded-full ud-ease-in-out ud-duration-300 hover:ud-bg-primary">
+                      <svg class="ud-fill-body group-hover:ud-fill-white ud-ease-in-out ud-duration-300" width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.82308 0.904297C7.40883 0.904297 7.95058 0.95013 8.44558 1.0858C8.89476 1.16834 9.32351 1.33772 9.70783 1.58446C10.069 1.81088 10.3394 2.12896 10.5191 2.53688C10.6997 2.9448 10.7895 3.44438 10.7895 3.98796C10.7895 4.62321 10.6547 5.1668 10.3394 5.57471C10.069 5.98355 9.61799 6.34563 9.07716 6.61788C9.84349 6.84521 10.4292 7.25313 10.7895 7.79672C11.1507 8.34122 11.3762 9.02138 11.3762 9.7923C11.3762 10.4275 11.2405 10.9711 11.015 11.4249C10.7895 11.8786 10.4292 12.2865 10.0232 12.5588C9.58205 12.8506 9.09443 13.0651 8.58124 13.1931C8.04041 13.3297 7.49958 13.4205 6.95874 13.4205H0.916992V0.904297H6.82308ZM6.46191 5.98263C6.95783 5.98263 7.36391 5.84696 7.67924 5.62055C7.99458 5.39413 8.13024 4.9853 8.13024 4.48663C8.13024 4.21438 8.08441 3.94213 7.99458 3.76155C7.90474 3.58005 7.76908 3.44346 7.58941 3.3078C7.40883 3.21705 7.22824 3.1263 7.00274 3.08138C6.77724 3.03555 6.55266 3.03555 6.28133 3.03555H3.66699V5.98355H6.46283L6.46191 5.98263ZM6.59758 11.3341C6.86799 11.3341 7.13841 11.2883 7.36391 11.2434C7.59159 11.2001 7.80692 11.1071 7.99458 10.9711C8.17826 10.8384 8.33193 10.6685 8.44558 10.4725C8.53541 10.246 8.62616 9.9738 8.62616 9.65663C8.62616 9.02138 8.44558 8.56763 8.08533 8.25046C7.72416 7.97822 7.22824 7.84255 6.64249 7.84255H3.66699V11.335H6.59758V11.3341ZM15.2986 11.2883C15.6588 11.6513 16.1997 11.8328 16.9211 11.8328C17.417 11.8328 17.868 11.6971 18.2282 11.4707C18.5894 11.1985 18.8149 10.9262 18.9047 10.654H21.1139C20.7527 11.742 20.2119 12.513 19.4914 13.0116C18.7691 13.4654 17.9129 13.7376 16.8762 13.7376C16.2128 13.7396 15.5551 13.6165 14.9374 13.3746C14.3816 13.1661 13.886 12.8235 13.4946 12.3773C13.0759 11.9598 12.7665 11.4457 12.5935 10.8804C12.368 10.291 12.2772 9.65663 12.2772 8.93063C12.2772 8.25047 12.368 7.61613 12.5935 7.0258C12.8103 6.45755 13.1311 5.93468 13.5395 5.48396C13.9456 5.07605 14.4415 4.71396 14.9823 4.48663C15.5843 4.24469 16.2274 4.12143 16.8762 4.12363C17.6425 4.12363 18.319 4.26021 18.9047 4.57738C19.4914 4.89455 19.9415 5.25755 20.3027 5.80205C20.6711 6.32503 20.9456 6.90819 21.1139 7.52538C21.2037 8.15972 21.2487 8.79497 21.2037 9.52005H14.667C14.667 10.246 14.9374 10.9262 15.2986 11.2892V11.2883ZM18.1384 6.52713C17.8231 6.20996 17.3272 6.02846 16.7405 6.02846C16.3353 6.02846 16.0191 6.11922 15.7487 6.25488C15.4782 6.39147 15.2986 6.57297 15.118 6.75447C14.952 6.92978 14.8422 7.15067 14.8027 7.3888C14.7568 7.61613 14.7119 7.79672 14.7119 7.97822H18.7691C18.6792 7.29805 18.4537 6.84522 18.1384 6.52713ZM14.1711 1.76596H19.2201V2.99063H14.172V1.76596H14.1711Z"
+                          fill=""
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="animate_top w-full md:ud-w-3/5 lg:ud-w-2/3 ud-shadow-3 ud-rounded-lg ud-bg-white dark:ud-bg-black ud-p-7.5 xl:ud-p-14">
+              <form action="https://formbold.com/s/unique_form_id" method="POST">
+                <div class="ud-flex ud-flex-col lg:ud-flex-row lg:ud-justify-between ud-gap-7.5 lg:ud-gap-10 ud-mb-7.5">
+                  <div class="ud-w-full lg:ud-w-1/2">
+                    <label class="ud-block ud-mb-4" for="fullname">Full name</label>
+                    <input
+                      type="text"
+                      name="fullname"
+                      id="fullname"
+                      placeholder="Devid Wonder"
+                      class="ud-w-full ud-bg-transparent ud-rounded-lg ud-shadow-4 dark:ud-shadow-none ud-border ud-border-strokedark dark:ud-border-stroke focus-visible:ud-outline-none focus:ud-border-primary dark:focus:ud-border-primary focus:ud-shadow-5 placeholder:ud-text-body/50 ud-py-3.5 ud-px-6"
+                    />
+                  </div>
+
+                  <div class="ud-w-full lg:ud-w-1/2">
+                    <label class="ud-block ud-mb-4" for="email">Email address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="example@gmail.com"
+                      class="ud-w-full ud-bg-transparent ud-rounded-lg ud-shadow-4 dark:ud-shadow-none ud-border ud-border-strokedark dark:ud-border-stroke focus-visible:ud-outline-none focus:ud-border-primary dark:focus:ud-border-primary focus:ud-shadow-5 placeholder:ud-text-body/50 ud-py-3.5 ud-px-6"
+                    />
+                  </div>
+                </div>
+
+                <div class="ud-flex ud-flex-col lg:ud-flex-row lg:ud-justify-between ud-gap-7.5 lg:ud-gap-10 ud-mb-7.5">
+                  <div class="ud-w-full lg:ud-w-1/2">
+                    <label class="ud-block ud-mb-4" for="phone">Phone number</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder="+009 3342 3432"
+                      class="ud-w-full ud-bg-transparent ud-rounded-lg ud-shadow-4 dark:ud-shadow-none ud-border ud-border-strokedark dark:ud-border-stroke focus-visible:ud-outline-none focus:ud-border-primary dark:focus:ud-border-primary focus:ud-shadow-5 placeholder:ud-text-body/50 ud-py-3.5 ud-px-6"
+                    />
+                  </div>
+
+                  <div class="ud-w-full lg:ud-w-1/2">
+                    <label class="ud-block ud-mb-4" for="subject">Subject</label>
+                    <input
+                      type="text"
+                      for="subject"
+                      id="subject"
+                      placeholder="Type your subject"
+                      class="ud-w-full ud-bg-transparent ud-rounded-lg ud-shadow-4 dark:ud-shadow-none ud-border ud-border-strokedark dark:ud-border-stroke focus-visible:ud-outline-none focus:ud-border-primary dark:focus:ud-border-primary focus:ud-shadow-5 placeholder:ud-text-body/50 ud-py-3.5 ud-px-6"
+                    />
+                  </div>
+                </div>
+
+                <div class="ud-mb-10">
+                  <label class="ud-block ud-mb-4" for="message">Message</label>
+                  <textarea
+                    placeholder="Message"
+                    rows="4"
+                    name="message"
+                    id="message"
+                    class="ud-w-full ud-bg-transparent ud-rounded-lg ud-shadow-4 dark:ud-shadow-none ud-border ud-border-strokedark dark:ud-border-stroke focus-visible:ud-outline-none focus:ud-border-primary dark:focus:ud-border-primary focus:ud-shadow-5 placeholder:ud-text-body/50 ud-p-6"
+                  ></textarea>
+                </div>
+
+                <div class="ud-flex ud-justify-center">
+                  <button class="ud-inline-flex ud-rounded-full ud-text-white ud-bg-primary ud-ease-in-out ud-duration-300 ud-px-7.5 ud-py-3 hover:ud-shadow-1">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Contact End ===== -->
+
+      <!-- ===== CTA Start ===== -->
+      <include src="./partials/cta.html" />
+      <!-- ===== CTA End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+
+    <script>
+      //  Pricing Table
+      const setup = () => {
+        return {
+          isNavOpen: false,
+
+          billPlan: 'monthly',
+
+          plans: [
+            {
+              name: 'Starter',
+              price: {
+                monthly: 29,
+                annually: 29 * 12 - 199,
+              },
+              features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+            },
+            {
+              name: 'Growth Plan',
+              price: {
+                monthly: 59,
+                annually: 59 * 12 - 100,
+              },
+              features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+            },
+            {
+              name: 'Business',
+              price: {
+                monthly: 139,
+                annually: 139 * 12 - 100,
+              },
+              features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+            },
+          ],
+        };
+      };
+    </script>
+  </body>
+</html>

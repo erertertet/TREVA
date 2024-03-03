@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* third-party libraries CSS */
+
+#supportCheckbox:checked ~ div span {
+  @apply ud-opacity-100;
+}
+
+@layer base {
+  body {
+    @apply ud-font-inter ud-font-normal ud-text-regular ud-text-body ud-relative ud-z-1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply ud-font-outfit;
+  }
+}
+
+@layer components {
+  .ud-dropdown {
+    @apply ud-flex-col ud-gap-4 ud-min-w-max lg:ud-w-[250px] ud-mt-2 lg:ud-mt-0 ud-bg-white dark:ud-bg-black ud-border ud-border-strokedark dark:ud-border-stroke ud-shadow-lg ud-ease-in ud-duration-300 ud-px-8 ud-py-5 ud-rounded-md -ud-left-7.5 ud-hidden
+    lg:ud-translate-y-10 lg:ud-opacity-0 lg:ud-invisible lg:ud-absolute lg:ud-flex
+    lg:before:ud-absolute lg:before:-ud-top-1.5 lg:before:ud-left-10 lg:before:ud-w-3 lg:before:ud-h-3 lg:before:ud-border-l lg:before:ud-border-t lg:before:ud-border-strokedark lg:dark:before:ud-border-stroke lg:before:ud-bg-white lg:dark:before:ud-bg-black lg:before:ud-rotate-45
+    lg:group-hover:ud-translate-y-6.5 lg:group-hover:ud-opacity-100 lg:group-hover:ud-visible;
+  }
+
+  .project-sizer {
+  @apply ud-w-full md:ud-w-1/2 lg:ud-w-1/3;
+}
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .img-white {
+    filter: invert(0%) sepia(96%) saturate(15%) hue-rotate(249deg) brightness(100%) contrast(105%);
+  }
+}
