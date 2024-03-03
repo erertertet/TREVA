@@ -25,12 +25,16 @@ class TokenCounter:
         self.TOKENER = tiktoken.get_encoding(tiktoken_model_name)
 
     def count_tokens(self, sentences):
-        length = sum([len(self.TOKENER.encode(sentence)) for sentence in sentences])
+        length = sum(
+            [len(self.TOKENER.encode(sentence)) for sentence in sentences]
+        )
         return length
 
     def create_batches(self, sentences, max_tokens, min_overlap):
         # Tokenize sentences and calculate their lengths
-        tokenized_sentences = [self.TOKENER.encode(sentence) for sentence in sentences]
+        tokenized_sentences = [
+            self.TOKENER.encode(sentence) for sentence in sentences
+        ]
         sentence_lengths = [len(tokens) for tokens in tokenized_sentences]
 
         batches = []
@@ -83,8 +87,11 @@ class SrtFile:
     def parse_line(self, text_list):
         start, end = text_list[1][:-1].split(" --> ")
         sentence = " ".join(map(lambda x: x[:-1], text_list[2:]))
-
+        sentence = sentence.strip()
         return (start, end, sentence)
+
+    def get(self, id):
+        return self.content[id][2]
 
     def generate_slices(self, token_counter, max_tokens, min_overlap):
         text_list = map(lambda x: x[2], self.content)
@@ -92,6 +99,9 @@ class SrtFile:
 
     def get_slice(self, l, r):
         return self.content[l:r]
+
+    def get_slice_pure_text(self, l, r):
+        return "\n".join(map(lambda x: x[2], self.content[l:r]))
 
 
 class AICaller:
@@ -130,20 +140,22 @@ class AICaller:
                     "role": "system",
                     "content": "You are a literature master. You will be given some sentencies, but some information \
                             is missing. We do not have some punctuations and we do not seperate the paragraphs \
-                            correctly. Please help us to fix the text.",
+                            correctly. Never remove or add any word even a letter from the original file! Please help us to \
+                            fix the text.",
                 },
                 {
                     "role": "user",
                     "content": "Please fix the text. This text lose some punctuations. Please add the correct \
-                            punctuations and seperate the paragraphs by the meaning of context correctly. And only \
-                            give me the final content please. Here is the text: "
+                            punctuations and seperate the paragraphs by the meaning of context correctly. Don't \
+                            remove or add any word even a letter from the original file! Only add punctuations and \
+                            seperate the content into paragraphs. And only give me the final content please. Here \
+                            is the text: "
                     + text,
                 },
             ],
         )
 
         return completion.choices[0].message.content
-
 
 
 def test_ai():
@@ -216,10 +228,9 @@ Your sexual identity--It is at
 """
     assistant = AICaller()
     print(assistant.api_key)
-    result = assistant.common_sentence_connect(
-        text_text
-    )
-    print (result)
+    result = assistant.common_sentence_connect(text_text)
+    print(result)
+
 
 if __name__ == "__main__":
     pass
@@ -230,5 +241,5 @@ if __name__ == "__main__":
     #     counter = TokenCounter()
     #     text_list = counter.reader(file)
     #     counter.create_batches(text_list, 100, 10)
-        
+
     # AICaller test
