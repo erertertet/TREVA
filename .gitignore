@@ -4,3 +4,7 @@ model_test
 frontend/.env
 backend/.env
 .vscode/
+
+ya-frontend/node_modules
+backend/parsed/*
+backend/uploads/*
