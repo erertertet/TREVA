@@ -38,7 +38,7 @@ function HoverSentence({ children, timestamp }) {
           {children}
         </span>
         {isHovered && (
-          <div style={{ position: 'absolute', top: '-20px', left: 0, backgroundColor: 'yellow', padding: '2px' }}>
+          <div style={{ position: 'absolute', top: '-20px', left: 0, backgroundColor: "rgba(0,0,0,0.5)", padding: '2px', color: 'white' }}>
             {timestamp}
           </div>
         )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo_light.svg'; // Make sure the path to your logo is correct
 import './App.css';
-import YouTubeLinkSender from './send.js';
+import SrtSender from './send.js';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <div className="Logo-container">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <YouTubeLinkSender></YouTubeLinkSender>
+        <SrtSender></SrtSender>
       </header>
     </div>
   );
