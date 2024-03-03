@@ -9,10 +9,11 @@ import asyncio
 
 
 async def process_file(filename):
-    txt = basic_generate(filename)
+    # txt = basic_generate(filename)
     # parsed_name = uuid.uuid1()
     # with open("./parsed/%s.txt" % parsed_name, "w") as file:
     #     file.write(txt)
+    txt = "tesetstestset"
     return txt
 
 
