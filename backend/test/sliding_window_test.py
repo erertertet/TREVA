@@ -45,4 +45,5 @@ from sliding_window import *
 # print(merge_sliding_windows(punctuation_info, windows))
 
 # * basic generator test
-bg = basic_generate("../backend/test/test.srt")
+sliding_window = SlidingWindow()
+bg = sliding_window.basic_generate("../backend/test/test.srt")
