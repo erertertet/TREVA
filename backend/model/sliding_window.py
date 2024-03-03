@@ -8,20 +8,20 @@ import multiprocessing
 
 def basic_generate(srt_file_path):
     srt_file = SrtFile(srt_file_path)
-    srt_file = SrtFile("../backend/test/test.srt")
     counter = TokenCounter("cl100k_base")
     windows = srt_file.generate_slices(counter, 200, 40)
     punctuation_info = generate_punctuated_info(srt_file, windows)
-    with open("punctuation_info.txt", "w") as file:
-        file.write(str(punctuation_info))
+    # with open("punctuation_info.txt", "w") as file:
+    #     file.write(str(punctuation_info))
     list1 = punctuation_info[0]
     list2 = punctuation_info[1]
 
     final_list1, final_list2 = merge_sliding_windows(punctuation_info, windows)
     full_text = direct_connnect(final_list1, final_list2)
     
-    with open("full_text.txt", "w") as file:
-        file.write(full_text)
+    # with open("full_text.txt", "w") as file:
+    #     file.write(full_text)
+    return full_text
 
 
 def edit_distance(str1, str2):
