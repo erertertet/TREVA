@@ -35,14 +35,16 @@ class FileUploadHandler(BaseHandler):
                 out_file.write(f["body"])
             a = SrtFile(storing)
             print(a.content)
-            resulting = await process_file(storing)
+            result = "aaaa\n\n\naaaa"
+            result = result.replace("\n", "<br><br>")
+            # resulting = await process_file(storing)
             # a hypothetical model
-            await asyncio.sleep(10)
+            # await asyncio.sleep(10)
         self.write(
             {
                 "status": "success",
-                "message": str(resulting),
-                "url": str(resulting),
+                "message": result,
+                "url": "aaaa\n\n\naaaa",
             }
         )
 

@@ -40,13 +40,18 @@ function VideoUploader() {
 
     return (
         <>
-            <input
-                type="file"
-                onChange={inputChanged}
-                accept="multipart/form-data"
-            />
-            <button onClick={handleUploadClick}>Upload Video</button>
-            <p>{response}</p>
+            <div className="flex">
+                <input
+                    type="file"
+                    onChange={inputChanged}
+                    accept="multipart/form-data"
+                />
+                <button onClick={handleUploadClick}>Upload SRT File</button>
+
+            </div>
+            <div className="note">
+                {response}
+            </div>
         </>
     );
 }
