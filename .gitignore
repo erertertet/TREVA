@@ -4,3 +4,6 @@ model_test
 frontend/.env
 backend/.env
 .vscode/
+
+backend/uploads/*
+backend/parsed/*
