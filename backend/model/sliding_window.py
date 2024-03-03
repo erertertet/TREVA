@@ -11,6 +11,8 @@ for i,j in combinations(hieracy, 2):
 
 print(HIER_DCT)
 from typing import List, Tuple
+from thefuzz import fuzz
+import re
 
 
 def edit_distance(str1, str2):
@@ -31,44 +33,66 @@ def edit_distance(str1, str2):
     return dp[len_str1][len_str2]
 
 
-def get_pure_text_seq(text, begin_index, length):
-    # get the pure text sequence, only contains lower letters
-    result_str = ""
-    index = begin_index
-    while index < len(text):
-        char_item = text[index]
-        # if char_item is not letter, continue
-        if not char_item.isalpha():
-            index += 1
-            continue
-        # convert char_item to lower case
-        char_item = char_item.lower()
-        # add char_item to result_str
-        result_str += char_item
-        # if the length of result_str is equal to length, return result_str
-        if len(result_str) == length:
-            return (begin_index, index + 1, result_str)
-        # increase index by 1
-        index += 1
-    # length of result_str is less than length, return result_str
-    # return (begin_index, end_index, result_str)
-    return (begin_index, index, result_str)
+def fuzzy_match_sentence_in_annotated_text(str1, str2):
+    return fuzz.partial_ratio(str1, str2)
+
+
+def get_pure_text_seq(text, begin_index, words_num):
+    # Split the text into words
+    words = text.split()
+    # Check if the begin_index is within the range of words
+    if begin_index < 0 or begin_index >= len(words):
+        return ""
+    # Get the sequence of words starting from the begin_index
+    seq = words[begin_index : begin_index + words_num]
+    # Join the words back into a single string
+    pure_text_seq = " ".join(seq)
+    return pure_text_seq
+
+
+def get_word_ranges(annotated_text):
+    # Split the text into words
+    words = annotated_text.split()
+    # Initialize the word ranges list
+    word_ranges = []
+    # Track the current index in the annotated text
+    current_index = 0
+    # Iterate through each word and calculate its range
+    for word in words:
+        # Find the start index of the word
+        start_index = annotated_text.find(word, current_index)
+        # Calculate the end index of the word
+        end_index = start_index + len(word) - 1
+        # Update the current index for the next iteration
+        current_index = end_index + 1
+        # Append the word range to the list
+        word_ranges.append((start_index, end_index))
+    return word_ranges
 
 
 def allocate_sentence_in_annotated_text(
     origin_text, annotated_text, scan_begin_index=0
 ):
+    annotated_text_word_count = len(annotated_text.split())
     # Reloacte the sentence in the annotated text
     pure_letter_origin_text = ""
+    origin_text = origin_text.lower()
+    origin_text = re.sub(" +", " ", origin_text)
+    origin_text = re.sub("\n+", "\n", origin_text)
+    # remove the beginning and ending white space
+    origin_text = origin_text.strip()
+    word_count = 1
     for i in range(len(origin_text)):
         char_item = origin_text[i]
+        if char_item == " ":
+            word_count += 1
+            pure_letter_origin_text += char_item
         if "a" <= char_item <= "z":
             pure_letter_origin_text += char_item
         if "A" <= char_item <= "Z":
             # convert to lower case
             pure_letter_origin_text += chr(ord(char_item) + 32)
     # annotated_text = annotated_text
-    print(origin_text)
     origin_text = pure_letter_origin_text
 
     # scan_index, index in the annotated text
@@ -88,37 +112,162 @@ def allocate_sentence_in_annotated_text(
     # our sentence is lower case only, we need to convert the annotated text to lower case when we do the match
     # also, we need to remove all the punctuation in the annotated text when we do the match
     # there might be some fuzzy match issue, we need to find a way to solve it
-    while scan_index < len(annotated_text):
-        # skip the punctuation or white space
-        if not annotated_text[scan_index].isalpha():
-            scan_index += 1
-            continue
-        compare_str = get_pure_text_seq(
-            annotated_text, scan_index, len(origin_text)
-        )
-        edit_distance_result = edit_distance(origin_text, compare_str[2])
+    while scan_index < annotated_text_word_count:
+        compare_str = get_pure_text_seq(annotated_text, scan_index, word_count)
 
-        if edit_distance_result < 5:
+        edit_distance_result = edit_distance(origin_text, compare_str)
+
+        if edit_distance_result < 10:
             # enter the match region
             match_region = True
             # tolerate the edit distance
             if edit_distance_result < match_ratio:
                 match_ratio = edit_distance_result
-                final_begin_index = compare_str[0]
-                final_end_index = compare_str[1]
+                final_begin_index = scan_index
+                final_end_index = scan_index + word_count
             if edit_distance_result == 0:
                 # exact match
                 break
         else:
             if match_region:
-                # we already enter the match region, but the edit distance is too large
-                break
+                if edit_distance_result > 10:
+                    break
         scan_index += 1
+    if final_begin_index != -1:
+        return (final_begin_index, final_end_index)
 
-    print(compare_str)
-    print(final_begin_index, final_end_index)
-    print(annotated_text[final_begin_index:final_end_index])
-    return (final_begin_index, final_end_index, annotated_text[final_begin_index:final_end_index])
+    # if we can not find the sentence in the annotated text, use fuzzy match
+    scan_index = scan_begin_index
+    match_index = 0
+    match_ratio = 0
+    match_region = False
+    final_begin_index = -1
+    final_end_index = -1
+    while scan_index < annotated_text_word_count:
+        word_count_delta = 2
+        best_score = 0
+        best_word_count = 0
+        word_count_begin = word_count - word_count_delta
+        word_count_end = word_count + word_count_delta
+        for word_count_item in range(word_count_begin, word_count_end + 1):
+            if scan_index + word_count_item > annotated_text_word_count:
+                break
+            compare_str = get_pure_text_seq(
+                annotated_text, scan_index, word_count
+            )
+            edit_distance_result_item = fuzzy_match_sentence_in_annotated_text(
+                origin_text, compare_str
+            )
+            if edit_distance_result_item > best_score:
+                edit_distance_result = edit_distance_result_item
+                best_word_count = word_count_item
+        if edit_distance_result > 60:
+            match_region = True
+            if edit_distance_result > match_ratio:
+                match_ratio = edit_distance_result
+                final_begin_index = scan_index
+                final_end_index = scan_index + word_count
+            if edit_distance_result == 100:
+                break
+        else:
+            if match_region:
+                if edit_distance_result < 50:
+                    break
+        scan_index += 1
+    return (final_begin_index, final_end_index)
+
+
+def generate_single_sliding_window_annotation_info(
+    srt_file: SrtFile, begin_index: int, end_index: int
+):
+    words_delta = 1
+    window_size = end_index - begin_index
+    # list of n items, each item is a string, annotated string with correct punctuation
+    annotated_srt = []
+    # list of n-1 items, each item is a string
+    # if the char = "./,/!/?/..." then we connect 2 sentences with the char
+    # if the char = " " then we connect 2 sentences with out any punctuation
+    # if the char = "\n" we connect 2 sentences with a new line
+    srt_ranges = []
+    srt_relations = []
+
+    # fetch full text
+    window_text = srt_file.get_slice_pure_text(begin_index, end_index)
+    # get the annotated text by AI assistant
+    ai_assistant = AICaller()
+    annotated_text = ai_assistant.common_sentence_connect(window_text)
+    annotated_text = re.sub(" +", " ", annotated_text)
+    annotated_text = re.sub("\n+", "\n", annotated_text)
+
+    # Get the range of each word in the annotated text
+    # word_range[i] = (begin_index, end_index) of the i-th word in the annotated text
+    # annotated_text is a complex string, including punctuation and white space like new line and space
+    annotated_text_word_range = get_word_ranges(annotated_text)
+    print(annotated_text_word_range)
+    annotated_text_word_count = len(annotated_text_word_range)
+    srt_word_records = []
+
+    print(annotated_text)
+    index = begin_index
+    last_sentence_end_index = 0
+    while index < end_index:
+        # get the srt item
+        srt_item = srt_file.get(index)
+        (final_begin_index, final_end_index) = (
+            allocate_sentence_in_annotated_text(
+                srt_item, annotated_text, last_sentence_end_index
+            )
+        )
+        if (final_begin_index, final_end_index) == (-1, -1):
+            (final_begin_index, final_end_index) = (
+                allocate_sentence_in_annotated_text(srt_item, annotated_text, 0)
+            )
+        last_sentence_end_index = final_end_index - words_delta
+        str_begin_index = annotated_text_word_range[final_begin_index][0]
+        final_end_index_fix = min(annotated_text_word_count, final_end_index)
+        str_end_index = (
+            annotated_text_word_range[final_end_index_fix - 1][1] + 1
+        )
+        annotated_sentence = annotated_text[str_begin_index:str_end_index]
+        annotated_srt.append(annotated_sentence)
+        srt_ranges.append((str_begin_index, str_end_index))
+        srt_word_records.append((final_begin_index, final_end_index))
+        index += 1
+
+    # Fix for illegal annotated sentence
+    for i in range(len(annotated_srt)):
+        if srt_word_records[i] == (-1, -1):
+            if i == 0:
+                new_record_left = 0
+            else:
+                new_record_left = srt_word_records[i - 1][1]
+            if i == len(annotated_srt) - 1:
+                new_record_right = annotated_text_word_count
+            else:
+                new_record_right = srt_word_records[i + 1][0] - 1
+            srt_word_records[i] = (new_record_left, new_record_right)
+            (final_begin_index, final_end_index) = srt_word_records[i]
+            str_begin_index = annotated_text_word_range[final_begin_index][0]
+            final_end_index_fix = min(
+                annotated_text_word_count, final_end_index
+            )
+            str_end_index = (
+                annotated_text_word_range[final_end_index_fix - 1][1] + 1
+            )
+            annotated_sentence = annotated_text[str_begin_index:str_end_index]
+            annotated_srt[i] = srt_file.get(i)
+            srt_ranges[i] = (str_begin_index, str_end_index)
+
+    for i in range(len(srt_ranges) - 1):
+        # put the punctuation between 2 sentences
+        sentence_end_index = srt_ranges[i][1]
+        next_begin_index = srt_ranges[i + 1][0]
+        annotated_sentence_connect = annotated_text[
+            sentence_end_index:next_begin_index
+        ]
+        srt_relations.append(annotated_sentence_connect)
+
+    return (annotated_srt, srt_relations)
 
 
 def generate_single_sliding_window_annotation_info(
@@ -141,28 +290,33 @@ def generate_single_sliding_window_annotation_info(
     ai_assistant = AICaller()
     annotated_text = ai_assistant.common_sentence_connect(window_text)
     print(annotated_text)
-    
+
     index = begin_index
     last_sentence_end_index = 0
     while index < end_index:
         # get the srt item
         srt_item = srt_file.get(index)
-        (final_begin_index, final_end_index, annotated_sentence) = allocate_sentence_in_annotated_text(srt_item, annotated_text, last_sentence_end_index)
+        (final_begin_index, final_end_index, annotated_sentence) = (
+            allocate_sentence_in_annotated_text(
+                srt_item, annotated_text, last_sentence_end_index
+            )
+        )
         last_sentence_end_index = final_end_index
         annotated_srt.append(annotated_sentence)
         srt_ranges.append((final_begin_index, final_end_index))
-        
+
     for i in range(len(srt_ranges) - 1):
         # put the punctuation between 2 sentences
         sentence_end_index = srt_ranges[i][1]
         next_begin_index = srt_ranges[i + 1][0] + 1
-        annotated_sentence_connect = annotated_text[sentence_end_index:next_begin_index]
+        annotated_sentence_connect = annotated_text[
+            sentence_end_index:next_begin_index
+        ]
         srt_relations.append(annotated_sentence_connect)
-    
+
     print(annotated_srt)
     print(srt_relations)
     return (annotated_srt, srt_relations)
-        
 
 
 def generate_punctuated_info(

@@ -72,6 +72,7 @@ class SrtFile:
         self.content = []
         if filename:
             self.parse(filename)
+            self.optimization()
 
     def parse(self, filename):
         with open(filename, "r") as file:
@@ -90,6 +91,26 @@ class SrtFile:
         sentence = sentence.strip()
         return (start, end, sentence)
 
+    def optimization(self):
+        index = 0
+        new_content = []
+        while index < len(self.content):
+            if index == 0:
+                new_content.append(self.content[index])
+                index += 1
+                continue
+            if len(new_content[-1][2]) < 80:
+                current_item = self.content[index]
+                new_content[-1] = (
+                    new_content[-1][0],
+                    current_item[1],
+                    new_content[-1][2] + " " + current_item[2],
+                )
+            else:
+                new_content.append(self.content[index])
+            index += 1
+        self.content = new_content
+
     def get(self, id):
         return self.content[id][2]
 
@@ -105,7 +126,7 @@ class SrtFile:
 
 
 class AICaller:
-    def __init__(self, provider="OPENAI", model="gpt-3.5-turbo") -> None:
+    def __init__(self, provider="OPENAI", model="gpt-3.5-turbo-0125") -> None:
         if provider == "OPENAI":
             self.provider = provider
             # Read environment variables from .env file
