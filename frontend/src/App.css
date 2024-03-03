@@ -1,8 +1,10 @@
 .App {
   text-align: center;
   border: 2px solid black;
-  padding:5px;
-  background-color: #FF0000;
+  padding: 5px;
+  background-color: royalblue; /* Change the background color to royal blue */
+  background-image: radial-gradient(white 5%, transparent 5%);
+  background-size: 20px 20px;
 }
 
 
@@ -39,4 +41,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* Hover effect for buttons */
+button:hover {
+  background-color: #117a8b; /* Darker shade of blue for the hover state */
+  color: #ffffff; /* Change text color to white on hover for better visibility */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
 }
