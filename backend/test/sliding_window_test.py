@@ -32,14 +32,17 @@ from sliding_window import *
 # print(direct_connnect(list1, list2))
 
 # * merge test
-counter = TokenCounter("cl100k_base")
-srt_file = SrtFile("../backend/test/test.srt")
-windows = srt_file.generate_slices(counter, 100, 30)
+# counter = TokenCounter("cl100k_base")
+# srt_file = SrtFile("../backend/test/test.srt")
+# windows = srt_file.generate_slices(counter, 100, 30)
 # punctuation_info = generate_punctuated_info(srt_file, windows)
 # with open("punctuation_info.txt", "w") as file:
 #     file.write(str(punctuation_info))
 
-with open("punctuation_info.txt", "r") as file:
-    punctuation_info = eval(file.read())
-print(punctuation_info)
-print(merge_sliding_windows(punctuation_info, windows))
+# with open("punctuation_info.txt", "r") as file:
+#     punctuation_info = eval(file.read())
+# print(punctuation_info)
+# print(merge_sliding_windows(punctuation_info, windows))
+
+# * basic generator test
+bg = basic_generate("../backend/test/test.srt")
