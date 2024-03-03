@@ -1,6 +1,10 @@
+model_test
+.env
+
+frontend/.env
+backend/.env
+.vscode/
 frontend/node_modules/
 backend/__pycache__/
-.vscode
 backend/model/__pycache__
-.env
 backend/uploads/*
