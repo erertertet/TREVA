@@ -24,4 +24,11 @@ def test_token_length(m, n):
         lst = [item[2] for item in lst]
         assert counter.count_tokens(lst) >= n
 
-test_token_length(100, 10)
+def test_srt_file_sliding_window_api():
+    a = SrtFile("./test/test.srt")
+    counter = TokenCounter("cl100k_base")
+    windows = a.generate_slices(counter, 100, 10)
+    print(a.get_slice_pure_text(0, 19))
+        
+# test_token_length(100, 10)
+test_srt_file_sliding_window_api()

@@ -1,0 +1,3596 @@
+1
+00:00:00,230 --> 00:00:02,510
+the following content is provided under
+
+2
+00:00:02,510 --> 00:00:05,269
+a Creative Commons license your support
+
+3
+00:00:05,269 --> 00:00:07,519
+will help MIT OpenCourseWare continue to
+
+4
+00:00:07,519 --> 00:00:09,410
+offer high quality educational resources
+
+5
+00:00:09,410 --> 00:00:10,580
+for free
+
+6
+00:00:10,580 --> 00:00:12,860
+to make a donation or view additional
+
+7
+00:00:12,860 --> 00:00:15,080
+materials from hundreds of MIT courses
+
+8
+00:00:15,080 --> 00:00:21,070
+visit MIT opencourseware at ocw.mit.edu
+
+9
+00:00:30,420 --> 00:00:35,230
+alright let's get started everyone so
+
+10
+00:00:35,230 --> 00:00:38,380
+good afternoon welcome to the second
+
+11
+00:00:38,380 --> 00:00:40,510
+lecture of six triple zero one and also
+
+12
+00:00:40,510 --> 00:00:43,840
+of 600 so as always if you'd like to
+
+13
+00:00:43,840 --> 00:00:45,489
+follow along with the lecture with the
+
+14
+00:00:45,489 --> 00:00:46,989
+lectures please go ahead and download
+
+15
+00:00:46,989 --> 00:00:49,180
+the slides and the code that that I'll
+
+16
+00:00:49,180 --> 00:00:51,730
+provide at least an hour before class
+
+17
+00:00:51,730 --> 00:00:55,239
+every day alright so quick recap of what
+
+18
+00:00:55,239 --> 00:00:57,400
+we did last time so last time we talked
+
+19
+00:00:57,400 --> 00:00:59,620
+a little bit about what a computer is
+
+20
+00:00:59,620 --> 00:01:02,470
+and I think the main takeaway from the
+
+21
+00:01:02,470 --> 00:01:04,299
+last lecture is really that a computer
+
+22
+00:01:04,299 --> 00:01:06,880
+only does what it is told right so it's
+
+23
+00:01:06,880 --> 00:01:08,560
+not going to spontaneously spontaneously
+
+24
+00:01:08,560 --> 00:01:10,479
+make decisions on its own you as the
+
+25
+00:01:10,479 --> 00:01:13,060
+programmer have to tell it what you want
+
+26
+00:01:13,060 --> 00:01:16,210
+it to do by writing programs okay so we
+
+27
+00:01:16,210 --> 00:01:20,290
+talked about simple objects and these
+
+28
+00:01:20,290 --> 00:01:22,240
+objects were of different types so we
+
+29
+00:01:22,240 --> 00:01:25,119
+saw integers floats and boolean's and
+
+30
+00:01:25,119 --> 00:01:26,020
+then we did a couple of simple
+
+31
+00:01:26,020 --> 00:01:29,170
+operations with them today we're going
+
+32
+00:01:29,170 --> 00:01:31,900
+to look at a different a new a new type
+
+33
+00:01:31,900 --> 00:01:34,240
+of object called a string and then we're
+
+34
+00:01:34,240 --> 00:01:39,420
+going to introduce some more powerful
+
+35
+00:01:39,720 --> 00:01:42,130
+things in our programming toolbox so
+
+36
+00:01:42,130 --> 00:01:43,420
+we're going to look at how to how to
+
+37
+00:01:43,420 --> 00:01:45,280
+branch within a program and how to make
+
+38
+00:01:45,280 --> 00:01:47,380
+things how to make the computer repeat
+
+39
+00:01:47,380 --> 00:01:50,260
+certain tasks within our program all
+
+40
+00:01:50,260 --> 00:01:52,540
+right so let's begin by looking at
+
+41
+00:01:52,540 --> 00:01:56,080
+strings so strings are a new object type
+
+42
+00:01:56,080 --> 00:01:58,120
+we've seen so far integers which were
+
+43
+00:01:58,120 --> 00:02:01,240
+whole numbers floats which were decimal
+
+44
+00:02:01,240 --> 00:02:04,030
+numbers and we have seen we've see
+
+45
+00:02:04,030 --> 00:02:05,860
+billions which were true and false
+
+46
+00:02:05,860 --> 00:02:08,440
+so strings are going to be sequences of
+
+47
+00:02:08,440 --> 00:02:10,720
+characters and these characters can be
+
+48
+00:02:10,720 --> 00:02:12,989
+anything they could be letters digits
+
+49
+00:02:12,989 --> 00:02:16,530
+special characters and also spaces and
+
+50
+00:02:16,530 --> 00:02:19,390
+you tell Python that you're you're
+
+51
+00:02:19,390 --> 00:02:20,680
+talking about a string object by
+
+52
+00:02:20,680 --> 00:02:23,560
+enclosing it in quotation marks so in
+
+53
+00:02:23,560 --> 00:02:27,819
+this case I'm creating an object whose
+
+54
+00:02:27,819 --> 00:02:32,430
+value is h-e-l-l-o space th er E and
+
+55
+00:02:32,430 --> 00:02:34,360
+Python knows it's a string object
+
+56
+00:02:34,360 --> 00:02:35,980
+because we're enclosing it in quotations
+
+57
+00:02:35,980 --> 00:02:37,810
+they could be either double quotes or
+
+58
+00:02:37,810 --> 00:02:39,040
+single quotes but as long as you're
+
+59
+00:02:39,040 --> 00:02:41,310
+consistent it doesn't matter
+
+60
+00:02:41,310 --> 00:02:44,100
+and this object worse where we're
+
+61
+00:02:44,100 --> 00:02:46,170
+binding it to this variable named hi and
+
+62
+00:02:46,170 --> 00:02:48,140
+we're using that using the equal sign
+
+63
+00:02:48,140 --> 00:02:51,569
+which is the assignment operator okay so
+
+64
+00:02:51,569 --> 00:02:53,870
+from now on whenever we refer to this
+
+65
+00:02:53,870 --> 00:02:56,670
+variable hi python is going to say oh i
+
+66
+00:02:56,670 --> 00:02:58,739
+know what the value is and it's that
+
+67
+00:02:58,739 --> 00:03:01,709
+string of characters so we're going to
+
+68
+00:03:01,709 --> 00:03:03,000
+learn about two things that you can do
+
+69
+00:03:03,000 --> 00:03:05,610
+on strings today two operations one is
+
+70
+00:03:05,610 --> 00:03:08,069
+to concatenate them and concatenation is
+
+71
+00:03:08,069 --> 00:03:10,680
+really just a fancy word for using this
+
+72
+00:03:10,680 --> 00:03:12,420
+plus operator which means put the
+
+73
+00:03:12,420 --> 00:03:16,880
+strings together so I have this original
+
+74
+00:03:16,880 --> 00:03:19,170
+variable named hi and I create a new
+
+75
+00:03:19,170 --> 00:03:21,630
+variable called name and in it I'm going
+
+76
+00:03:21,630 --> 00:03:23,640
+to assign I'm going to assign the string
+
+77
+00:03:23,640 --> 00:03:27,660
+a na to the variable name and when I use
+
+78
+00:03:27,660 --> 00:03:30,300
+the plus operator in between high and
+
+79
+00:03:30,300 --> 00:03:32,760
+named those two variables Python is
+
+80
+00:03:32,760 --> 00:03:34,350
+going to look at the values of those two
+
+81
+00:03:34,350 --> 00:03:37,489
+and it's going to just put them together
+
+82
+00:03:37,489 --> 00:03:41,430
+okay I'm going to switch to Sky to
+
+83
+00:03:41,430 --> 00:03:45,239
+spider and this is just that example
+
+84
+00:03:45,239 --> 00:03:50,160
+from the from the slides so let's see
+
+85
+00:03:50,160 --> 00:03:53,310
+what happens so I have the variable hi
+
+86
+00:03:53,310 --> 00:03:55,170
+the variable name and I'm just
+
+87
+00:03:55,170 --> 00:03:57,870
+concatenate again and then I'm going to
+
+88
+00:03:57,870 --> 00:04:01,280
+print that out so if I run the code
+
+89
+00:04:01,280 --> 00:04:04,220
+notice it prints out hello there Anna
+
+90
+00:04:04,220 --> 00:04:06,930
+right there's no space and there's no
+
+91
+00:04:06,930 --> 00:04:08,340
+space because the concatenation up
+
+92
+00:04:08,340 --> 00:04:12,840
+operator the plus doesn't add any spaces
+
+93
+00:04:12,840 --> 00:04:14,910
+implicitly so again another example of
+
+94
+00:04:14,910 --> 00:04:17,100
+just computer just doing what it's told
+
+95
+00:04:17,100 --> 00:04:19,529
+if we want to add a space we'd have to
+
+96
+00:04:19,529 --> 00:04:22,470
+actually insert the space manually so
+
+97
+00:04:22,470 --> 00:04:25,620
+that's this line here line 8 and in this
+
+98
+00:04:25,620 --> 00:04:28,530
+line we're concatenating the very value
+
+99
+00:04:28,530 --> 00:04:31,590
+of the variable high with a space notice
+
+100
+00:04:31,590 --> 00:04:33,990
+we're putting it in quotation marks just
+
+101
+00:04:33,990 --> 00:04:38,130
+the space and then with name so if we go
+
+102
+00:04:38,130 --> 00:04:41,850
+ahead and print that value notice this
+
+103
+00:04:41,850 --> 00:04:45,690
+was that garbage greeting there and now
+
+104
+00:04:45,690 --> 00:04:49,340
+we have a proper greeting right
+
+105
+00:04:51,560 --> 00:04:54,350
+another so that's the concatenation
+
+106
+00:04:54,350 --> 00:04:57,360
+between strings and then the other thing
+
+107
+00:04:57,360 --> 00:05:00,000
+we're going to look at related to
+
+108
+00:05:00,000 --> 00:05:04,980
+strings is the star operator so that's
+
+109
+00:05:04,980 --> 00:05:07,740
+this one here on line 10 so python
+
+110
+00:05:07,740 --> 00:05:09,450
+allows you to use the star operator
+
+111
+00:05:09,450 --> 00:05:10,740
+which is stands for multiplication
+
+112
+00:05:10,740 --> 00:05:15,540
+between a string and a number and when
+
+113
+00:05:15,540 --> 00:05:17,610
+you do that python interpreter
+
+114
+00:05:17,610 --> 00:05:22,830
+interprets it as repeat that string that
+
+115
+00:05:22,830 --> 00:05:26,370
+many number of times so in this case I'm
+
+116
+00:05:26,370 --> 00:05:29,610
+creating a silly greeting and I'm
+
+117
+00:05:29,610 --> 00:05:31,890
+concatenated the value of hi which is
+
+118
+00:05:31,890 --> 00:05:36,350
+hello there with the space plus the name
+
+119
+00:05:36,350 --> 00:05:38,940
+so notice here I'm using parentheses to
+
+120
+00:05:38,940 --> 00:05:41,240
+tell Python do this operation first and
+
+121
+00:05:41,240 --> 00:05:44,130
+then multiply whatever the result of
+
+122
+00:05:44,130 --> 00:05:50,360
+this is by 3 okay so if I print that out
+
+123
+00:05:50,360 --> 00:05:53,700
+it's going to multiply the space with my
+
+124
+00:05:53,700 --> 00:05:55,860
+name three times and it's going to
+
+125
+00:05:55,860 --> 00:05:58,230
+concatenate that with hello there so
+
+126
+00:05:58,230 --> 00:06:01,850
+that's exactly what it printed out there
+
+127
+00:06:01,850 --> 00:06:03,900
+last lecture we talked a little bit
+
+128
+00:06:03,900 --> 00:06:05,670
+about about print today I'm going to
+
+129
+00:06:05,670 --> 00:06:08,730
+talk about about some nuances related to
+
+130
+00:06:08,730 --> 00:06:10,530
+print so you use print to interact with
+
+131
+00:06:10,530 --> 00:06:13,560
+the user it's cool to write programs
+
+132
+00:06:13,560 --> 00:06:16,500
+that print things out to the user so the
+
+133
+00:06:16,500 --> 00:06:19,740
+keyword here being print and then you
+
+134
+00:06:19,740 --> 00:06:22,740
+put parentheses after print and in the
+
+135
+00:06:22,740 --> 00:06:25,470
+parentheses you put in whatever you want
+
+136
+00:06:25,470 --> 00:06:28,200
+to show the user so in this little
+
+137
+00:06:28,200 --> 00:06:31,170
+program I have I create a variable named
+
+138
+00:06:31,170 --> 00:06:33,510
+X I assign it the value 1 and then I
+
+139
+00:06:33,510 --> 00:06:38,820
+print one here I'm casting so I'm taking
+
+140
+00:06:38,820 --> 00:06:41,010
+the number one the integer one and I'm
+
+141
+00:06:41,010 --> 00:06:43,950
+casting it to a string and you'll see
+
+142
+00:06:43,950 --> 00:06:47,040
+why in a moment so I want to bring to
+
+143
+00:06:47,040 --> 00:06:48,510
+your attention a couple things here so
+
+144
+00:06:48,510 --> 00:06:52,260
+in the first print I'm using commas
+
+145
+00:06:52,260 --> 00:06:55,380
+everywhere here and then the second
+
+146
+00:06:55,380 --> 00:06:58,310
+print I'm using plus
+
+147
+00:07:00,210 --> 00:07:03,130
+so by definition if you can use print
+
+148
+00:07:03,130 --> 00:07:06,310
+you can use commas inside a print inside
+
+149
+00:07:06,310 --> 00:07:10,900
+the parentheses of print and if you use
+
+150
+00:07:10,900 --> 00:07:13,600
+a comma Python is going to automatically
+
+151
+00:07:13,600 --> 00:07:16,270
+add a space in between the two things
+
+152
+00:07:16,270 --> 00:07:19,509
+that the commas in in between the values
+
+153
+00:07:19,509 --> 00:07:23,110
+so my fav num is is the first thing and
+
+154
+00:07:23,110 --> 00:07:25,210
+the second thing is whatever is after
+
+155
+00:07:25,210 --> 00:07:26,400
+the comma
+
+156
+00:07:26,400 --> 00:07:30,280
+let's take X so if you use a comma
+
+157
+00:07:30,280 --> 00:07:32,020
+Python is going to automatically insert
+
+158
+00:07:32,020 --> 00:07:35,229
+a space for you okay sometimes you might
+
+159
+00:07:35,229 --> 00:07:37,090
+want that sometimes you might not if you
+
+160
+00:07:37,090 --> 00:07:38,500
+don't want that you can use the
+
+161
+00:07:38,500 --> 00:07:42,430
+concatenation operation the plus and you
+
+162
+00:07:42,430 --> 00:07:44,530
+can add all of your little bits together
+
+163
+00:07:44,530 --> 00:07:48,520
+to create one big string if you're using
+
+164
+00:07:48,520 --> 00:07:51,849
+commas the items the objects in between
+
+165
+00:07:51,849 --> 00:07:53,620
+the commas do not all have to be strings
+
+166
+00:07:53,620 --> 00:07:56,260
+that's the plus side of using commas but
+
+167
+00:07:56,260 --> 00:07:58,599
+the downside is you get spaces
+
+168
+00:07:58,599 --> 00:08:03,070
+everywhere if you use plus operator the
+
+169
+00:08:03,070 --> 00:08:05,770
+plus side is Python does exactly what
+
+170
+00:08:05,770 --> 00:08:08,050
+you tell it to do but everything has to
+
+171
+00:08:08,050 --> 00:08:11,380
+be a string object so my fav num is is a
+
+172
+00:08:11,380 --> 00:08:13,690
+string object you have to convert all of
+
+173
+00:08:13,690 --> 00:08:17,400
+your numbers to string objects and so on
+
+174
+00:08:17,400 --> 00:08:21,960
+so if we look at spider
+
+175
+00:08:27,850 --> 00:08:31,090
+this is the same almost the same code so
+
+176
+00:08:31,090 --> 00:08:34,210
+here I don't have spaces anywhere so you
+
+177
+00:08:34,210 --> 00:08:37,870
+can see that the first line here has
+
+178
+00:08:37,870 --> 00:08:40,440
+commas everywhere so I'm going to have
+
+179
+00:08:40,440 --> 00:08:42,789
+spaces in between every one of the
+
+180
+00:08:42,789 --> 00:08:46,380
+things that I'm that I'm printing out
+
+181
+00:08:46,380 --> 00:08:48,970
+this line here is sort of a combination
+
+182
+00:08:48,970 --> 00:08:54,280
+between commas and concatenation so
+
+183
+00:08:54,280 --> 00:08:56,680
+depending on where I use the comma I'm
+
+184
+00:08:56,680 --> 00:08:58,270
+going to have an extra space and this
+
+185
+00:08:58,270 --> 00:09:00,760
+line here just has concatenation
+
+186
+00:09:00,760 --> 00:09:01,300
+everywhere
+
+187
+00:09:01,300 --> 00:09:05,980
+okay so if I run this notice this very
+
+188
+00:09:05,980 --> 00:09:08,890
+first line added spaces everywhere in
+
+189
+00:09:08,890 --> 00:09:10,480
+between all my objects the second one
+
+190
+00:09:10,480 --> 00:09:12,730
+added spaces somewhere and you can sort
+
+191
+00:09:12,730 --> 00:09:14,230
+of trace through and see exactly where
+
+192
+00:09:14,230 --> 00:09:16,960
+the spaces were added and the last line
+
+193
+00:09:16,960 --> 00:09:22,500
+here didn't add spaces anywhere
+
+194
+00:09:30,529 --> 00:09:32,560
+okay
+
+195
+00:09:32,560 --> 00:09:36,759
+so printing things out to the console is
+
+196
+00:09:36,759 --> 00:09:39,160
+nice but the second part of sort of
+
+197
+00:09:39,160 --> 00:09:40,959
+writing an interactive program is
+
+198
+00:09:40,959 --> 00:09:43,449
+getting input from the user and that's
+
+199
+00:09:43,449 --> 00:09:45,730
+that's a more interesting part so if
+
+200
+00:09:45,730 --> 00:09:47,560
+you've done problem set 0 you might have
+
+201
+00:09:47,560 --> 00:09:49,899
+sort of already tried to understand this
+
+202
+00:09:49,899 --> 00:09:54,339
+on your own but here we are so the way
+
+203
+00:09:54,339 --> 00:09:55,749
+you get input from the user is using
+
+204
+00:09:55,749 --> 00:09:59,670
+this command function called input and
+
+205
+00:09:59,670 --> 00:10:02,949
+inside the parentheses you type in
+
+206
+00:10:02,949 --> 00:10:05,860
+whatever you'd like to prompt the user
+
+207
+00:10:05,860 --> 00:10:09,550
+with so in this case in my example here
+
+208
+00:10:09,550 --> 00:10:12,459
+I have input and then here I said type
+
+209
+00:10:12,459 --> 00:10:15,009
+anything so the user is going to see
+
+210
+00:10:15,009 --> 00:10:18,370
+this text here and then the program is
+
+211
+00:10:18,370 --> 00:10:19,839
+just going to stop and it's going to
+
+212
+00:10:19,839 --> 00:10:21,519
+wait for the user to type in something
+
+213
+00:10:21,519 --> 00:10:24,819
+and hit enter as soon as the user types
+
+214
+00:10:24,819 --> 00:10:28,509
+in enter whatever the user types in
+
+215
+00:10:28,509 --> 00:10:32,259
+becomes a string okay if the user types
+
+216
+00:10:32,259 --> 00:10:34,540
+in a number for example that becomes the
+
+217
+00:10:34,540 --> 00:10:37,389
+string that number okay so everything
+
+218
+00:10:37,389 --> 00:10:39,279
+that user types in is going to be made
+
+219
+00:10:39,279 --> 00:10:44,129
+as a string in this line right here
+
+220
+00:10:44,129 --> 00:10:46,600
+whatever the user types in becomes a
+
+221
+00:10:46,600 --> 00:10:49,600
+string and we're going to bind that
+
+222
+00:10:49,600 --> 00:10:51,759
+string object to this variable named
+
+223
+00:10:51,759 --> 00:10:55,449
+called text okay so now further in my
+
+224
+00:10:55,449 --> 00:10:57,069
+program I could do whatever I want with
+
+225
+00:10:57,069 --> 00:10:58,870
+this variable text in this case I'm
+
+226
+00:10:58,870 --> 00:11:02,740
+going to print 5 start text okay
+
+227
+00:11:02,740 --> 00:11:06,339
+so if the user for example gave me ha
+
+228
+00:11:06,339 --> 00:11:10,300
+I'm going to print ha 5 times if the
+
+229
+00:11:10,300 --> 00:11:14,290
+user gave me 5 what do you think the
+
+230
+00:11:14,290 --> 00:11:15,519
+users what do you think's going to be
+
+231
+00:11:15,519 --> 00:11:22,959
+printed out 25 or 5 5 times great
+
+232
+00:11:22,959 --> 00:11:26,490
+yes exactly 5 5 times
+
+233
+00:11:27,900 --> 00:11:29,880
+often times you don't want to work with
+
+234
+00:11:29,880 --> 00:11:32,520
+numbers as strings right you want to
+
+235
+00:11:32,520 --> 00:11:34,800
+work with numbers as numbers right so
+
+236
+00:11:34,800 --> 00:11:37,529
+you have to cast and we learn that last
+
+237
+00:11:37,529 --> 00:11:40,320
+lecture you cast by just putting in this
+
+238
+00:11:40,320 --> 00:11:42,000
+little bit right in front of the input
+
+239
+00:11:42,000 --> 00:11:44,820
+and you can cast it to whatever type you
+
+240
+00:11:44,820 --> 00:11:46,830
+want here I cast it to an int but you
+
+241
+00:11:46,830 --> 00:11:48,750
+can also cast to a float if you want to
+
+242
+00:11:48,750 --> 00:11:51,710
+work with floats and that converts
+
+243
+00:11:51,710 --> 00:11:54,180
+whatever the user typed in as long as
+
+244
+00:11:54,180 --> 00:11:56,010
+it's some number that Python knows how
+
+245
+00:11:56,010 --> 00:11:58,170
+to how to convert into the number itself
+
+246
+00:11:58,170 --> 00:12:00,600
+so in this case if the user gives me
+
+247
+00:12:00,600 --> 00:12:03,210
+five I'm going to print out five times
+
+248
+00:12:03,210 --> 00:12:09,230
+five instead of five five times so
+
+249
+00:12:10,190 --> 00:12:15,690
+that's the code here so the first bit is
+
+250
+00:12:15,690 --> 00:12:17,339
+I'm going to get the user to type in
+
+251
+00:12:17,339 --> 00:12:22,740
+anything and I'm going to put five five
+
+252
+00:12:22,740 --> 00:12:24,300
+five and then when I type in the number
+
+253
+00:12:24,300 --> 00:12:26,100
+since I'm casting it I'm going to do
+
+254
+00:12:26,100 --> 00:12:30,350
+operations with the number yeah question
+
+255
+00:12:31,550 --> 00:12:37,589
+why do you want to cast - oh the
+
+256
+00:12:37,589 --> 00:12:38,970
+question is why do you want to cast - a
+
+257
+00:12:38,970 --> 00:12:42,029
+string what why do you want to cast a
+
+258
+00:12:42,029 --> 00:12:49,920
+string to a number Oh so Python always
+
+259
+00:12:49,920 --> 00:12:52,320
+whatever you whatever you type in just
+
+260
+00:12:52,320 --> 00:12:54,540
+by default by definition of the input
+
+261
+00:12:54,540 --> 00:12:57,290
+command Python always makes it a string
+
+262
+00:12:57,290 --> 00:12:59,580
+so if you want to work with numbers you
+
+263
+00:12:59,580 --> 00:13:01,080
+have to explicitly tell it I'm going to
+
+264
+00:13:01,080 --> 00:13:03,839
+work with a number so even if you give
+
+265
+00:13:03,839 --> 00:13:05,279
+it the number five it's going to think
+
+266
+00:13:05,279 --> 00:13:09,330
+it's the string five yeah that's just
+
+267
+00:13:09,330 --> 00:13:12,290
+how input works
+
+268
+00:13:13,580 --> 00:13:17,830
+the next thing we're going to look at is
+
+269
+00:13:17,830 --> 00:13:23,780
+ways that you can start adding tests in
+
+270
+00:13:23,780 --> 00:13:26,600
+your code and before you can start
+
+271
+00:13:26,600 --> 00:13:28,730
+adding tests before you can start adding
+
+272
+00:13:28,730 --> 00:13:30,320
+tests in your code you need to be able
+
+273
+00:13:30,320 --> 00:13:32,600
+to do the actual tests
+
+274
+00:13:32,600 --> 00:13:36,920
+so this is where comparison operators
+
+275
+00:13:36,920 --> 00:13:39,380
+come in okay
+
+276
+00:13:39,380 --> 00:13:41,570
+so here let's assume that I and J are
+
+277
+00:13:41,570 --> 00:13:46,070
+variables okay the following comparisons
+
+278
+00:13:46,070 --> 00:13:48,350
+are going to give you a boolean so it's
+
+279
+00:13:48,350 --> 00:13:50,000
+either going to say this is true or this
+
+280
+00:13:50,000 --> 00:13:53,950
+is false so that's going to be your test
+
+281
+00:13:53,950 --> 00:13:56,780
+so if I and J are variables you're
+
+282
+00:13:56,780 --> 00:13:59,180
+allowed to compare in swith int floats
+
+283
+00:13:59,180 --> 00:14:01,310
+with floats strings with strings and
+
+284
+00:14:01,310 --> 00:14:03,830
+you're allowed to compare instant floats
+
+285
+00:14:03,830 --> 00:14:05,450
+between themselves but you're not
+
+286
+00:14:05,450 --> 00:14:07,460
+allowed to compare a string with a
+
+287
+00:14:07,460 --> 00:14:11,150
+number in fact if you even try to do
+
+288
+00:14:11,150 --> 00:14:14,090
+that in Python in spider here if I try
+
+289
+00:14:14,090 --> 00:14:17,440
+to say is the letter A greater than 5 I
+
+290
+00:14:17,440 --> 00:14:21,610
+get some angry text right right here and
+
+291
+00:14:21,610 --> 00:14:24,200
+this just tells me Python doesn't
+
+292
+00:14:24,200 --> 00:14:26,240
+understand the meaning of what how do I
+
+293
+00:14:26,240 --> 00:14:29,860
+compare a string with a number right
+
+294
+00:14:30,160 --> 00:14:34,880
+okay so just like in math we can do
+
+295
+00:14:34,880 --> 00:14:36,770
+these usual comparisons we can say if
+
+296
+00:14:36,770 --> 00:14:38,030
+something is greater than something
+
+297
+00:14:38,030 --> 00:14:39,470
+greater or equal to less than less than
+
+298
+00:14:39,470 --> 00:14:41,810
+or equal to I'd like to bring to your
+
+299
+00:14:41,810 --> 00:14:45,200
+attention the Equality so the single
+
+300
+00:14:45,200 --> 00:14:47,150
+equal sign is an assignment so you're
+
+301
+00:14:47,150 --> 00:14:48,830
+taking a value and you're signing it to
+
+302
+00:14:48,830 --> 00:14:50,360
+a variable but when you're doing the
+
+303
+00:14:50,360 --> 00:14:52,220
+double equal sign this is the test for
+
+304
+00:14:52,220 --> 00:14:55,220
+equality is the value of variable I the
+
+305
+00:14:55,220 --> 00:14:58,100
+same as the value of the variable J okay
+
+306
+00:14:58,100 --> 00:14:59,870
+and that's again also going to give you
+
+307
+00:14:59,870 --> 00:15:02,270
+a boolean either true or false and you
+
+308
+00:15:02,270 --> 00:15:04,130
+can also test for inequality with the
+
+309
+00:15:04,130 --> 00:15:07,640
+exclamation equal so that means is the
+
+310
+00:15:07,640 --> 00:15:10,160
+value of the variable I not equal to the
+
+311
+00:15:10,160 --> 00:15:12,890
+value of the variable J true if yes
+
+312
+00:15:12,890 --> 00:15:18,170
+false if no okay so those are comparison
+
+313
+00:15:18,170 --> 00:15:20,420
+operators on integer floats and strings
+
+314
+00:15:20,420 --> 00:15:23,180
+on bullying's you can do some logic
+
+315
+00:15:23,180 --> 00:15:25,089
+operators
+
+316
+00:15:25,089 --> 00:15:31,149
+and the simplest is just inverting so if
+
+317
+00:15:31,149 --> 00:15:34,239
+a is a vet is a variable that can that
+
+318
+00:15:34,239 --> 00:15:36,699
+has a boolean value not a is just going
+
+319
+00:15:36,699 --> 00:15:38,829
+to invert it so if it is true then not a
+
+320
+00:15:38,829 --> 00:15:43,359
+is false and vice versa this is a table
+
+321
+00:15:43,359 --> 00:15:45,489
+that sort of represents what I've said
+
+322
+00:15:45,489 --> 00:15:48,669
+here so you can do you can use and and
+
+323
+00:15:48,669 --> 00:15:52,299
+or these are keywords in Python you can
+
+324
+00:15:52,299 --> 00:15:54,669
+use those two keywords on variables on
+
+325
+00:15:54,669 --> 00:15:58,899
+boolean variables and you get the result
+
+326
+00:15:58,899 --> 00:16:02,919
+and B is only true if both a and B are
+
+327
+00:16:02,919 --> 00:16:09,819
+true and a or B is only false if a and B
+
+328
+00:16:09,819 --> 00:16:12,099
+are false and this is the complete table
+
+329
+00:16:12,099 --> 00:16:16,319
+just in case you need to reference it
+
+330
+00:16:16,709 --> 00:16:19,389
+alright so now that we have ways to do
+
+331
+00:16:19,389 --> 00:16:23,249
+logical tête that question right there
+
+332
+00:16:25,529 --> 00:16:28,029
+yeah great question so what does it mean
+
+333
+00:16:28,029 --> 00:16:29,679
+to compare a string with a string with
+
+334
+00:16:29,679 --> 00:16:31,329
+the greater than so that's just going to
+
+335
+00:16:31,329 --> 00:16:33,519
+compare them like psychographically
+
+336
+00:16:33,519 --> 00:16:36,359
+so it does it come first in the alphabet
+
+337
+00:16:36,359 --> 00:16:39,909
+so we can even test that out we can say
+
+338
+00:16:39,909 --> 00:16:48,309
+is a greater than B and it's false so B
+
+339
+00:16:48,309 --> 00:16:51,779
+becomes later in the alphabet than a
+
+340
+00:16:53,950 --> 00:16:56,769
+so now we have ways to do the tests so
+
+341
+00:16:56,769 --> 00:17:01,630
+we can add some branching to our
+
+342
+00:17:01,630 --> 00:17:03,310
+programming toolbox now that we have
+
+343
+00:17:03,310 --> 00:17:05,650
+ways to do tests okay this is a map of
+
+344
+00:17:05,650 --> 00:17:09,579
+MIT I'm going to go through sort of a
+
+345
+00:17:09,579 --> 00:17:11,380
+little example to motivate why we would
+
+346
+00:17:11,380 --> 00:17:13,619
+want to do branching in our in our in
+
+347
+00:17:13,619 --> 00:17:16,359
+our code and I think after this lecture
+
+348
+00:17:16,359 --> 00:17:17,949
+you'll be able to sort of code up this
+
+349
+00:17:17,949 --> 00:17:20,230
+algorithm that I'm going to explain so
+
+350
+00:17:20,230 --> 00:17:22,390
+most of us see MIT as a maze I first did
+
+351
+00:17:22,390 --> 00:17:27,490
+when I came here when I first came here
+
+352
+00:17:27,490 --> 00:17:29,200
+obviously I signed up for the free food
+
+353
+00:17:29,200 --> 00:17:32,710
+mailing list and MIT being amazed I had
+
+354
+00:17:32,710 --> 00:17:34,600
+no idea where to go right what the
+
+355
+00:17:34,600 --> 00:17:38,770
+shortest path was to free food so one
+
+356
+00:17:38,770 --> 00:17:40,840
+way to think about it is all I wanted to
+
+357
+00:17:40,840 --> 00:17:44,860
+do was get to the free food a very
+
+358
+00:17:44,860 --> 00:17:47,200
+simple algorithm to get there would be
+
+359
+00:17:47,200 --> 00:17:48,820
+to say okay I'm going to take my right
+
+360
+00:17:48,820 --> 00:17:50,380
+hand and I'm going to make sure that my
+
+361
+00:17:50,380 --> 00:17:53,320
+right hand is always on a wall okay and
+
+362
+00:17:53,320 --> 00:17:54,820
+I'm going to go around campus with my
+
+363
+00:17:54,820 --> 00:17:56,580
+right hand always being at a wall and
+
+364
+00:17:56,580 --> 00:17:58,450
+eventually I'll get to the where the
+
+365
+00:17:58,450 --> 00:17:59,950
+free food is I might not there might not
+
+366
+00:17:59,950 --> 00:18:02,440
+be any left right but I'll be there okay
+
+367
+00:18:02,440 --> 00:18:05,290
+so the algorithm is as follows okay if
+
+368
+00:18:05,290 --> 00:18:07,179
+my right hand always has to be on a wall
+
+369
+00:18:07,179 --> 00:18:10,750
+then I'm going to say if there's no wall
+
+370
+00:18:10,750 --> 00:18:12,669
+to my right side then I'm going to go
+
+371
+00:18:12,669 --> 00:18:20,410
+right until I get to a wall okay then if
+
+372
+00:18:20,410 --> 00:18:22,150
+there's a wall to my right and I can go
+
+373
+00:18:22,150 --> 00:18:23,320
+forward I'm just going to keep going
+
+374
+00:18:23,320 --> 00:18:27,520
+forward okay if I keep going forward and
+
+375
+00:18:27,520 --> 00:18:28,780
+there's a wall to my right and in front
+
+376
+00:18:28,780 --> 00:18:29,980
+of me I'm going to turn around and go
+
+377
+00:18:29,980 --> 00:18:33,549
+left okay and then if there's a wall to
+
+378
+00:18:33,549 --> 00:18:35,049
+my right in front of me and to the left
+
+379
+00:18:35,049 --> 00:18:36,040
+that I'm going to turn around and go
+
+380
+00:18:36,040 --> 00:18:36,280
+back
+
+381
+00:18:36,280 --> 00:18:39,840
+so with this fairly simple algorithm I
+
+382
+00:18:39,840 --> 00:18:43,929
+just follow the the path always keeping
+
+383
+00:18:43,929 --> 00:18:47,440
+the wall to my right and eventually I
+
+384
+00:18:47,440 --> 00:18:50,200
+wind up where I need to be okay so
+
+385
+00:18:50,200 --> 00:18:52,690
+notice I used just in plain English a
+
+386
+00:18:52,690 --> 00:18:56,470
+few key words okay if otherwise things
+
+387
+00:18:56,470 --> 00:18:56,980
+like that
+
+388
+00:18:56,980 --> 00:18:59,950
+so in programming we have those same
+
+389
+00:18:59,950 --> 00:19:02,799
+constructs and those same sort of
+
+390
+00:19:02,799 --> 00:19:05,140
+intuitive words can be used to tell
+
+391
+00:19:05,140 --> 00:19:06,500
+Python to do
+
+392
+00:19:06,500 --> 00:19:08,840
+thing or to do something else or to
+
+393
+00:19:08,840 --> 00:19:11,390
+choose from a different set of
+
+394
+00:19:11,390 --> 00:19:15,740
+possibilities okay and this way we can
+
+395
+00:19:15,740 --> 00:19:17,090
+get the computer to make decisions for
+
+396
+00:19:17,090 --> 00:19:20,090
+us now you might be thinking well you
+
+397
+00:19:20,090 --> 00:19:21,830
+said that computers can't make decisions
+
+398
+00:19:21,830 --> 00:19:25,280
+on their own it's not us programmers are
+
+399
+00:19:25,280 --> 00:19:26,960
+going to build these decisions into the
+
+400
+00:19:26,960 --> 00:19:28,909
+program and all the computer is going to
+
+401
+00:19:28,909 --> 00:19:30,260
+do is going to say is going to reach the
+
+402
+00:19:30,260 --> 00:19:32,780
+decision point and say okay this is a
+
+403
+00:19:32,780 --> 00:19:34,250
+decision point should I go left or
+
+404
+00:19:34,250 --> 00:19:35,990
+should I go right or which one do I pick
+
+405
+00:19:35,990 --> 00:19:39,260
+and these sort of decisions are created
+
+406
+00:19:39,260 --> 00:19:40,309
+by you as the programmer and the
+
+407
+00:19:40,309 --> 00:19:41,929
+computer just has to make make the
+
+408
+00:19:41,929 --> 00:19:45,260
+decision and choose a path okay so in
+
+409
+00:19:45,260 --> 00:19:47,240
+programming there's three sort of simple
+
+410
+00:19:47,240 --> 00:19:50,090
+ways that you can add control flow to
+
+411
+00:19:50,090 --> 00:19:51,919
+your programs and that's making one
+
+412
+00:19:51,919 --> 00:19:54,110
+decision and choosing whether to execute
+
+413
+00:19:54,110 --> 00:19:57,980
+something or execute something else the
+
+414
+00:19:57,980 --> 00:20:02,929
+first is a simple if okay and given a
+
+415
+00:20:02,929 --> 00:20:04,730
+program that just linearly has
+
+416
+00:20:04,730 --> 00:20:07,850
+statements that get executed whenever I
+
+417
+00:20:07,850 --> 00:20:12,080
+reach an if statement you're going to
+
+418
+00:20:12,080 --> 00:20:14,630
+check the condition the condition is
+
+419
+00:20:14,630 --> 00:20:16,190
+going to be something that's going to
+
+420
+00:20:16,190 --> 00:20:19,840
+get evaluated to either true or false
+
+421
+00:20:19,840 --> 00:20:23,240
+okay so I've reached the condition here
+
+422
+00:20:23,240 --> 00:20:26,809
+and if the condition is true then I'm
+
+423
+00:20:26,809 --> 00:20:29,210
+going to additionally execute this extra
+
+424
+00:20:29,210 --> 00:20:32,299
+set of expressions but if the condition
+
+425
+00:20:32,299 --> 00:20:33,740
+is false then I'm just going to keep
+
+426
+00:20:33,740 --> 00:20:35,840
+going through the program and not
+
+427
+00:20:35,840 --> 00:20:37,659
+execute that extra set of instructions
+
+428
+00:20:37,659 --> 00:20:42,500
+okay how does Python know which
+
+429
+00:20:42,500 --> 00:20:44,870
+instructions to execute they're going to
+
+430
+00:20:44,870 --> 00:20:46,970
+be inside this what we call code block
+
+431
+00:20:46,970 --> 00:20:50,140
+and the code block is denoted by
+
+432
+00:20:50,140 --> 00:20:52,460
+indentation so it's going to be
+
+433
+00:20:52,460 --> 00:20:54,919
+everything that's indented is part of
+
+434
+00:20:54,919 --> 00:20:59,059
+that if code block typically four spaces
+
+435
+00:20:59,059 --> 00:21:04,260
+indentation okay so that's
+
+436
+00:21:04,260 --> 00:21:07,350
+that's how you'd write code that decides
+
+437
+00:21:07,350 --> 00:21:09,299
+whether to execute this extra thing or
+
+438
+00:21:09,299 --> 00:21:13,230
+not now let's say I don't just want to
+
+439
+00:21:13,230 --> 00:21:15,150
+execute an extra thing I want to reach a
+
+440
+00:21:15,150 --> 00:21:16,799
+condition I want to reach a point where
+
+441
+00:21:16,799 --> 00:21:18,990
+I say I'll either go down this path or
+
+442
+00:21:18,990 --> 00:21:21,960
+I'll do something else okay
+
+443
+00:21:21,960 --> 00:21:29,210
+that's this right here so this if/else
+
+444
+00:21:29,210 --> 00:21:33,600
+construct says this is my code I've
+
+445
+00:21:33,600 --> 00:21:37,440
+reached my decision point here if the
+
+446
+00:21:37,440 --> 00:21:42,120
+condition inside this if is true then
+
+447
+00:21:42,120 --> 00:21:44,309
+I'm going to execute maybe this set of
+
+448
+00:21:44,309 --> 00:21:49,110
+statements here okay but if the
+
+449
+00:21:49,110 --> 00:21:52,020
+condition is not true then I'm not going
+
+450
+00:21:52,020 --> 00:21:53,880
+to execute that set of statements and
+
+451
+00:21:53,880 --> 00:21:55,410
+instead I'm going to execute under
+
+452
+00:21:55,410 --> 00:22:01,890
+whatever else is so using this construct
+
+453
+00:22:01,890 --> 00:22:03,630
+I'm either going to do one set of
+
+454
+00:22:03,630 --> 00:22:05,549
+expressions or the other but never both
+
+455
+00:22:05,549 --> 00:22:06,570
+okay
+
+456
+00:22:06,570 --> 00:22:08,429
+and after I've executed one or the other
+
+457
+00:22:08,429 --> 00:22:10,350
+I'm going to continue on with just the
+
+458
+00:22:10,350 --> 00:22:17,160
+regular execution of the program all
+
+459
+00:22:17,160 --> 00:22:19,280
+right
+
+460
+00:22:19,280 --> 00:22:21,929
+okay so we're able to either choose one
+
+461
+00:22:21,929 --> 00:22:23,340
+thing choose one thing or another but
+
+462
+00:22:23,340 --> 00:22:26,429
+what if we want to have more than one
+
+463
+00:22:26,429 --> 00:22:30,630
+choice so if some number is equal to
+
+464
+00:22:30,630 --> 00:22:32,160
+zero I want to do this if it's equal to
+
+465
+00:22:32,160 --> 00:22:33,929
+one I want to do this otherwise if it's
+
+466
+00:22:33,929 --> 00:22:35,360
+equal to two I want to do this and so on
+
+467
+00:22:35,360 --> 00:22:38,240
+that's where this last one comes in and
+
+468
+00:22:38,240 --> 00:22:42,600
+we introduced this other keyword here
+
+469
+00:22:42,600 --> 00:22:46,710
+called Elif so that stands for short
+
+470
+00:22:46,710 --> 00:22:50,580
+form for else--if so first we check if
+
+471
+00:22:50,580 --> 00:22:53,490
+this condition is true so we're going
+
+472
+00:22:53,490 --> 00:22:55,380
+through our program we've reached our
+
+473
+00:22:55,380 --> 00:22:57,900
+decision point if the condition is true
+
+474
+00:22:57,900 --> 00:23:00,299
+we're going to execute maybe this set of
+
+475
+00:23:00,299 --> 00:23:05,640
+instructions if the conditions not true
+
+476
+00:23:05,640 --> 00:23:09,000
+maybe we'll check what if the condition
+
+477
+00:23:09,000 --> 00:23:11,160
+is not true we will check this next
+
+478
+00:23:11,160 --> 00:23:13,860
+condition that's part of the L if right
+
+479
+00:23:13,860 --> 00:23:16,140
+here and if that one's true we're going
+
+480
+00:23:16,140 --> 00:23:17,309
+to execute a different set of
+
+481
+00:23:17,309 --> 00:23:18,010
+instruction
+
+482
+00:23:18,010 --> 00:23:20,910
+you can have more than one L if and
+
+483
+00:23:20,910 --> 00:23:22,809
+depending on which one's true you're
+
+484
+00:23:22,809 --> 00:23:24,070
+going to execute a different instead of
+
+485
+00:23:24,070 --> 00:23:27,309
+instructions and then this last else is
+
+486
+00:23:27,309 --> 00:23:29,830
+sort of a catch-all where if none of the
+
+487
+00:23:29,830 --> 00:23:31,780
+previous conditions were true then just
+
+488
+00:23:31,780 --> 00:23:35,200
+do this this last set of expressions so
+
+489
+00:23:35,200 --> 00:23:36,750
+in this case you're going to choose
+
+490
+00:23:36,750 --> 00:23:39,790
+between one of these three one of these
+
+491
+00:23:39,790 --> 00:23:42,780
+four routes or however many you have and
+
+492
+00:23:42,780 --> 00:23:44,890
+then when you're done making your choice
+
+493
+00:23:44,890 --> 00:23:46,390
+you're going to execute the remaining
+
+494
+00:23:46,390 --> 00:23:51,760
+set of instructions so the way this
+
+495
+00:23:51,760 --> 00:23:53,980
+works is if more than one condition is
+
+496
+00:23:53,980 --> 00:23:55,660
+true you're actually just going to enter
+
+497
+00:23:55,660 --> 00:23:58,540
+one of them and you're going to enter
+
+498
+00:23:58,540 --> 00:24:01,270
+the very first one that's true so you're
+
+499
+00:24:01,270 --> 00:24:03,040
+never going to enter more than one of
+
+500
+00:24:03,040 --> 00:24:06,220
+these code blocks you're always enter
+
+501
+00:24:06,220 --> 00:24:08,169
+one and you enter the very the first one
+
+502
+00:24:08,169 --> 00:24:16,240
+that's that evaluates to true so notice
+
+503
+00:24:16,240 --> 00:24:18,220
+that we denoted code blocks using
+
+504
+00:24:18,220 --> 00:24:20,350
+indentation and that's actually one of
+
+505
+00:24:20,350 --> 00:24:21,940
+the things that I really like about
+
+506
+00:24:21,940 --> 00:24:24,190
+Python it sort of forces you to write
+
+507
+00:24:24,190 --> 00:24:27,760
+pretty code and nice-looking code and
+
+508
+00:24:27,760 --> 00:24:32,080
+just code that's very readable and that
+
+509
+00:24:32,080 --> 00:24:33,610
+it forces you to indent everything
+
+510
+00:24:33,610 --> 00:24:36,400
+that's a code block okay so you can
+
+511
+00:24:36,400 --> 00:24:38,260
+easily see sort of where the flow of
+
+512
+00:24:38,260 --> 00:24:39,790
+control is and where decision-making
+
+513
+00:24:39,790 --> 00:24:43,870
+points are and and things like that okay
+
+514
+00:24:43,870 --> 00:24:46,960
+so in this particular example we have
+
+515
+00:24:46,960 --> 00:24:50,169
+one if statement here and it checks if
+
+516
+00:24:50,169 --> 00:24:56,140
+two variables are equal and we have an
+
+517
+00:24:56,140 --> 00:24:57,280
+if L if else
+
+518
+00:24:57,280 --> 00:25:00,250
+and in this example we're going to enter
+
+519
+00:25:00,250 --> 00:25:02,890
+either this code block or this one or
+
+520
+00:25:02,890 --> 00:25:05,049
+this one depending on the variables of X
+
+521
+00:25:05,049 --> 00:25:07,150
+and Y and we're only going to enter one
+
+522
+00:25:07,150 --> 00:25:10,210
+code block and we'll enter the first one
+
+523
+00:25:10,210 --> 00:25:12,750
+that that's true
+
+524
+00:25:12,750 --> 00:25:15,850
+notice you can have nested conditionals
+
+525
+00:25:15,850 --> 00:25:18,370
+so inside this first if we have another
+
+526
+00:25:18,370 --> 00:25:25,150
+if here and this inner if is only going
+
+527
+00:25:25,150 --> 00:25:29,140
+to be checked when we enter the first
+
+528
+00:25:29,140 --> 00:25:30,860
+this outer if
+
+529
+00:25:30,860 --> 00:25:38,320
+okay I do want to make one point though
+
+530
+00:25:38,320 --> 00:25:41,029
+so sometimes you might forget to do the
+
+531
+00:25:41,029 --> 00:25:42,890
+double equals sign when you do when you
+
+532
+00:25:42,890 --> 00:25:43,820
+check Warren you're checking for
+
+533
+00:25:43,820 --> 00:25:46,940
+equality and that's okay if you just use
+
+534
+00:25:46,940 --> 00:25:49,159
+one equal sign pythons going to give you
+
+535
+00:25:49,159 --> 00:25:52,610
+an error and it's going to say syntax
+
+536
+00:25:52,610 --> 00:25:54,679
+error and it's going to highlight this
+
+537
+00:25:54,679 --> 00:25:56,659
+line and then you're going to know that
+
+538
+00:25:56,659 --> 00:25:58,490
+there's there's a there's a mistake
+
+539
+00:25:58,490 --> 00:25:59,840
+there you should be using equality
+
+540
+00:25:59,840 --> 00:26:01,399
+because it doesn't make sense to be
+
+541
+00:26:01,399 --> 00:26:04,010
+using to assign to be making an
+
+542
+00:26:04,010 --> 00:26:11,710
+assignment inside the if okay all right
+
+543
+00:26:11,710 --> 00:26:14,029
+so we've learned about branching and we
+
+544
+00:26:14,029 --> 00:26:17,600
+know about conditionals let's try to
+
+545
+00:26:17,600 --> 00:26:22,929
+apply this to to a little game and
+
+546
+00:26:22,929 --> 00:26:25,250
+spoiler we won't be able to we'll have
+
+547
+00:26:25,250 --> 00:26:27,769
+to learn about a new thing but back in
+
+548
+00:26:27,769 --> 00:26:30,230
+1980s there was the Legend of Zelda cool
+
+549
+00:26:30,230 --> 00:26:33,799
+graphics where there was a scene with
+
+550
+00:26:33,799 --> 00:26:37,370
+the Lost Woods okay oversimplification
+
+551
+00:26:37,370 --> 00:26:40,279
+if anyone's a Zelda know die-hard fan
+
+552
+00:26:40,279 --> 00:26:43,549
+but the basic idea was if you entered
+
+553
+00:26:43,549 --> 00:26:45,889
+the woods you know you entered from the
+
+554
+00:26:45,889 --> 00:26:48,950
+left to the right and then as long as
+
+555
+00:26:48,950 --> 00:26:50,210
+you kept going right it would show you
+
+556
+00:26:50,210 --> 00:26:52,490
+the same screen over and over again okay
+
+557
+00:26:52,490 --> 00:26:55,220
+and the trick was you just had to go
+
+558
+00:26:55,220 --> 00:26:57,500
+backward and then you'd exit exit the
+
+559
+00:26:57,500 --> 00:27:00,799
+woods okay so very simple using what we
+
+560
+00:27:00,799 --> 00:27:02,750
+know so far we could sort of code this
+
+561
+00:27:02,750 --> 00:27:06,110
+up and we'd say something like this if
+
+562
+00:27:06,110 --> 00:27:08,510
+the user exits right then set the
+
+563
+00:27:08,510 --> 00:27:10,630
+background to the woods background
+
+564
+00:27:10,630 --> 00:27:13,490
+otherwise set the background to the exit
+
+565
+00:27:13,490 --> 00:27:16,220
+background okay now let's say the user
+
+566
+00:27:16,220 --> 00:27:18,289
+and then and then in the else we're done
+
+567
+00:27:18,289 --> 00:27:21,320
+let's say the user went right well you'd
+
+568
+00:27:21,320 --> 00:27:23,090
+show them the woods background and now
+
+569
+00:27:23,090 --> 00:27:24,710
+ask them again where do they want to go
+
+570
+00:27:24,710 --> 00:27:27,049
+if they exit right set the background to
+
+571
+00:27:27,049 --> 00:27:28,580
+the woods background otherwise set the
+
+572
+00:27:28,580 --> 00:27:30,740
+background to the exit background and so
+
+573
+00:27:30,740 --> 00:27:33,679
+on so you notice that there's sort of no
+
+574
+00:27:33,679 --> 00:27:36,200
+end to this right how many times do you
+
+575
+00:27:36,200 --> 00:27:38,330
+know do you know how many times the user
+
+576
+00:27:38,330 --> 00:27:39,770
+might keep going right they might be
+
+577
+00:27:39,770 --> 00:27:42,049
+really persistent right and they'll be
+
+578
+00:27:42,049 --> 00:27:43,730
+like maybe maybe if I go a thousand
+
+579
+00:27:43,730 --> 00:27:44,250
+times
+
+580
+00:27:44,250 --> 00:27:45,960
+get out of the woods you know maybe a
+
+581
+00:27:45,960 --> 00:27:51,990
+thousand one maybe so this this would
+
+582
+00:27:51,990 --> 00:27:55,020
+probably be who knows how deep this
+
+583
+00:27:55,020 --> 00:27:57,840
+nested does these nested ifs okay so we
+
+584
+00:27:57,840 --> 00:28:01,860
+don't know so with what we know so far
+
+585
+00:28:01,860 --> 00:28:03,690
+we can't really code this this cute
+
+586
+00:28:03,690 --> 00:28:07,460
+little game but enter loops and
+
+587
+00:28:07,460 --> 00:28:12,270
+specifically a while loop so this code
+
+588
+00:28:12,270 --> 00:28:14,640
+here that could be you know infinitely
+
+589
+00:28:14,640 --> 00:28:18,060
+number of nested if statements deep can
+
+590
+00:28:18,060 --> 00:28:21,810
+be rewritten using these three lines so
+
+591
+00:28:21,810 --> 00:28:24,510
+we say while the user exits right set
+
+592
+00:28:24,510 --> 00:28:25,920
+the background to the woods background
+
+593
+00:28:25,920 --> 00:28:28,560
+and with a while loop it's going to do
+
+594
+00:28:28,560 --> 00:28:30,000
+what we tell it to do inside the loop
+
+595
+00:28:30,000 --> 00:28:30,990
+and then it's going to check the
+
+596
+00:28:30,990 --> 00:28:32,790
+condition again and then it's going to
+
+597
+00:28:32,790 --> 00:28:35,190
+do what we what we say it should do
+
+598
+00:28:35,190 --> 00:28:37,110
+inside the code block and then it's
+
+599
+00:28:37,110 --> 00:28:38,670
+going to set the check the condition
+
+600
+00:28:38,670 --> 00:28:40,890
+again and then when the condition as
+
+601
+00:28:40,890 --> 00:28:42,690
+long as the condition is true it's going
+
+602
+00:28:42,690 --> 00:28:44,910
+to keep doing that little loop there and
+
+603
+00:28:44,910 --> 00:28:46,800
+as soon as the condition becomes false
+
+604
+00:28:46,800 --> 00:28:49,020
+it's going to stop doing the loop and do
+
+605
+00:28:49,020 --> 00:28:52,770
+whatever is right after the while okay
+
+606
+00:28:52,770 --> 00:28:55,700
+so that's basically how a while loop
+
+607
+00:28:55,700 --> 00:28:59,210
+works we have while that's the keyword
+
+608
+00:28:59,210 --> 00:29:01,620
+the condition is something that gets
+
+609
+00:29:01,620 --> 00:29:04,140
+evaluated to true or false and once
+
+610
+00:29:04,140 --> 00:29:05,610
+again we have a code block that's
+
+611
+00:29:05,610 --> 00:29:08,280
+indented and it tells Python these are
+
+612
+00:29:08,280 --> 00:29:09,840
+the expressions I want to do as long as
+
+613
+00:29:09,840 --> 00:29:17,010
+the condition is true so the condition
+
+614
+00:29:17,010 --> 00:29:18,840
+is true you evaluate every expression in
+
+615
+00:29:18,840 --> 00:29:20,460
+the code block when you reach the end of
+
+616
+00:29:20,460 --> 00:29:22,470
+the expression end of the code block you
+
+617
+00:29:22,470 --> 00:29:24,720
+check the condition again if it's true
+
+618
+00:29:24,720 --> 00:29:26,730
+still you keep doing the expressions
+
+619
+00:29:26,730 --> 00:29:30,680
+check it again and so on
+
+620
+00:29:32,310 --> 00:29:36,960
+so here's a little game and with these
+
+621
+00:29:36,960 --> 00:29:38,730
+lines of code we were able you know we
+
+622
+00:29:38,730 --> 00:29:41,910
+can code up the the lost losses of of
+
+623
+00:29:41,910 --> 00:29:44,880
+Zelda even worse graphics by the way
+
+624
+00:29:44,880 --> 00:29:47,610
+than the original Zelda is this one that
+
+625
+00:29:47,610 --> 00:29:50,280
+I coded up here so I print out the
+
+626
+00:29:50,280 --> 00:29:51,450
+following things you're in the last
+
+627
+00:29:51,450 --> 00:29:55,200
+forest go left or right and my program
+
+628
+00:29:55,200 --> 00:29:56,670
+is going to say you know you're in the
+
+629
+00:29:56,670 --> 00:29:58,290
+last forest go left or right it's going
+
+630
+00:29:58,290 --> 00:30:00,240
+to get user input it's going to say
+
+631
+00:30:00,240 --> 00:30:03,050
+while the user keeps typing in right
+
+632
+00:30:03,050 --> 00:30:06,780
+show them this text and ask them again
+
+633
+00:30:06,780 --> 00:30:08,490
+right so I'm asking them again by just
+
+634
+00:30:08,490 --> 00:30:11,520
+saying input here again and that's it
+
+635
+00:30:11,520 --> 00:30:13,470
+that's going to just keep getting input
+
+636
+00:30:13,470 --> 00:30:15,810
+from the user and if the user doesn't
+
+637
+00:30:15,810 --> 00:30:17,820
+type in right and maybe types in left
+
+638
+00:30:17,820 --> 00:30:20,610
+you're going to exit out of this loop
+
+639
+00:30:20,610 --> 00:30:21,930
+and print out you got out of the loss
+
+640
+00:30:21,930 --> 00:30:26,280
+force so I have to show you this because
+
+641
+00:30:26,280 --> 00:30:31,110
+I spent too much time on it but I
+
+642
+00:30:31,110 --> 00:30:36,090
+decided to improve on the code that's in
+
+643
+00:30:36,090 --> 00:30:39,300
+the slides and I've written here ways
+
+644
+00:30:39,300 --> 00:30:42,510
+that you guys can also improve it so if
+
+645
+00:30:42,510 --> 00:30:44,730
+I run my code you'll know you're in the
+
+646
+00:30:44,730 --> 00:30:46,350
+last force go left or right so if I say
+
+647
+00:30:46,350 --> 00:30:48,840
+left then yay I got out of the last
+
+648
+00:30:48,840 --> 00:30:54,630
+forest but if I go right then I'm stuck
+
+649
+00:30:54,630 --> 00:30:58,290
+right I took down some trees you can see
+
+650
+00:30:58,290 --> 00:30:59,760
+there's no more trees here I made a
+
+651
+00:30:59,760 --> 00:31:05,040
+table and then I flipped it over okay so
+
+652
+00:31:05,040 --> 00:31:07,230
+the expansion to this if you want to try
+
+653
+00:31:07,230 --> 00:31:09,180
+it out I put this in the comments here
+
+654
+00:31:09,180 --> 00:31:12,660
+is try to use a counter okay if the user
+
+655
+00:31:12,660 --> 00:31:15,030
+types and write the first two times just
+
+656
+00:31:15,030 --> 00:31:17,940
+make that a sad face but if the user
+
+657
+00:31:17,940 --> 00:31:19,740
+types in more than two times make them
+
+658
+00:31:19,740 --> 00:31:21,630
+cut down some trees and build a table
+
+659
+00:31:21,630 --> 00:31:25,170
+and flip it okay that's a cute little
+
+660
+00:31:25,170 --> 00:31:26,460
+expansion if you want to test yourself
+
+661
+00:31:26,460 --> 00:31:28,260
+to make sure you you're getting loops
+
+662
+00:31:28,260 --> 00:31:33,330
+okay so so far we've used while loops to
+
+663
+00:31:33,330 --> 00:31:35,660
+ask for user input and that's actually
+
+664
+00:31:35,660 --> 00:31:37,710
+somewhere where it makes sense to use
+
+665
+00:31:37,710 --> 00:31:38,970
+while loops because you don't actually
+
+666
+00:31:38,970 --> 00:31:40,560
+know how many times the user is going to
+
+667
+00:31:40,560 --> 00:31:44,130
+type in something you can use while
+
+668
+00:31:44,130 --> 00:31:45,240
+loops
+
+669
+00:31:45,240 --> 00:31:47,550
+to keep sort of a counter and to write
+
+670
+00:31:47,550 --> 00:31:52,860
+code that counts something if you do
+
+671
+00:31:52,860 --> 00:31:54,780
+that though there's two there's two
+
+672
+00:31:54,780 --> 00:31:56,400
+things you need to take care of the
+
+673
+00:31:56,400 --> 00:32:01,110
+first is this first line here which is
+
+674
+00:32:01,110 --> 00:32:03,750
+sort of an initialization of this loop
+
+675
+00:32:03,750 --> 00:32:08,690
+counter and the second is this line here
+
+676
+00:32:08,690 --> 00:32:13,970
+which is incrementing your loop counter
+
+677
+00:32:14,690 --> 00:32:17,370
+the reason why the second one is
+
+678
+00:32:17,370 --> 00:32:19,410
+important is because let's look at our
+
+679
+00:32:19,410 --> 00:32:21,870
+condition here so while n is less than
+
+680
+00:32:21,870 --> 00:32:26,150
+five if you didn't have this line here
+
+681
+00:32:26,150 --> 00:32:29,820
+you'd never increment n so every time
+
+682
+00:32:29,820 --> 00:32:31,260
+through the loop you just keep printing
+
+683
+00:32:31,260 --> 00:32:33,990
+zeros okay and you'd have an infinite
+
+684
+00:32:33,990 --> 00:32:36,380
+loop I do want to show though what if
+
+685
+00:32:36,380 --> 00:32:38,760
+you do have an infinite loop it's not
+
+686
+00:32:38,760 --> 00:32:41,070
+the end of the world so I can say
+
+687
+00:32:41,070 --> 00:32:52,140
+something like so while true print zero
+
+688
+00:32:52,140 --> 00:32:54,420
+okay so this is going to give me an
+
+689
+00:32:54,420 --> 00:32:57,830
+infinite loop in my program and
+
+690
+00:33:06,450 --> 00:33:10,260
+okay so notice it's just printing the
+
+691
+00:33:10,260 --> 00:33:12,930
+letter P over and over again and if I
+
+692
+00:33:12,930 --> 00:33:14,130
+let it go any longer it's going to slow
+
+693
+00:33:14,130 --> 00:33:15,540
+down the computer so I'm going to hit
+
+694
+00:33:15,540 --> 00:33:19,170
+control-c or command-c maybe and it's
+
+695
+00:33:19,170 --> 00:33:21,720
+going to stop the program from printing
+
+696
+00:33:21,720 --> 00:33:22,350
+okay
+
+697
+00:33:22,350 --> 00:33:23,940
+so just in case you ever enter enter
+
+698
+00:33:23,940 --> 00:33:26,400
+infinite loops in your programs just go
+
+699
+00:33:26,400 --> 00:33:28,260
+to the console and hit control-c and
+
+700
+00:33:28,260 --> 00:33:31,080
+that's going to stop it from sort of
+
+701
+00:33:31,080 --> 00:33:35,460
+slowing down the computer okay so going
+
+702
+00:33:35,460 --> 00:33:37,170
+back to this example I was saying that
+
+703
+00:33:37,170 --> 00:33:40,320
+if you're using counters or variables in
+
+704
+00:33:40,320 --> 00:33:41,940
+order to sort of count up inside the
+
+705
+00:33:41,940 --> 00:33:43,320
+while loop you have to take care to
+
+706
+00:33:43,320 --> 00:33:46,140
+initialize a counter variable first and
+
+707
+00:33:46,140 --> 00:33:49,110
+then to increment it otherwise you'll
+
+708
+00:33:49,110 --> 00:33:51,930
+enter an infinite loop that feels a
+
+709
+00:33:51,930 --> 00:33:54,270
+little bit tedious and so there's a
+
+710
+00:33:54,270 --> 00:33:57,630
+shortcut for doing that exact same thing
+
+711
+00:33:57,630 --> 00:33:59,880
+so these four lines you can rewrite
+
+712
+00:33:59,880 --> 00:34:01,670
+those into these two lines right here
+
+713
+00:34:01,670 --> 00:34:04,800
+using this new type of loop called a for
+
+714
+00:34:04,800 --> 00:34:09,630
+loop so the for loop says for some loop
+
+715
+00:34:09,630 --> 00:34:12,030
+variable in this case I named it n you
+
+716
+00:34:12,030 --> 00:34:14,670
+can name it whatever you want in range 5
+
+717
+00:34:14,670 --> 00:34:15,960
+we're going to come back to what range
+
+718
+00:34:15,960 --> 00:34:22,139
+means in a little bit print n okay so
+
+719
+00:34:22,139 --> 00:34:23,790
+every time through the loop you're going
+
+720
+00:34:23,790 --> 00:34:26,120
+to print out what the value of n is
+
+721
+00:34:26,120 --> 00:34:31,139
+range 5 actually creates internally a
+
+722
+00:34:31,139 --> 00:34:34,050
+sequence of numbers starting from 0 and
+
+723
+00:34:34,050 --> 00:34:37,050
+going to that number 5 minus 1 so the
+
+724
+00:34:37,050 --> 00:34:41,030
+sequence is going to be 0 1 2 3 and for
+
+725
+00:34:41,030 --> 00:34:43,230
+the first time through the loop you're
+
+726
+00:34:43,230 --> 00:34:45,360
+going to say n is equal to 0 or
+
+727
+00:34:45,360 --> 00:34:47,520
+internally this is what happens and gets
+
+728
+00:34:47,520 --> 00:34:51,179
+the value 0 you're going to print n then
+
+729
+00:34:51,179 --> 00:34:53,100
+you're going to back go back to the to
+
+730
+00:34:53,100 --> 00:34:55,469
+the top and gets the value 1 then you're
+
+731
+00:34:55,469 --> 00:34:57,200
+going to go execute whatever is inside
+
+732
+00:34:57,200 --> 00:35:00,960
+so you're going to print 1 then you're
+
+733
+00:35:00,960 --> 00:35:02,220
+going to increment that to the next
+
+734
+00:35:02,220 --> 00:35:03,690
+value in the sequence you're going to
+
+735
+00:35:03,690 --> 00:35:07,950
+print out 2 and so on so this is the
+
+736
+00:35:07,950 --> 00:35:12,390
+general look of a for loop so we have
+
+737
+00:35:12,390 --> 00:35:16,200
+for some loop variable again can be
+
+738
+00:35:16,200 --> 00:35:18,760
+named whatever you want in rain
+
+739
+00:35:18,760 --> 00:35:22,300
+change some number do a bunch of stuff
+
+740
+00:35:22,300 --> 00:35:26,080
+and again these are part of this four
+
+741
+00:35:26,080 --> 00:35:27,790
+loop code block so you should indent
+
+742
+00:35:27,790 --> 00:35:29,860
+them to tell Python that these are the
+
+743
+00:35:29,860 --> 00:35:32,830
+things that you should do okay so when
+
+744
+00:35:32,830 --> 00:35:34,840
+you're using range some number you start
+
+745
+00:35:34,840 --> 00:35:38,470
+out with variable getting the values
+
+746
+00:35:38,470 --> 00:35:43,360
+zero okay with with variable having
+
+747
+00:35:43,360 --> 00:35:45,250
+value zero you're going to execute all
+
+748
+00:35:45,250 --> 00:35:48,610
+of these expressions after all the
+
+749
+00:35:48,610 --> 00:35:50,230
+expressions in the code block are done
+
+750
+00:35:50,230 --> 00:35:52,950
+you're going to go on to the next value
+
+751
+00:35:52,950 --> 00:35:57,160
+so one you're going to execute all these
+
+752
+00:35:57,160 --> 00:35:59,920
+expressions with variable being value
+
+753
+00:35:59,920 --> 00:36:03,190
+one and then so on and so on until you
+
+754
+00:36:03,190 --> 00:36:11,980
+go to some num minus one that it's so so
+
+755
+00:36:11,980 --> 00:36:13,740
+using range in that way is a little bit
+
+756
+00:36:13,740 --> 00:36:16,480
+constraining because you're always going
+
+757
+00:36:16,480 --> 00:36:18,250
+to get values starting from zero and
+
+758
+00:36:18,250 --> 00:36:21,790
+ending at some numb - 1 ok whatever is
+
+759
+00:36:21,790 --> 00:36:24,310
+in the parentheses in range sometimes
+
+760
+00:36:24,310 --> 00:36:25,660
+you might want to write programs that
+
+761
+00:36:25,660 --> 00:36:27,700
+maybe start at a custom value don't
+
+762
+00:36:27,700 --> 00:36:29,410
+start at 0 maybe they start at 5
+
+763
+00:36:29,410 --> 00:36:32,980
+maybe start at minus 10 and sometimes
+
+764
+00:36:32,980 --> 00:36:34,270
+you might want to write programs that
+
+765
+00:36:34,270 --> 00:36:36,550
+don't go with don't increment the
+
+766
+00:36:36,550 --> 00:36:38,710
+numbers by 1 but maybe skip every other
+
+767
+00:36:38,710 --> 00:36:40,660
+number go every two numbers every three
+
+768
+00:36:40,660 --> 00:36:43,660
+numbers and so on so you can customize
+
+769
+00:36:43,660 --> 00:36:48,130
+range to your needs the one thing you do
+
+770
+00:36:48,130 --> 00:36:50,530
+need to give it is this stop so if you
+
+771
+00:36:50,530 --> 00:36:51,760
+give it only one value in the
+
+772
+00:36:51,760 --> 00:36:55,390
+parentheses that stands for stop and by
+
+773
+00:36:55,390 --> 00:36:56,890
+default start is going to have the value
+
+774
+00:36:56,890 --> 00:36:59,230
+0 and step is going to have the value 1
+
+775
+00:36:59,230 --> 00:37:02,950
+if you give it two things in the
+
+776
+00:37:02,950 --> 00:37:05,140
+parenthesis you're giving it start and
+
+777
+00:37:05,140 --> 00:37:07,810
+stop so the first thing start the second
+
+778
+00:37:07,810 --> 00:37:11,140
+being stop and step gets this value of 1
+
+779
+00:37:11,140 --> 00:37:14,140
+by default and if you give it 3 things
+
+780
+00:37:14,140 --> 00:37:15,520
+in the parenthesis you're giving it
+
+781
+00:37:15,520 --> 00:37:20,370
+start stop and step in that order
+
+782
+00:37:21,539 --> 00:37:24,599
+and you're always going to start at the
+
+783
+00:37:24,599 --> 00:37:28,139
+start value and stop at or so you're
+
+784
+00:37:28,139 --> 00:37:30,179
+going to start at the start value and
+
+785
+00:37:30,179 --> 00:37:32,159
+you're going to go until stop minus one
+
+786
+00:37:32,159 --> 00:37:33,689
+so those are the the sequences of
+
+787
+00:37:33,689 --> 00:37:38,239
+numbers so in this first code right here
+
+788
+00:37:38,239 --> 00:37:40,829
+my sum is going to get the value zero
+
+789
+00:37:40,829 --> 00:37:43,279
+and you're going to have a for loop
+
+790
+00:37:43,279 --> 00:37:46,289
+we're going to start from seven right
+
+791
+00:37:46,289 --> 00:37:47,939
+because we're giving it two numbers and
+
+792
+00:37:47,939 --> 00:37:49,409
+when you give it two numbers it
+
+793
+00:37:49,409 --> 00:37:51,989
+represents start and stop with step
+
+794
+00:37:51,989 --> 00:37:55,249
+being one so you're starting at seven if
+
+795
+00:37:55,249 --> 00:37:59,329
+step is one the next value is eight
+
+796
+00:37:59,329 --> 00:38:05,339
+what's the value after that if we're
+
+797
+00:38:05,339 --> 00:38:13,319
+incrementing by one nine and since we're
+
+798
+00:38:13,319 --> 00:38:17,699
+going until stop minus one we're not
+
+799
+00:38:17,699 --> 00:38:21,449
+actually going to pick up on ten okay so
+
+800
+00:38:21,449 --> 00:38:23,819
+this loop variable I the very first time
+
+801
+00:38:23,819 --> 00:38:25,169
+through the loop is going to have the
+
+802
+00:38:25,169 --> 00:38:31,919
+value seven so my sum is going to be
+
+803
+00:38:31,919 --> 00:38:38,159
+zero plus seven that's everything that's
+
+804
+00:38:38,159 --> 00:38:41,159
+inside the code block the next time
+
+805
+00:38:41,159 --> 00:38:44,719
+through the loop I gets the value eight
+
+806
+00:38:44,719 --> 00:38:51,689
+so inside inside the for loop my sum
+
+807
+00:38:51,689 --> 00:38:54,689
+gets whatever the previous value was
+
+808
+00:38:54,689 --> 00:39:00,599
+which was seven plus eight okay the next
+
+809
+00:39:00,599 --> 00:39:04,859
+time through the loop my sum gets the
+
+810
+00:39:04,859 --> 00:39:07,669
+value seven plus eight plus nine
+
+811
+00:39:07,669 --> 00:39:09,809
+obviously replacing that with the
+
+812
+00:39:09,809 --> 00:39:13,409
+previous value so fifteen okay since
+
+813
+00:39:13,409 --> 00:39:14,969
+we're not going through ten that's where
+
+814
+00:39:14,969 --> 00:39:17,009
+we stop and we're going to print out my
+
+815
+00:39:17,009 --> 00:39:18,599
+sum which is going to be the value of
+
+816
+00:39:18,599 --> 00:39:21,529
+seven plus eight plus nine
+
+817
+00:39:21,649 --> 00:39:24,180
+okay
+
+818
+00:39:24,180 --> 00:39:31,680
+okay yeah do they have to be integers um
+
+819
+00:39:31,800 --> 00:39:34,180
+that's a great question we can try that
+
+820
+00:39:34,180 --> 00:39:36,730
+out I'm not actually sure right off just
+
+821
+00:39:36,730 --> 00:39:39,220
+off the top of my head so you can go in
+
+822
+00:39:39,220 --> 00:39:46,510
+Spyder and say let's say in this example
+
+823
+00:39:46,510 --> 00:39:52,690
+here in this example here so we can say
+
+824
+00:39:52,690 --> 00:39:59,110
+seven point one ten point three yeah so
+
+825
+00:39:59,110 --> 00:40:01,920
+they have to be integers
+
+826
+00:40:08,270 --> 00:40:11,140
+okay so that's that's that example and
+
+827
+00:40:11,140 --> 00:40:14,030
+let's erase that in this particular
+
+828
+00:40:14,030 --> 00:40:16,400
+example we have start/stop and step and
+
+829
+00:40:16,400 --> 00:40:19,120
+here we're going going every other value
+
+830
+00:40:19,120 --> 00:40:22,670
+so we're starting at five tell me what
+
+831
+00:40:22,670 --> 00:40:25,430
+the next value is supposed to be if
+
+832
+00:40:25,430 --> 00:40:28,370
+we're taking every other one seven and
+
+833
+00:40:28,370 --> 00:40:33,830
+then nine and then are we doing 11 or
+
+834
+00:40:33,830 --> 00:40:37,910
+not excellent nice yeah so we're going
+
+835
+00:40:37,910 --> 00:40:41,840
+to the end minus one okay so it's
+
+836
+00:40:41,840 --> 00:40:43,910
+possible that sometimes you write code
+
+837
+00:40:43,910 --> 00:40:45,860
+where you might want to exit out of the
+
+838
+00:40:45,860 --> 00:40:48,260
+loop early okay you don't want to go
+
+839
+00:40:48,260 --> 00:40:50,090
+through all of the sequences of your
+
+840
+00:40:50,090 --> 00:40:52,280
+numbers maybe there's a condition inside
+
+841
+00:40:52,280 --> 00:40:53,960
+there where you just want to exit the
+
+842
+00:40:53,960 --> 00:40:56,570
+loop early inside the while loop maybe
+
+843
+00:40:56,570 --> 00:40:58,190
+you want to exit the loop before the
+
+844
+00:40:58,190 --> 00:41:00,950
+condition becomes false so that's where
+
+845
+00:41:00,950 --> 00:41:03,260
+the break statement comes in so the
+
+846
+00:41:03,260 --> 00:41:07,040
+break works like this it's going to as
+
+847
+00:41:07,040 --> 00:41:09,820
+soon as Python sees this break statement
+
+848
+00:41:09,820 --> 00:41:13,580
+it's going to say okay I'm going to look
+
+849
+00:41:13,580 --> 00:41:17,200
+at whatever loop I'm currently in I'm
+
+850
+00:41:17,200 --> 00:41:20,870
+not evaluating any expression after it
+
+851
+00:41:20,870 --> 00:41:24,290
+that comes within my loop and I'm going
+
+852
+00:41:24,290 --> 00:41:26,600
+to immediately exit the loop so I'm
+
+853
+00:41:26,600 --> 00:41:28,520
+going inside this while this while I'm
+
+854
+00:41:28,520 --> 00:41:30,830
+evaluating this one expression and I
+
+855
+00:41:30,830 --> 00:41:34,700
+suddenly see a break expression B does
+
+856
+00:41:34,700 --> 00:41:39,440
+not get evaluated and break is going to
+
+857
+00:41:39,440 --> 00:41:41,240
+immediately exit out of the innermost
+
+858
+00:41:41,240 --> 00:41:44,480
+loop that it's in so this while loop
+
+859
+00:41:44,480 --> 00:41:46,610
+that has condition - that's the
+
+860
+00:41:46,610 --> 00:41:48,650
+innermost loop that the break is found
+
+861
+00:41:48,650 --> 00:41:52,400
+its found in so we're going to exit out
+
+862
+00:41:52,400 --> 00:41:55,070
+of this innermost loop here and we're
+
+863
+00:41:55,070 --> 00:41:57,680
+evaluating expression C and notice we're
+
+864
+00:41:57,680 --> 00:42:00,140
+evaluating expressions C because its
+
+865
+00:42:00,140 --> 00:42:02,900
+expression C is part of the outer while
+
+866
+00:42:02,900 --> 00:42:07,610
+loop it's at the same level as this one
+
+867
+00:42:07,610 --> 00:42:10,820
+and these ones are part of the inner
+
+868
+00:42:10,820 --> 00:42:14,360
+while loop okay okay
+
+869
+00:42:14,360 --> 00:42:15,830
+last thing I want to say is just a
+
+870
+00:42:15,830 --> 00:42:17,240
+little bit of a comparison between for
+
+871
+00:42:17,240 --> 00:42:19,220
+and while loops so when would you use
+
+872
+00:42:19,220 --> 00:42:21,920
+one or the other this might be useful in
+
+873
+00:42:21,920 --> 00:42:22,040
+you
+
+874
+00:42:22,040 --> 00:42:24,050
+problem sets so for loops you usually
+
+875
+00:42:24,050 --> 00:42:25,340
+use when you know the number of
+
+876
+00:42:25,340 --> 00:42:28,430
+iterations okay while loops are very
+
+877
+00:42:28,430 --> 00:42:30,110
+useful when for example you're getting
+
+878
+00:42:30,110 --> 00:42:31,670
+user input and user input is
+
+879
+00:42:31,670 --> 00:42:33,260
+unpredictable right you don't know how
+
+880
+00:42:33,260 --> 00:42:35,180
+many times they're going to do a certain
+
+881
+00:42:35,180 --> 00:42:38,030
+task for both for and while loops you
+
+882
+00:42:38,030 --> 00:42:39,770
+can end out of the loop early using the
+
+883
+00:42:39,770 --> 00:42:42,530
+break the for loop uses this counter its
+
+884
+00:42:42,530 --> 00:42:45,650
+inherent inside the for loop a while
+
+885
+00:42:45,650 --> 00:42:48,170
+loop you can use a counter in order you
+
+886
+00:42:48,170 --> 00:42:51,020
+can use a while loop to count things but
+
+887
+00:42:51,020 --> 00:42:52,580
+you must initialize the counter before
+
+888
+00:42:52,580 --> 00:42:54,650
+the while loop and you have to remember
+
+889
+00:42:54,650 --> 00:42:55,940
+to increment it within the loop
+
+890
+00:42:55,940 --> 00:42:57,860
+otherwise you may be lead to an infinite
+
+891
+00:42:57,860 --> 00:43:02,450
+loop we've seen in as the very first
+
+892
+00:43:02,450 --> 00:43:04,940
+example of a for loop that the while
+
+893
+00:43:04,940 --> 00:43:07,580
+loop the for loop could be rewritten as
+
+894
+00:43:07,580 --> 00:43:09,140
+a while loop but the vice-versa is not
+
+895
+00:43:09,140 --> 00:43:11,990
+necessarily true and the counter example
+
+896
+00:43:11,990 --> 00:43:14,900
+to that is just user input so you might
+
+897
+00:43:14,900 --> 00:43:16,850
+not know how many times you might do a
+
+898
+00:43:16,850 --> 00:43:20,150
+certain task all right great that's
+
+899
+00:43:20,150 --> 00:43:23,050
+that's all for today
+
