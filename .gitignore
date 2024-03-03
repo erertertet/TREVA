@@ -8,3 +8,4 @@ frontend/node_modules/
 backend/__pycache__/
 backend/model/__pycache__
 backend/uploads/*
+backend/parsed/*
