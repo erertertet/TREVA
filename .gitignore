@@ -9,3 +9,5 @@ backend/__pycache__/
 backend/model/__pycache__
 backend/uploads/*
 backend/parsed/*
+
+ya-frontend/node_modules/

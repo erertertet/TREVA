@@ -10,10 +10,10 @@ import asyncio
 
 async def process_file(filename):
     txt = basic_generate(filename)
-    parsed_name = uuid.uuid1()
-    with open("./parsed/%s.txt" % parsed_name, "w") as file:
-        file.write(txt)
-    return parsed_name
+    # parsed_name = uuid.uuid1()
+    # with open("./parsed/%s.txt" % parsed_name, "w") as file:
+    #     file.write(txt)
+    return txt
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -41,7 +41,7 @@ class FileUploadHandler(BaseHandler):
         self.write(
             {
                 "status": "success",
-                "message": f"Uploaded {len(files)} files.",
+                "message": str(resulting),
                 "url": str(resulting),
             }
         )
