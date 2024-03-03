@@ -1,18 +1,17 @@
 from utils import *
 from itertools import combinations, product
-
-# from higher to lower
-hieracy = ["!.?", "\"n", ","]
-HIER_DCT = []
-
-for i,j in combinations(hieracy, 2):
-    for m, n in product(i, j):
-        HIER_DCT.append((m, n))
-
-print(HIER_DCT)
 from typing import List, Tuple
 from thefuzz import fuzz
 import re
+
+
+# from higher to lower
+hieracy = ["!.?", '"n', ","]
+HIER_DCT = []
+
+for i, j in combinations(hieracy, 2):
+    for m, n in product(i, j):
+        HIER_DCT.append((m, n))
 
 
 def edit_distance(str1, str2):
@@ -327,7 +326,6 @@ def generate_punctuated_info(
     assistant = AICaller()
 
 
-
 def merge_sliding_windows(srt_file: SrtFile, windows, windows_slice):
     # Assumption: windows is in the format of
     # [([annotated sentences], [annotations])]
@@ -342,7 +340,10 @@ def merge_sliding_windows(srt_file: SrtFile, windows, windows_slice):
             print(i - l, annotated_sentences)
         for i in range(l, r - 1):
             if i in all_connections:
-                if (all_connections[i], annotated_sentences[1][i - l]) in HIER_DCT:
+                if (
+                    all_connections[i],
+                    annotated_sentences[1][i - l],
+                ) in HIER_DCT:
                     continue
             all_connections[i] = annotated_sentences[1][i - l]
 
@@ -352,8 +353,6 @@ def merge_sliding_windows(srt_file: SrtFile, windows, windows_slice):
         [all_sentences[i] for i in range(num)],
         [all_connections[i] for i in range(num - 1)],
     )
-
-
 
 
 # windows: List[window: tuple[annotationed_sentence: List[str], connection: List[str]]]
