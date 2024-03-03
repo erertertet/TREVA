@@ -7,13 +7,17 @@ from model.utils import *
 from model.sliding_window import *
 import asyncio
 
+import multiprocessing
+
 
 async def process_file(filename):
-    # txt = basic_generate(filename)
+    
+    pool = multiprocessing.Pool(processes=8)
+    txt = basic_generate(filename, pool)
     # parsed_name = uuid.uuid1()
     # with open("./parsed/%s.txt" % parsed_name, "w") as file:
     #     file.write(txt)
-    txt = "tesetstestset"
+    # txt = "tesetstestset"
     return txt
 
 
@@ -36,9 +40,8 @@ class FileUploadHandler(BaseHandler):
                 out_file.write(f["body"])
             a = SrtFile(storing)
             print(a.content)
-            result = "aaaa\n\n\naaaa"
-            result = result.replace("\n", "<br><br>")
-            # resulting = await process_file(storing)
+            # result = result.replace("\n", "<br><br>")
+            result = await process_file(storing)
             # a hypothetical model
             # await asyncio.sleep(10)
         self.write(
