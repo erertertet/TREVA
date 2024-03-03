@@ -1,6 +1,6 @@
 <header class="fixed left-0 top-0 w-full z-99999 py-7" :class="{ 'bg-white dark:bg-black shadow !py-4 transition duration-100' : stickyMenu }" @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false">
-  <div class="mx-auto max-w-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
-    <div class="w-full lg:w-1/4 flex items-center justify-between">
+  <div class="mx-auto max-w-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative flex">
+    <div class="items-center justify-between">
       <a href="index.html">
         <img class="dark:hidden w-20 h-20" src="./images/logo/Logo.svg" alt="Logo Light" />
         <img class="hidden dark:block w-20 h-20" src="./images/logo/Logo.svg" alt="Logo Dark" />
@@ -26,12 +26,12 @@
       <!-- Hamburger Toggle BTN -->
     </div>
 
-    <div class="w-full lg:w-3/4 h-auto flex-initial items-center justify-center">
+    <div class="h-auto items-center justify-center">
       <!-- Displaying T.R.E.V.A heading -->
       <h1 class="text-xl lg:text-3xl font-bold text-primary dark:text-white">T.R.E.V.A</h1>
     </div>
 
-    <div class="flex items-center gap-6 mt-7 lg:mt-0">
+    <div class="items-center gap-6 mt-7 lg:mt-0">
       <div class="lg:static absolute right-4 top-4">
         <label class="block m-0 relative">
           <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="cursor-pointer w-full h-full opacity-0 absolute top-0 z-50 m-0" />
