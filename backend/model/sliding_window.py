@@ -6,6 +6,22 @@ import re
 import multiprocessing
 
 
+def basic_generate(srt_file_path):
+    srt_file = SrtFile(srt_file_path)
+    srt_file = SrtFile("../backend/test/test.srt")
+    counter = TokenCounter("cl100k_base")
+    windows = srt_file.generate_slices(counter, 200, 40)
+    punctuation_info = generate_punctuated_info(srt_file, windows)
+    with open("punctuation_info.txt", "w") as file:
+        file.write(str(punctuation_info))
+    list1 = punctuation_info[0]
+    list2 = punctuation_info[1]
+
+    final_list1, final_list2 = merge_sliding_windows(punctuation_info, windows)
+    full_text = direct_connnect(final_list1, final_list2)
+    
+    with open("full_text.txt", "w") as file:
+        file.write(full_text)
 
 
 def edit_distance(str1, str2):
@@ -391,6 +407,13 @@ def generate_punctuated_info(
 
 def merge_sliding_windows(windows, windows_slice):
     # @ merge the sliding windows
+    # @ input:
+    # @ - windows: the windows, List[Tuple[List[str], List[str]]], each item is a tuple, represents the
+    # @            annotated sentences and the relations between the annotated sentences
+    # @ - windows_slice: the windows slice, List[Tuple[int, int]], each item is a tuple, represents the
+    # @                  begin index and end index of the sliding window
+    # @ output:
+    # @ - the merged annotated sentences and the relations between the annotated sentences, Tuple[List[str], List[str]]
     # Assumption: windows is in the format of
     # [([annotated sentences], [annotations])]
     # windows_slice is in the form of [(l, r)]
