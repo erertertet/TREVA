@@ -1,0 +1,7 @@
+1
+00:00:05,120 --> 00:00:08,330
+This is a sample SRT file.
+
+2
+00:00:09,500 --> 00:00:12,020
+It is for testing the database.
