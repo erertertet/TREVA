@@ -9,7 +9,7 @@ sys.path.append(str(model_dir))
 from utils import *
 from sliding_window import *
 
-
+# * simple merge test
 # windows: List[window: tuple[annotationed_sentence: List[str], connection: List[str]]]
 
 # test_windows = [
@@ -18,16 +18,28 @@ from sliding_window import *
 # ]
 # test_windows_slice = [(0, 4), (2, 8)]
 
-# print(merge_sliding_windows(None, test_windows, test_windows_slice))
+# print(merge_sliding_windows(test_windows, test_windows_slice))
 
 
-# Single window test
+# * single window test
+# srt_file = SrtFile("../backend/test/test.srt")
+# list1, list2 = generate_single_sliding_window_annotation_info(srt_file, 10, 30)
+# for i in range(len(list1)):
+#     print(i, end=": \n")
+#     print(list1[i])
+#     print()
+# print(list2)
+# print(direct_connnect(list1, list2))
 
+# * merge test
+counter = TokenCounter("cl100k_base")
 srt_file = SrtFile("../backend/test/test.srt")
-list1, list2 = generate_single_sliding_window_annotation_info(srt_file, 10, 30)
-for i in range(len(list1)):
-    print(i, end=": \n")
-    print(list1[i])
-    print()
-print(list2)
-print(direct_connnect(list1, list2))
+windows = srt_file.generate_slices(counter, 100, 30)
+# punctuation_info = generate_punctuated_info(srt_file, windows)
+# with open("punctuation_info.txt", "w") as file:
+#     file.write(str(punctuation_info))
+
+with open("punctuation_info.txt", "r") as file:
+    punctuation_info = eval(file.read())
+print(punctuation_info)
+print(merge_sliding_windows(punctuation_info, windows))

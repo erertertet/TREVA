@@ -3,15 +3,9 @@ from itertools import combinations, product
 from typing import List, Tuple
 from thefuzz import fuzz
 import re
+import multiprocessing
 
 
-# from higher to lower
-hieracy = ["!.?", '"n', ","]
-HIER_DCT = []
-
-for i, j in combinations(hieracy, 2):
-    for m, n in product(i, j):
-        HIER_DCT.append((m, n))
 
 
 def edit_distance(str1, str2):
@@ -328,6 +322,7 @@ def generate_single_sliding_window_annotation_info(
             if i == len(annotated_srt) - 1:
                 new_record_right = annotated_text_word_count
             else:
+                # TODO: Fuzzy search right end
                 new_record_right = srt_word_records[i + 1][0]
             srt_word_records[i] = (new_record_left, new_record_right)
             (final_begin_index, final_end_index) = srt_word_records[i]
@@ -390,15 +385,24 @@ def generate_punctuated_info(
         annotated_srt, srt_relations = generate_single_sliding_window_annotation_info(
             srt_file, window[0], window[1]
         )
-        result.append(annotated_srt, srt_relations)
+        result.append((annotated_srt, srt_relations))
     return result
 
-def merge_sliding_windows(srt_file: SrtFile, windows, windows_slice):
+
+def merge_sliding_windows(windows, windows_slice):
     # @ merge the sliding windows
     # Assumption: windows is in the format of
     # [([annotated sentences], [annotations])]
     # windows_slice is in the form of [(l, r)]
 
+    # from higher to lower
+    hieracy = ["!.?", '"n', ","]
+    HIER_DCT = []
+
+    for i, j in combinations(hieracy, 2):
+        for m, n in product(i, j):
+            HIER_DCT.append((m, n))
+        
     all_sentences = {}
     all_connections = {}
 
