@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Base - Tailwind CSS Startup Template</title>
 </head>
-<body x-data="{ page: 'home', darkMode: true, stickyMenu: false, navigationOpen: false, scrollTop: false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode')); $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))" :class="{'dark bg-black': darkMode === true}">
-  <!-- ===== Header Start ===== -->
+<body x-data="{ page: 'home', darkMode: true, stickyMenu: false, navigationOpen: false, scrollTop: false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode')); $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))" :class="{'dark bg-black': darkMode === true}">  <!-- ===== Header Start ===== -->
   <include src="./partials/header.html" />
   <!-- ===== Header End ===== -->
 
