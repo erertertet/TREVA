@@ -162,3 +162,5 @@ cython_debug/
 
 full_text.txt
 punctuation_info.txt
+parsed
+uploads
