@@ -50,5 +50,9 @@ if __name__ == "__main__":
     pool = multiprocessing.Pool(processes=8)
     bg = basic_generate("../backend/test/small_test.srt", pool)
     print(bg)
+    sentences, time_slices = bg
     with open("full_text.txt", "w") as file:
-        file.write(str(bg))
+        file.write("".join(sentences))
+    counter = TokenCounter("cl100k_base")
+    srt_file = SrtFile("../backend/test/small_test.srt")
+    print(get_chapters(srt_file, sentences, time_slices))

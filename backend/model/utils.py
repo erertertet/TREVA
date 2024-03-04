@@ -160,23 +160,47 @@ class AICaller:
                 {
                     "role": "system",
                     "content": "You are a literature master. You will be given some sentencies, but some information \
-                            is missing. We do not have some punctuations and we do not seperate the paragraphs \
-                            correctly. Never remove or add any word even a letter from the original file! Please help us to \
-                            fix the text.",
+is missing. We do not have some punctuations and we do not seperate the paragraphs \
+correctly. Never remove or add any word even a letter from the original file! Please help us to \
+fix the text.",
                 },
                 {
                     "role": "user",
                     "content": "Please fix the text. This text lose some punctuations. Please add the correct \
-                            punctuations and seperate the paragraphs by the meaning of context correctly. Don't \
-                            remove or add any word even a letter from the original file! Only add punctuations and \
-                            seperate the content into paragraphs. And only give me the final content please. Here \
-                            is the text: "
+punctuations and seperate the paragraphs by the meaning of context correctly. Don't \
+remove or add any word even a letter from the original file! Only add punctuations and \
+seperate the content into paragraphs. And only give me the final content please. Here \
+is the text: "
                     + text,
                 },
             ],
         )
 
         return completion.choices[0].message.content
+    
+    def common_chapter_finder(self, text):
+        client = OpenAI()
+        completion = client.chat.completions.create(
+            model="gpt-4-0125-preview",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a literature master. You will be given some sentencies. I wish you can help me \
+connect the sentencies into paragraphs first. Then, you can help me to find the chapters in those paragraphs. And you \
+should tell me the final in this format: 'Chapter 1 (sentence 1 - sentenc 10): summary of the chapter.'",
+                },
+                {
+                    "role": "user",
+                    "content": "You are a literature master. You will be given some sentencies. I wish you can help me \
+connect the sentencies into paragraphs first. Then, you can help me to find the chapters in those paragraphs. And you \
+should tell me the final in this format: 'Chapter 1 (sentence 1 - sentenc 10): summary of the chapter.' I only need \
+this and do not give me any extra text. Here is our text:" + text,
+                },
+            ],
+        )
+
+        return completion.choices[0].message.content
+        
 
 
 def test_ai():

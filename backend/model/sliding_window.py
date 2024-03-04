@@ -13,7 +13,9 @@ def basic_generate(srt_file_path, pool=None):
     punctuation_info = generate_punctuated_info(srt_file, windows, pool)
     # with open("punctuation_info.txt", "w") as file:
     #     file.write(str(punctuation_info))
-    single_sentence, time_range = merge_sliding_windows(srt_file, punctuation_info, windows)
+    single_sentence, time_range = merge_sliding_windows(
+        srt_file, punctuation_info, windows
+    )
     # with open("full_text.txt", "w") as file:
     #     file.write(full_text)
     return (single_sentence, time_range)
@@ -116,7 +118,7 @@ def allocate_sentence_in_annotated_text(
     pure_letter_origin_text = ""
     origin_text = origin_text.lower()
     origin_text = re.sub(" +", " ", origin_text)
-    origin_text = re.sub("\n+", "\n", origin_text)
+    # origin_text = re.sub("\n+", "\n", origin_text)
 
     # * Handle the origin text
     # remove the beginning and ending white space
@@ -283,7 +285,7 @@ def generate_single_sliding_window_annotation_info(
     ai_assistant = AICaller()
     annotated_text = ai_assistant.common_sentence_connect(window_text)
     annotated_text = re.sub(" +", " ", annotated_text)
-    annotated_text = re.sub("\n+", "\n", annotated_text)
+    # annotated_text = re.sub("\n+", "\n", annotated_text)
 
     # Get the range of each word in the annotated text
     # word_range[i] = (begin_index, end_index) of the i-th word in the annotated text
@@ -403,14 +405,19 @@ def generate_punctuated_info(
                 )
             )
         return result
-    
+
     # Create a multiprocessing pool with the number of available CPUs
     # Use the pool to parallelize the generation of punctuated info for each sliding window
     for window in sliding_windows:
         # Apply the generate_single_sliding_window_annotation_info function to each sliding window
         # and store the result in the result list
-        result.append(pool.apply_async(generate_single_sliding_window_annotation_info, (srt_file, window[0], window[1])))
-    
+        result.append(
+            pool.apply_async(
+                generate_single_sliding_window_annotation_info,
+                (srt_file, window[0], window[1]),
+            )
+        )
+
     # Close the pool and wait for all processes to finish
     pool.close()
     pool.join()
@@ -440,7 +447,7 @@ def merge_sliding_windows(srt_file, windows, windows_slice):
     for i, j in combinations(hieracy, 2):
         for m, n in product(i, j):
             HIER_DCT.append((m, n))
-        
+
     all_sentences = {}
     all_connections = {}
 
@@ -449,7 +456,10 @@ def merge_sliding_windows(srt_file, windows, windows_slice):
             all_sentences[i] = annotated_sentences[0][i - l]
         for i in range(l, r - 1):
             if i in all_connections:
-                if all_connections[i] != "\n" and annotated_sentences[1][i - l] == "\n":
+                if (
+                    all_connections[i] != "\n"
+                    and annotated_sentences[1][i - l] == "\n"
+                ):
                     continue
             all_connections[i] = annotated_sentences[1][i - l]
 
@@ -457,8 +467,45 @@ def merge_sliding_windows(srt_file, windows, windows_slice):
 
     for i in range(num - 1):
         all_sentences[i] = all_sentences[i] + all_connections[i]
-        
+
     return (
         [all_sentences[i] for i in range(num)],
-        [(srt_file.content[i][0], srt_file.content[i + 1][0]) for i in range(num)],
+        [
+            (srt_file.content[i][0], srt_file.content[i + 1][0])
+            for i in range(num)
+        ],
     )
+
+
+def get_chapters(srt_file, annotated_sentences, time_stamp):
+    # @ get the chapters from the annotated sentences and time stamp
+    # @ input:
+    # @ - srt_file: the srt file
+    # @ - annotated_sentences: the annotated sentences
+    # @ - time_stamp: the time stamp
+    # @ output:
+    # @ - the chapters
+    ai_assistant = AICaller()
+    full_text = ""
+    index = 0
+    for sentence in annotated_sentences:
+        full_text += "Sentence: " + str(index) + "\n:" + sentence + "\n"
+        index += 1
+    chapter_result = ai_assistant.common_chapter_finder(full_text)
+
+    # Find format regex: 'Chapter id0 (sentence id1 - sentence id2):'
+    # each letter could be upper or lower case
+    # id0, id1, id2 are integers
+    pattern = r"Chapter\s+(\d+)\s+\(Sentence\s+(\d+)\s+-\s+Sentence\s+(\d+)\):\s+(.*)"
+    matches = re.findall(pattern, text, re.IGNORECASE)
+    
+    chapters = []
+    for match in matches:
+        chapter_id = int(match[0])
+        sentence_id1 = int(match[1])
+        sentence_id2 = int(match[2])
+        summary = match[3].strip()
+        chapters.append((chapter_id, sentence_id1, sentence_id2, summary))
+    
+
+    return result
