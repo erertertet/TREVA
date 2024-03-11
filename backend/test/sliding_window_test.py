@@ -48,11 +48,11 @@ from sliding_window import *
 # * basic generator test
 if __name__ == "__main__":
     pool = multiprocessing.Pool(processes=8)
-    bg = basic_generate("../backend/test/small_test.srt", pool)
+    bg = basic_generate("/Users/chivier/Downloads/b.srt", pool)
     print(bg)
     sentences, time_slices = bg
     with open("full_text.txt", "w") as file:
         file.write("".join(sentences))
     counter = TokenCounter("cl100k_base")
-    srt_file = SrtFile("../backend/test/small_test.srt")
+    srt_file = SrtFile("/Users/chivier/Downloads/b.srt")
     print(get_chapters(srt_file, sentences, time_slices))

@@ -164,3 +164,9 @@ full_text.txt
 punctuation_info.txt
 parsed
 uploads
+
+# Test files
+*.sct
+*.srt
+*.wav
+*.mp4

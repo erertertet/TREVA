@@ -497,7 +497,7 @@ def get_chapters(srt_file, annotated_sentences, time_stamp):
     # each letter could be upper or lower case
     # id0, id1, id2 are integers
     pattern = r"Chapter\s+(\d+)\s+\(Sentence\s+(\d+)\s+-\s+Sentence\s+(\d+)\):\s+(.*)"
-    matches = re.findall(pattern, text, re.IGNORECASE)
+    matches = re.findall(pattern, chapter_result, re.IGNORECASE)
     
     chapters = []
     for match in matches:
@@ -505,7 +505,9 @@ def get_chapters(srt_file, annotated_sentences, time_stamp):
         sentence_id1 = int(match[1])
         sentence_id2 = int(match[2])
         summary = match[3].strip()
-        chapters.append((chapter_id, sentence_id1, sentence_id2, summary))
+        chapter_time1 = srt_file.content[sentence_id1][0]
+        chapter_time2 = srt_file.content[sentence_id2][1]
+        chapters.append((chapter_id, chapter_time1, chapter_time2, summary))
     
 
-    return result
+    return chapters
