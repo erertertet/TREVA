@@ -40,7 +40,7 @@ def generate_srt(transcribed_text, output_path):
         f.write(srt_content)
 
 # Step 6: Execute the process
-video_path = 'path/to/video.mp4'
+video_path = '/Users/chivier/tmp/a.mp4'
 audio_path = extract_audio(video_path)
 transcribed_text = transcribe_audio(audio_path)
 output_path = 'output.srt'
